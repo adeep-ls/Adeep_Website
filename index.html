@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADEEP GROUP | World-Class API & Intermediate Pharmaceutical Manufacturing</title>
+  <meta name="description" content="ADEEP GROUP is a premier pharmaceutical manufacturer with a 17+ year legacy specializing in APIs, advanced intermediates, and green biocatalysis. USFDA & WHO-GMP compliant." />
+  <meta name="keywords" content="ADEEP Group, Adeep Life Sciences, Adeep Laboratories, API manufacturing, Mirtazapine, Brivaracetam, biocatalysis, green chemistry, pharmaceutical manufacturer India" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+
+  <!-- Main Navigation -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Product Portfolio</a>
+        <a href="#facilities" class="nav-link">Facilities</a>
+        <a href="#quality" class="nav-link">Quality & USPs</a>
+        <a href="#clients" class="nav-link">Partners</a>
+        <a href="#leadership" class="nav-link">Leadership</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+
+
+        <button class="cart-btn" id="cartOpenBtn" title="Inquiry Basket">
+          <svg viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#inquiry" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <!-- 5-Image Background Slider (Quest Pharma UI/UX) -->
+    <div class="hero-bg-slider" id="heroBgSlider">
+      <div class="hero-slide active" data-index="0">
+        <img src="assets/hero_slide_1.jpg" alt="ADEEP Excellency in Chemistry & Innovation" class="hero-slide-img" />
+      </div>
+      <div class="hero-slide" data-index="1">
+        <img src="assets/plant_facility.jpg" alt="ADEEP World-Class API Manufacturing Facility" class="hero-slide-img" />
+      </div>
+      <div class="hero-slide" data-index="2">
+        <img src="assets/hero_lab.jpg" alt="ADEEP High-Tech Analytical Quality Labs" class="hero-slide-img" />
+      </div>
+      <div class="hero-slide" data-index="3">
+        <img src="assets/biocatalysis.jpg" alt="ADEEP Advanced Biocatalysis & Enzyme Engineering" class="hero-slide-img" />
+      </div>
+      <div class="hero-slide" data-index="4">
+        <img src="assets/hero_pharma_clean.jpg" alt="ADEEP cGMP & WHO-GMP Compliant Manufacturing" class="hero-slide-img" />
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span class="pill-dot"></span>
+          <span>A Center for Excellence &amp; Innovation in Pharma</span>
+          <span class="pill-sep">•</span>
+          <span class="pill-highlight">17+ Years Legacy (Est. 2008)</span>
+        </div>
+
+        <h1 class="hero-title">
+          Excellency in Chemistry <br />
+          <span class="text-gradient">&amp; Green Biocatalysis</span>
+        </h1>
+
+        <div class="hero-cta-group">
+          <a href="products.html" class="btn btn-primary">
+            <span>Explore Product Basket</span>
+            <svg viewBox="0 0 24 24" class="icon-arrow"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#inquiry" class="btn btn-accent">Request Dossier / RFQ</a>
+        </div>
+
+        <!-- Trust Metrics Bar -->
+        <div class="hero-metrics-strip">
+          <div class="metric-card">
+            <div class="metric-value"><span class="counter" data-target="17">17</span><span class="metric-suffix">+</span></div>
+            <div class="metric-label">Years of Legacy</div>
+            <div class="metric-sub">Founded in 2008</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value"><span class="counter" data-target="3">3</span><span class="metric-plus">+</span>1</div>
+            <div class="metric-label">Plants &amp; Central R&amp;D</div>
+            <div class="metric-sub">Karnataka, AP &amp; Telangana</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value"><span class="counter" data-target="30">30</span><span class="metric-suffix">+</span></div>
+            <div class="metric-label">Commercial Products</div>
+            <div class="metric-sub">High Growth Therapies</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value"><span class="counter" data-target="50">50</span><span class="metric-suffix">+</span></div>
+            <div class="metric-label">Global Customers</div>
+            <div class="metric-sub">Top Tier Pharma Giants</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value"><span class="counter" data-target="250">250</span><span class="metric-suffix">+</span></div>
+            <div class="metric-label">Skilled Workforce</div>
+            <div class="metric-sub">Lowest Industry Attrition</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Slider Dots / Navigation (Quest Pharma Style) -->
+    <div class="hero-slider-nav">
+      <button class="hero-slider-arrow prev" id="heroPrevBtn" aria-label="Previous Slide">‹</button>
+      <div class="hero-slider-dots" id="heroSliderDots">
+        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+      </div>
+      <button class="hero-slider-arrow next" id="heroNextBtn" aria-label="Next Slide">›</button>
+    </div>
+  </section>
+
+
+  <!-- About ADEEP Group -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">WHO WE ARE</span>
+        <h2 class="section-title">A Fast-Growing Leader in APIs &amp; Complex Intermediates</h2>
+        <p class="section-desc">
+          Founded in 2008, ADEEP GROUP encompasses <strong>Adeep Life Sciences Pvt Ltd</strong> and <strong>Adeep Laboratories Pvt Ltd</strong>. From humble beginnings, we have scaled into an integrated pharmaceutical manufacturing powerhouse.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card-primary">
+          <div class="card-badge">
+            <span class="badge-star">★</span>
+            <span>Our Journey &amp; Legacy</span>
+            <span class="badge-pill-sub">Est. 2008</span>
+          </div>
+          <h3>17+ Years of Transforming Chemical Engineering into <span class="text-gradient">Life-Saving Therapies</span></h3>
+          <p class="about-lead">
+            ADEEP is a mission-driven innovator committed to India’s pharmaceutical self-reliance. Aligned deeply with national initiatives, we have systematically expanded domestic manufacturing to eliminate critical dependencies on foreign suppliers.
+          </p>
+          <div class="journey-highlights">
+            <div class="jh-item jh-item-emerald">
+              <div class="jh-icon-wrap">
+                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M4 22V6l6 4V4l6 4v14H4zm8-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-6 4h2v-2H6v2zm0-4h2v-2H6v2z"/></svg>
+              </div>
+              <div class="jh-content">
+                <div class="jh-title-row">
+                  <strong>3 High-Capacity Units &amp; Central R&amp;D</strong>
+                  <span class="jh-tag">Scale &amp; Capacity</span>
+                </div>
+                <span>Continuous multi-ton synthesis facilities in Bidar, Kopparthi (Kadapa), and Hyderabad.</span>
+              </div>
+            </div>
+
+            <div class="jh-item jh-item-cyan">
+              <div class="jh-icon-wrap">
+                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <div class="jh-content">
+                <div class="jh-title-row">
+                  <strong>Global Regulatory Footprint</strong>
+                  <span class="jh-tag">USFDA &amp; Tier-1</span>
+                </div>
+                <span>Merging with a USFDA-accredited intermediate manufacturing facility at Hyderabad for immediate entry into tier-1 regulated markets.</span>
+              </div>
+            </div>
+
+            <div class="jh-item jh-item-gold">
+              <div class="jh-icon-wrap">
+                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+              </div>
+              <div class="jh-content">
+                <div class="jh-title-row">
+                  <strong>Commercial Leadership</strong>
+                  <span class="jh-tag">₹110 Cr+ Turnover</span>
+                </div>
+                <span>Over ₹110 Cr+ annual turnover across our top API &amp; intermediate basket (Mirtazapine, Brivaracetam, Labetalol, Entacapone, Droxidopa).</span>
+              </div>
+            </div>
+
+            <div class="jh-item jh-item-violet">
+              <div class="jh-icon-wrap">
+                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+              </div>
+              <div class="jh-content">
+                <div class="jh-title-row">
+                  <strong>Strategic Governance &amp; Investor Value</strong>
+                  <span class="jh-tag">High Enterprise ROI</span>
+                </div>
+                <span>Disciplined governance and a clear exit strategy designed to maximize enterprise returns.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-col">
+          <div class="visual-image-wrapper">
+            <img src="assets/plant_facility.jpg" alt="ADEEP Pharmaceutical Industrial Campus" class="about-feature-img" />
+            <div class="facility-image-top-badge">
+              <span class="pulse-emerald-dot"></span>
+              <span>WHO-GMP &amp; ISO Integrated Standards</span>
+            </div>
+            <div class="facility-float-badge">
+              <div class="ffb-icon-glow">
+                <svg viewBox="0 0 24 24" class="ffb-svg"><path d="M4 22V6l6 4V4l6 4v14H4zm8-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-6 4h2v-2H6v2zm0-4h2v-2H6v2z"/></svg>
+              </div>
+              <div class="ffb-text">
+                <div class="ffb-title">
+                  <span>3 Production Units</span>
+                  <span class="ffb-dot-live">● Active</span>
+                </div>
+                <div class="ffb-desc">Bidar • Kadapa • Hyderabad</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Values 2x2 Grid -->
+          <div class="values-grid">
+            <div class="value-box val-box-integrity">
+              <div class="val-header">
+                <div class="val-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <span class="val-num">01</span>
+              </div>
+              <h4>Integrity</h4>
+              <p>Uncompromising honesty, full transparency, and ethical compliance across all scientific &amp; commercial dealings.</p>
+            </div>
+
+            <div class="value-box val-box-innovation">
+              <div class="val-header">
+                <div class="val-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-1.3l-.85-.6A5.006 5.006 0 017 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.95-.9 3.69-2.15 4.1z"/></svg>
+                </div>
+                <span class="val-num">02</span>
+              </div>
+              <h4>Innovation</h4>
+              <p>Fostering cutting-edge green chemistry, novel enzymatic pathways, and filing process patents.</p>
+            </div>
+
+            <div class="value-box val-box-quality">
+              <div class="val-header">
+                <div class="val-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="val-num">03</span>
+              </div>
+              <h4>Quality</h4>
+              <p>Delivering exceptional cGMP &amp; WHO-compliant APIs that consistently surpass international pharmacopoeias.</p>
+            </div>
+
+            <div class="value-box val-box-sustainability">
+              <div class="val-header">
+                <div class="val-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3 6 0 12-5 12-12zm-5 7c-2 0-3.5-1.5-3.5-3.5S10 8 12 8s3.5 1.5 3.5 3.5S14 15 12 15z"/></svg>
+                </div>
+                <span class="val-num">04</span>
+              </div>
+              <h4>Sustainability</h4>
+              <p>Prioritizing green enzymatic biocatalysis, reduced hazardous effluents, and environmental stewardship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- State-of-the-Art Manufacturing & Facilities -->
+  <section class="section facilities-section" id="facilities">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">GLOBAL INFRASTRUCTURE</span>
+        <h2 class="section-title">Strategic Manufacturing Facilities &amp; R&amp;D Hub</h2>
+        <p class="section-desc">
+          Strategically located across premier pharmaceutical industrial corridors in Karnataka, Andhra Pradesh, and Telangana.
+        </p>
+      </div>
+
+      <!-- Facility Nav Tabs -->
+      <div class="facility-tabs" id="facilityTabs">
+        <button class="fac-tab active" data-fac="unit1">
+          <span class="fac-unit-pill">Unit 1</span>
+          <span class="fac-name">Bidar, Karnataka</span>
+        </button>
+        <button class="fac-tab" data-fac="unit2">
+          <span class="fac-unit-pill">Unit 2</span>
+          <span class="fac-name">Kadapa, AP (Mega Hub)</span>
+        </button>
+        <button class="fac-tab" data-fac="unit3">
+          <span class="fac-unit-pill">Unit 3</span>
+          <span class="fac-name">Kadapa, AP (Adeep Labs)</span>
+        </button>
+        <button class="fac-tab" data-fac="unit4">
+          <span class="fac-unit-pill fac-pill-accent">Unit 4 &amp; R&amp;D</span>
+          <span class="fac-name">Hyderabad (USFDA &amp; R&amp;D)</span>
+        </button>
+      </div>
+
+      <!-- Facility Content Display -->
+      <div class="facility-card-display" id="facilityDisplay">
+        <!-- Dynamically managed via JavaScript -->
+        <div class="fac-display-grid">
+          <div class="fac-info">
+            <div class="fac-header">
+              <span class="fac-badge" id="facBadge">Adeep Life Sciences Private Limited</span>
+              <span class="fac-status" id="facStatus">● Operational Commercial Plant</span>
+            </div>
+            <h3 class="fac-title" id="facTitle">Unit 1 - Kolhar Industrial Area, Bidar</h3>
+            <p class="fac-location" id="facLocation">
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Plot no 131/A-1, 130 C&amp;D, Kolhar Industrial Area, Bidar – 585401, Karnataka, India
+            </p>
+            <p class="fac-desc" id="facDesc">
+              Our flagship commercial API and advanced intermediate production plant. Features world-class glass-lined and stainless-steel reactor trains, cleanroom finishing suites, automated powder processing, and dedicated QC testing laboratories.
+            </p>
+
+            <div class="fac-specs-list" id="facSpecs">
+              <div class="spec-row">
+                <span class="spec-key">Primary Focus:</span>
+                <span class="spec-val">Commercial APIs (Mirtazapine, Brivaracetam, Duloxetine)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Certifications:</span>
+                <span class="spec-val">WHO-GMP, ISO 9001:2015, ISO 14001:2015, ISO 45001:2018</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Safety &amp; ESG:</span>
+                <span class="spec-val">Full Zero Liquid Discharge (ZLD) effluent treatment</span>
+              </div>
+            </div>
+
+            <div class="fac-actions">
+              <a href="#contact" class="btn btn-primary btn-sm">Schedule Facility Audit</a>
+              <button class="btn btn-outline btn-sm copy-address-btn" data-copy="Plot no 131/A-1, 130 C&D, Kolhar Industrial Area, Bidar – 585401, Karnataka, India">Copy Address</button>
+            </div>
+          </div>
+
+          <div class="fac-visual">
+            <div class="fac-photo-frame">
+              <img src="assets/plant_facility.jpg" alt="ADEEP Manufacturing Plant" class="fac-photo" id="facImg" />
+              <div class="fac-photo-overlay">
+                <span class="tag tag-white" id="facTag">WHO-GMP Certified Facility</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview of Strategic Sites in 1 Compact Card Row -->
+      <div class="facility-summary-cards">
+        <div class="f-sum-card" onclick="switchFacility('unit1')">
+          <div class="f-sum-top">
+            <span class="f-dot dot-active"></span>
+            <strong>Unit 1 (Bidar)</strong>
+          </div>
+          <p>Plot 131/A-1, Kolhar Ind. Area, Bidar, Karnataka. Flagship API &amp; Intermediates plant.</p>
+          <span class="f-sum-link">View Details →</span>
+        </div>
+
+        <div class="f-sum-card" onclick="switchFacility('unit2')">
+          <div class="f-sum-top">
+            <span class="f-dot dot-construction"></span>
+            <strong>Unit 2 (Kadapa)</strong>
+          </div>
+          <p>Plot 27A, YSRJ Mega Hub, Kopparthi, AP. Under Construction Mega Expansion.</p>
+          <span class="f-sum-link">View Details →</span>
+        </div>
+
+        <div class="f-sum-card" onclick="switchFacility('unit3')">
+          <div class="f-sum-top">
+            <span class="f-dot dot-active"></span>
+            <strong>Unit 3 (Kadapa)</strong>
+          </div>
+          <p>Plot 162, YSRJ Mega Hub, Kopparthi, AP. Adeep Laboratories Subsidiary Unit.</p>
+          <span class="f-sum-link">View Details →</span>
+        </div>
+
+        <div class="f-sum-card" onclick="switchFacility('unit4')">
+          <div class="f-sum-top">
+            <span class="f-dot dot-usfda"></span>
+            <strong>Unit 4 &amp; Central R&amp;D (Hyderabad)</strong>
+          </div>
+          <p>USFDA-accredited intermediate manufacturing plant &amp; central analytical R&amp;D center.</p>
+          <span class="f-sum-link">View Details →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality, Compliance & Accreditations (USP) -->
+  <section class="section quality-section" id="quality">
+    <div class="container">
+      <div class="quality-grid">
+        <div class="quality-left">
+          <span class="section-tag section-tag-blue">UNCOMPROMISING QUALITY STANDARDS</span>
+          <h2 class="section-title">Global Certifications &amp; cGMP Compliance</h2>
+          <p class="section-desc">
+            Adeep adheres to the highest international regulatory standards. Our facilities are WHO-GMP certified and fully compliant with global regulatory requirements, ensuring systems are in place to verify the identity, strength, and quality of our products.
+          </p>
+
+          <div class="qc-capabilities">
+            <div class="qc-item">
+              <div class="qc-icon">📊</div>
+              <div>
+                <h4>In-House QC Laboratories</h4>
+                <p>Equipped for extensive testing—such as HPLC, GC, UV-Vis spectroscopy, and microbial analysis—throughout every single stage of production.</p>
+              </div>
+            </div>
+            <div class="qc-item">
+              <div class="qc-icon">🛡️</div>
+              <div>
+                <h4>Risk Mitigation Strategy</h4>
+                <p>Diversified product streams, robust compliance with international pharmacopoeias, and established long-term supplier alliances to safeguard continuous output.</p>
+              </div>
+            </div>
+            <div class="qc-item">
+              <div class="qc-icon">👥</div>
+              <div>
+                <h4>Skilled &amp; Dedicated Workforce (250+)</h4>
+                <p>Over 250+ skilled professionals across R&amp;D, Operations, Quality, and Regulatory. Lowest attrition rate in the industry with ongoing technical development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quality-right">
+          <!-- Certifications Seal Badges Grid -->
+          <div class="cert-seals-grid">
+            <div class="seal-card">
+              <div class="seal-icon-circle seal-who">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <h4>WHO-GMP</h4>
+              <p>Certified Good Manufacturing Practices aligned with World Health Organization guidelines.</p>
+            </div>
+
+            <div class="seal-card seal-highlight-card">
+              <div class="seal-icon-circle seal-fda">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+              </div>
+              <h4>USFDA Accredited</h4>
+              <p>USFDA-accredited intermediate manufacturing facility securing immediate regulated market access.</p>
+            </div>
+
+            <div class="seal-card">
+              <div class="seal-icon-circle seal-iso">
+                <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+              </div>
+              <h4>ISO 9001:2015</h4>
+              <p>Quality Management System standard ensuring continuous product consistency.</p>
+            </div>
+
+            <div class="seal-card">
+              <div class="seal-icon-circle seal-iso-env">
+                <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+              </div>
+              <h4>ISO 14001:2015</h4>
+              <p>Environmental Management System for sustainable waste, energy, and green chemistry.</p>
+            </div>
+
+            <div class="seal-card">
+              <div class="seal-icon-circle seal-iso-safe">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              </div>
+              <h4>ISO 45001:2018</h4>
+              <p>Occupational Health &amp; Safety Management ensuring highest standard worker safety.</p>
+            </div>
+
+            <div class="seal-card">
+              <div class="seal-icon-circle seal-lic">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+              </div>
+              <h4>API Drug License</h4>
+              <p>Authorized statutory manufacturing licenses for active ingredients &amp; intermediates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prestigious Client Base & Partners -->
+  <section class="section clients-section" id="clients">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">GLOBAL TRUST &amp; REPUTATION</span>
+        <h2 class="section-title">Trusted Partner to Leading Global Pharma Giants</h2>
+        <p class="section-desc">
+          Adeep has established a solid customer base, partnering with leading multi-billion-dollar pharmaceutical innovators across regulated and emerging markets.
+        </p>
+      </div>
+
+      <!-- Animated Infinite Client Logo Marquee -->
+      <div class="client-marquee-wrapper">
+        <div class="client-marquee-track">
+          <!-- Marquee item list (doubled for smooth loop) -->
+          <div class="client-pill"><strong>SUN PHARMA</strong></div>
+          <div class="client-pill"><strong>AUROBINDO</strong></div>
+          <div class="client-pill"><strong>MYLAN</strong></div>
+          <div class="client-pill"><strong>BIOCON</strong></div>
+          <div class="client-pill"><strong>TEVA</strong></div>
+          <div class="client-pill"><strong>HETERO</strong></div>
+          <div class="client-pill"><strong>PIRAMAL</strong></div>
+          <div class="client-pill"><strong>MANKIND</strong></div>
+          <div class="client-pill"><strong>NEULAND</strong></div>
+          <div class="client-pill"><strong>AKUMS</strong></div>
+          <div class="client-pill"><strong>AMI ORGANICS</strong></div>
+          <div class="client-pill"><strong>OPTIMUS</strong></div>
+          <div class="client-pill"><strong>IPCA LABS</strong></div>
+          <div class="client-pill"><strong>MICRO LABS</strong></div>
+          <div class="client-pill"><strong>MACLEODS</strong></div>
+          <div class="client-pill"><strong>MSN LABS</strong></div>
+          <div class="client-pill"><strong>HONOUR LAB</strong></div>
+          <div class="client-pill"><strong>KIMIA</strong></div>
+          <div class="client-pill"><strong>RAKSHIT</strong></div>
+          <div class="client-pill"><strong>ENALTEC</strong></div>
+          <div class="client-pill"><strong>BAJAJ HEALTHCARE</strong></div>
+          <div class="client-pill"><strong>LEE PHARMA</strong></div>
+          <div class="client-pill"><strong>MALLADI</strong></div>
+          <div class="client-pill"><strong>METROCHEM</strong></div>
+          <div class="client-pill"><strong>VIYASH</strong></div>
+          <div class="client-pill"><strong>MAITHRI</strong></div>
+          <div class="client-pill"><strong>MEGAFINE</strong></div>
+          <div class="client-pill"><strong>SINOLITE</strong></div>
+          <!-- Repeat for smooth infinite scroll -->
+          <div class="client-pill"><strong>SUN PHARMA</strong></div>
+          <div class="client-pill"><strong>AUROBINDO</strong></div>
+          <div class="client-pill"><strong>MYLAN</strong></div>
+          <div class="client-pill"><strong>BIOCON</strong></div>
+          <div class="client-pill"><strong>TEVA</strong></div>
+          <div class="client-pill"><strong>HETERO</strong></div>
+          <div class="client-pill"><strong>PIRAMAL</strong></div>
+          <div class="client-pill"><strong>MANKIND</strong></div>
+          <div class="client-pill"><strong>NEULAND</strong></div>
+          <div class="client-pill"><strong>AKUMS</strong></div>
+          <div class="client-pill"><strong>AMI ORGANICS</strong></div>
+          <div class="client-pill"><strong>OPTIMUS</strong></div>
+          <div class="client-pill"><strong>IPCA LABS</strong></div>
+          <div class="client-pill"><strong>MICRO LABS</strong></div>
+          <div class="client-pill"><strong>MACLEODS</strong></div>
+          <div class="client-pill"><strong>MSN LABS</strong></div>
+        </div>
+      </div>
+
+      <!-- Second Reverse Marquee Row -->
+      <div class="client-marquee-wrapper client-marquee-reverse">
+        <div class="client-marquee-track-reverse">
+          <div class="client-pill"><strong>RAGHAVA LIFE SCIENCES</strong></div>
+          <div class="client-pill"><strong>AMI LIFESCIENCES</strong></div>
+          <div class="client-pill"><strong>SHANTI PHARMACEUTICALS</strong></div>
+          <div class="client-pill"><strong>CADCHEM</strong></div>
+          <div class="client-pill"><strong>ALMON HEALTHCARE</strong></div>
+          <div class="client-pill"><strong>SAGA LIFESCIENCES</strong></div>
+          <div class="client-pill"><strong>BLUE WATERS</strong></div>
+          <div class="client-pill"><strong>NIKSAN PHARMA</strong></div>
+          <div class="client-pill"><strong>BASIL PHARMA</strong></div>
+          <div class="client-pill"><strong>JIUZHOU PHARMA</strong></div>
+          <div class="client-pill"><strong>SUN PHARMA</strong></div>
+          <div class="client-pill"><strong>AUROBINDO</strong></div>
+          <div class="client-pill"><strong>MYLAN</strong></div>
+          <div class="client-pill"><strong>BIOCON</strong></div>
+          <div class="client-pill"><strong>TEVA</strong></div>
+          <div class="client-pill"><strong>HETERO</strong></div>
+          <div class="client-pill"><strong>PIRAMAL</strong></div>
+          <div class="client-pill"><strong>MANKIND</strong></div>
+          <!-- Repeat -->
+          <div class="client-pill"><strong>RAGHAVA LIFE SCIENCES</strong></div>
+          <div class="client-pill"><strong>AMI LIFESCIENCES</strong></div>
+          <div class="client-pill"><strong>SHANTI PHARMACEUTICALS</strong></div>
+          <div class="client-pill"><strong>CADCHEM</strong></div>
+          <div class="client-pill"><strong>ALMON HEALTHCARE</strong></div>
+          <div class="client-pill"><strong>SAGA LIFESCIENCES</strong></div>
+          <div class="client-pill"><strong>BLUE WATERS</strong></div>
+          <div class="client-pill"><strong>NIKSAN PHARMA</strong></div>
+          <div class="client-pill"><strong>BASIL PHARMA</strong></div>
+          <div class="client-pill"><strong>JIUZHOU PHARMA</strong></div>
+        </div>
+      </div>
+
+      <div class="client-trust-summary">
+        <div class="cts-stat">
+          <strong>50+</strong>
+          <span>Contract Partners Worldwide</span>
+        </div>
+        <div class="cts-divider"></div>
+        <div class="cts-stat">
+          <strong>100%</strong>
+          <span>Batch Quality Conformance</span>
+        </div>
+        <div class="cts-divider"></div>
+        <div class="cts-stat">
+          <strong>17+ Years</strong>
+          <span>Zero Regulatory Action / Warning Letters</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Leadership Team -->
+  <section class="section leadership-section" id="leadership">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">VISIONARY GOVERNANCE</span>
+        <h2 class="section-title">Leadership Team: Meet Our Directors</h2>
+        <p class="section-desc">
+          Seasoned pharmaceutical professionals with over a century of cumulative leadership experience across production, R&amp;D, regulatory compliance, operational excellence, and financial governance.
+        </p>
+      </div>
+
+      <div class="directors-grid">
+        <!-- Director 1: Mr. Narasimha Reddy Sangati -->
+        <div class="director-card">
+          <div class="director-avatar-box">
+            <div class="director-monogram">NRS</div>
+            <div class="director-experience-badge">25+ Yrs Exp</div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Mr. Narasimha Reddy Sangati</h3>
+            <div class="director-role">Founder &amp; Managing Director</div>
+            <div class="director-badges">
+              <span class="d-tag">Production</span>
+              <span class="d-tag">R&amp;D</span>
+              <span class="d-tag">Quality Assurance</span>
+              <span class="d-tag">Operations</span>
+            </div>
+            <p class="director-bio">
+              Possessing over 25+ years of comprehensive expertise in API production, cutting-edge R&amp;D, quality systems, and large-scale plant operations. Leads ADEEP’s global strategic trajectory and technical innovation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Director 2: Mr. Srinivasa Reddy Nallagatla -->
+        <div class="director-card">
+          <div class="director-avatar-box">
+            <div class="director-monogram">SRN</div>
+            <div class="director-experience-badge">30+ Yrs Exp</div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Mr. Srinivasa Reddy Nallagatla</h3>
+            <div class="director-role">Founder &amp; Executive Director</div>
+            <div class="director-badges">
+              <span class="d-tag">Pharmaceuticals</span>
+              <span class="d-tag">Construction</span>
+              <span class="d-tag">Logistics &amp; Supply</span>
+            </div>
+            <p class="director-bio">
+              With 30+ years of visionary business leadership spanning pharmaceuticals, high-spec industrial construction, and integrated supply chain logistics. Architect of ADEEP’s multi-site manufacturing footprint.
+            </p>
+          </div>
+        </div>
+
+        <!-- Director 3: Mr. Narasimha Reddy Kalluru -->
+        <div class="director-card">
+          <div class="director-avatar-box">
+            <div class="director-monogram">NRK</div>
+            <div class="director-experience-badge">26+ Yrs Exp</div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Mr. Narasimha Reddy Kalluru</h3>
+            <div class="director-role">Executive Director of Operations</div>
+            <div class="director-badges">
+              <span class="d-tag">Plant Operations</span>
+              <span class="d-tag">Regulatory Affairs</span>
+              <span class="d-tag">Process Scaling</span>
+            </div>
+            <p class="director-bio">
+              Brings 26+ years of specialized expertise in complex drug manufacturing operations and regulatory affairs. Champions rigorous adherence to USFDA, WHO-GMP, and international pharmacopoeial standards.
+            </p>
+          </div>
+        </div>
+
+        <!-- Director 4: Mr. Suresh Reddy Yellipalem -->
+        <div class="director-card">
+          <div class="director-avatar-box">
+            <div class="director-monogram">SRY</div>
+            <div class="director-experience-badge">35+ Yrs Exp</div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Mr. Suresh Reddy Yellipalem</h3>
+            <div class="director-role">Executive Director of Finance</div>
+            <div class="director-badges">
+              <span class="d-tag">Corporate Finance</span>
+              <span class="d-tag">Capital Allocation</span>
+              <span class="d-tag">Business Strategy</span>
+            </div>
+            <p class="director-bio">
+              Over 35+ years of distinguished leadership in corporate finance, strategic capital allocation, and business management. Drives fiscal discipline, strategic acquisitions, and clear investor exit strategies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive RFQ & Sample Request Builder -->
+  <section class="section inquiry-section" id="inquiry">
+    <div class="container">
+      <div class="inquiry-wrapper">
+        <div class="inquiry-info-pane">
+          <span class="section-tag section-tag-orange">DIRECT COMMERCIAL PROCUREMENT</span>
+          <h2 class="inquiry-title">Request Quotation &amp; Technical Dossier</h2>
+          <p class="inquiry-desc">
+            Directly connect with our commercial and technical team for API pricing, intermediate procurement, DMF status, open-part dossiers, or evaluation samples.
+          </p>
+
+          <div class="inquiry-highlights">
+            <div class="ih-point">
+              <span class="ih-check">✓</span>
+              <span><strong>Guaranteed Response:</strong> Commercial quotes provided within 24 hours.</span>
+            </div>
+            <div class="ih-point">
+              <span class="ih-check">✓</span>
+              <span><strong>Regulatory Support:</strong> Access to DMFs, COA, Route of Synthesis, and ICH stability data.</span>
+            </div>
+            <div class="ih-point">
+              <span class="ih-check">✓</span>
+              <span><strong>Sample Program:</strong> High-purity evaluation samples dispatched for qualifying pharma partners.</span>
+            </div>
+          </div>
+
+          <div class="direct-contact-box">
+            <h4>Commercial Inquiries Desk</h4>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <div>
+                <span class="lbl">Email:</span>
+                <a href="mailto:srujanreddyn@adeepgroup.com">srujanreddyn@adeepgroup.com</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+              <div>
+                <span class="lbl">Direct Line:</span>
+                <a href="tel:+919515114455">+91 9515114455</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <div>
+                <span class="lbl">Corporate Office:</span>
+                <span>#1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inquiry-form-pane">
+          <form id="rfqForm" class="rfq-form">
+            <h3 class="form-title">Submit Request For Quotation (RFQ)</h3>
+            
+            <!-- Selected Basket Molecules Preview -->
+            <div class="basket-preview" id="basketPreview">
+              <div class="bp-label">Selected Molecules in Request:</div>
+              <div class="bp-tags" id="bpTags">
+                <span class="bp-placeholder">No molecules selected yet. Select from the product table or type below.</span>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="rfqName">Full Name *</label>
+                <input type="text" id="rfqName" required placeholder="Dr. / Mr. / Ms. Name" />
+              </div>
+              <div class="form-group">
+                <label for="rfqCompany">Company / Organization *</label>
+                <input type="text" id="rfqCompany" required placeholder="e.g. Acme Pharmaceuticals Ltd." />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="rfqEmail">Corporate Email *</label>
+                <input type="email" id="rfqEmail" required placeholder="name@company.com" />
+              </div>
+              <div class="form-group">
+                <label for="rfqPhone">Phone Number *</label>
+                <input type="tel" id="rfqPhone" required placeholder="+91 / Country Code & Number" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="rfqRequirement">Quantity Requirement *</label>
+                <select id="rfqRequirement" required>
+                  <option value="Commercial Tonnage">Commercial Scale (Tonnage / Metric Tons)</option>
+                  <option value="Pilot Batch">Pilot Scale (100 kg - 500 kg)</option>
+                  <option value="Evaluation Sample">R&amp;D / Regulatory Sample (100g - 1kg)</option>
+                  <option value="Custom Synthesis">Custom Synthesis / Contract R&amp;D</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="rfqMolecule">Target Molecule / CAS (if not selected)</label>
+                <input type="text" id="rfqMolecule" placeholder="e.g. Mirtazapine, Brivaracetam, etc." />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="rfqMessage">Technical Specifications / Project Details</label>
+              <textarea id="rfqMessage" rows="3" placeholder="Please mention target grade, delivery timeline, destination country, or custom specification requirements..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-block" id="submitRfqBtn">
+                <span>Submit Quotation Request</span>
+                <svg viewBox="0 0 24 24" class="icon-sm"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              </button>
+            </div>
+            <div class="form-privacy">
+              <small>🔒 Your confidential inquiries and technical requirements are protected under strict NDA standards.</small>
+            </div>
+          </form>
+
+          <!-- Success Alert Message -->
+          <div class="form-success-alert" id="formSuccessAlert" style="display: none;">
+            <div class="fsa-icon">✓</div>
+            <h3>RFQ Successfully Dispatched!</h3>
+            <p>Thank you for reaching out to <strong>ADEEP GROUP</strong>. Our commercial team has received your inquiry and a dedicated account manager will respond with pricing and technical dossiers within 24 hours.</p>
+            <button class="btn btn-sm btn-outline" id="resetRfqBtn">Send Another Inquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Details & Map Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Global Headquarters &amp; Operations</h2>
+        <p class="section-desc">Reach out to our leadership team and manufacturing offices.</p>
+      </div>
+
+      <div class="contact-cards-grid">
+        <div class="c-info-card">
+          <div class="cic-icon">🏢</div>
+          <h3>Corporate Headquarters</h3>
+          <p class="cic-company">ADEEP GROUP</p>
+          <p>
+            Unit No. 1501, 15th Floor, Block-B,<br />
+            ASIAN SUN CITY, Kothaguda (V),<br />
+            Kondapur, Serilingampally (M),<br />
+            Rangareddy Dist., Hyderabad - 500084,<br />
+            Telangana, India.
+          </p>
+          <div class="cic-links">
+            <a href="https://maps.google.com/?q=Asian+Sun+City+Kondapur+Hyderabad" target="_blank" rel="noopener" class="cic-link">Open in Google Maps ↗</a>
+          </div>
+        </div>
+
+        <div class="c-info-card">
+          <div class="cic-icon">📞</div>
+          <h3>Direct Communications</h3>
+          <p class="cic-company">24/7 Response Desk</p>
+          <div class="comm-line">
+            <span class="comm-label">Phone / WhatsApp:</span>
+            <a href="tel:+919515114455" class="comm-value">+91 9515114455</a>
+          </div>
+          <div class="comm-line">
+            <span class="comm-label">Corporate Email:</span>
+            <a href="mailto:srujanreddyn@adeepgroup.com" class="comm-value">srujanreddyn@adeepgroup.com</a>
+          </div>
+          <div class="comm-line">
+            <span class="comm-label">Official Portal:</span>
+            <a href="https://www.adeepgroup.com" target="_blank" rel="noopener" class="comm-value">www.adeepgroup.com</a>
+          </div>
+          <div class="comm-line">
+            <span class="comm-label">Life Sciences Portal:</span>
+            <a href="https://adeeplifesciences.com" target="_blank" rel="noopener" class="comm-value">adeeplifesciences.com</a>
+          </div>
+        </div>
+
+        <div class="c-info-card">
+          <div class="cic-icon">🏭</div>
+          <h3>Manufacturing Plants</h3>
+          <p class="cic-company">Key Industrial Sites</p>
+          <ul class="plant-quick-list">
+            <li><strong>Unit 1:</strong> Kolhar Ind. Area, Bidar, Karnataka - 585401</li>
+            <li><strong>Unit 2 &amp; 3:</strong> APIIC YSRJ Mega Industrial Hub, Kopparthi, Kadapa, AP</li>
+            <li><strong>Unit 4 &amp; Central R&amp;D:</strong> Hyderabad, Telangana</li>
+          </ul>
+          <div class="cic-links">
+            <a href="#facilities" class="cic-link">Explore Facility Audits &amp; Certs →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          A Center for Excellence and Innovation in the Pharmaceutical Industry. Delivering API leadership, green biocatalysis, and robust global compliance since 2008.
+        </p>
+        <div class="footer-entities">
+          <span>• Adeep Life Sciences Pvt. Ltd.</span>
+          <span>• Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Quicklinks</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?therapy=Anti+depressant">Mirtazapine &amp; Duloxetine (CNS)</a></li>
+          <li><a href="products.html?therapy=Anti+convulsant">Brivaracetam &amp; Intermediates</a></li>
+          <li><a href="products.html?therapy=Parkinsons">Entacapone &amp; Levodopa</a></li>
+          <li><a href="products.html?therapy=Anti+bacterial">Moxifloxacin HCl</a></li>
+          <li><a href="products.html?therapy=Glaucoma">Dorzolamide &amp; Chiral Intermediates</a></li>
+          <li><a href="products.html?category=speciality">Speciality Chemicals &amp; n-Butyl Lithium</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Key Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#about">Corporate Journey</a></li>
+          <li><a href="#facilities">Manufacturing Infrastructure</a></li>
+          <li><a href="#quality">WHO-GMP &amp; USFDA Accreditations</a></li>
+          <li><a href="#leadership">Board of Directors</a></li>
+          <li><a href="#inquiry">Request RFQ &amp; Dossiers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Compliance &amp; Certifications</h4>
+        <div class="footer-certs-list">
+          <span class="fc-badge">WHO-GMP Certified</span>
+          <span class="fc-badge">USFDA Accredited</span>
+          <span class="fc-badge">ISO 9001:2015</span>
+          <span class="fc-badge">ISO 14001:2015</span>
+          <span class="fc-badge">ISO 45001:2018</span>
+          <span class="fc-badge">API Drug Licensed</span>
+        </div>
+        <div class="make-in-india-badge">
+          <span>🇮🇳 Supporting India's Self-Reliance (Make in India)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="copyright">
+        © 2008 - 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
+      </div>
+      <div class="footer-legal">
+        <a href="#about">Corporate Governance</a>
+        <span>•</span>
+        <a href="#quality">Quality Policy</a>
+        <span>•</span>
+        <a href="#contact">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Inquiry Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div class="cart-title-row">
+        <h3>Inquiry Basket</h3>
+        <span class="cart-count-badge" id="drawerCartCount">0 Molecules</span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Basket">✕</button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="ce-icon">📋</div>
+        <h4>Your Basket is Empty</h4>
+        <p>Browse our commercial APIs or intermediates table and click "Inquire" to add molecules to this RFQ.</p>
+        <a href="products.html" class="btn btn-sm btn-primary" onclick="closeCart()">Browse Products</a>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-total-note">
+        <span>Selected for technical quotation &amp; sample review.</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="proceedToRfqBtn">Proceed to Request Quote →</button>
+      <button class="btn btn-text btn-block" id="clearCartBtn">Clear Basket</button>
+    </div>
+  </aside>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="modal-card" id="productModal">
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <div class="modal-header">
+        <span class="modal-cat-tag" id="modalCat">Commercial API</span>
+        <h2 class="modal-title" id="modalTitle">Mirtazapine</h2>
+        <div class="modal-cas-line">
+          <span>CAS Registry No:</span>
+          <strong class="code-font" id="modalCas">61337-89-1</strong>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Therapeutic Category &amp; Indication</h4>
+          <p id="modalIndication">Anti-depressant</p>
+        </div>
+        <div class="modal-section">
+          <h4>Target Molecule / API Relation</h4>
+          <p id="modalTarget">Direct Finished API</p>
+        </div>
+        <div class="modal-section">
+          <h4>Regulatory &amp; Quality Status</h4>
+          <p id="modalCompliance">WHO-GMP Compliant, DMF Available, USFDA Grade Standards</p>
+        </div>
+        <div class="modal-section" id="modalTurnoverSec" style="display:none;">
+          <h4>Annual Commercial Turnover</h4>
+          <p class="modal-revenue-text" id="modalTurnover">₹50 Cr+</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="modalCloseAction">Close</button>
+        <button class="btn btn-primary" id="modalInquireBtn">Add to Inquiry Basket</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scroll-to-Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top" aria-label="Scroll to top">↑</button>
+
+  <script src="app.js"></script>
+  <script>
+    // ── Interactive Molecular Particle Constellation ──────────────────────
+    (function() {
+      const canvas = document.getElementById('particleCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H, particles = [];
+      const mouse = { x: null, y: null, radius: 150 };
+
+      const COLORS = [
+        'rgba(0, 240, 255, ',   // Electric Cyan
+        'rgba(0, 230, 153, ',   // Cyber Emerald
+        'rgba(255, 183, 3, ',   // Gold
+        'rgba(139, 92, 246, '   // Electric Violet
+      ];
+
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
+
+      function Particle() {
+        this.reset = function() {
+          this.x = Math.random() * W;
+          this.y = Math.random() * H;
+          this.r = Math.random() * 2.2 + 1;
+          this.vx = (Math.random() - 0.5) * 0.7;
+          this.vy = (Math.random() - 0.5) * 0.7;
+          this.baseColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+          this.alpha = Math.random() * 0.6 + 0.3;
+          this.pulseSpeed = Math.random() * 0.02 + 0.01;
+          this.pulseAngle = Math.random() * Math.PI * 2;
+        };
+        this.reset();
+      }
+
+      function init() {
+        particles = [];
+        const count = Math.min(Math.floor((W * H) / 16000), 100);
+        for (let i = 0; i < count; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        particles.forEach(p => {
+          p.pulseAngle += p.pulseSpeed;
+          const currentAlpha = p.alpha + Math.sin(p.pulseAngle) * 0.2;
+
+          // Mouse attraction / gentle interaction
+          if (mouse.x !== null && mouse.y !== null) {
+            const dx = mouse.x - p.x;
+            const dy = mouse.y - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.radius) {
+              const force = (mouse.radius - dist) / mouse.radius;
+              p.x += (dx / dist) * force * 1.2;
+              p.y += (dy / dist) * force * 1.2;
+
+              // Connect to mouse
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.strokeStyle = 'rgba(0, 240, 255, ' + (0.35 * (1 - dist / mouse.radius)) + ')';
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+
+          // Draw Particle Node
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.baseColor + Math.max(0.1, currentAlpha) + ')';
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = 'rgba(0, 240, 255, 0.5)';
+          ctx.fill();
+          ctx.shadowBlur = 0;
+
+          // Connect nearby particles (Molecular Lattice)
+          particles.forEach(p2 => {
+            const dx = p.x - p2.x;
+            const dy = p.y - p2.y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 110) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = p.baseColor + (0.16 * (1 - d / 110)) + ')';
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          });
+
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > W || p.y < 0 || p.y > H) p.reset();
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', () => { resize(); init(); });
+      resize();
+      init();
+      draw();
+    })();
+
+    // ── Scroll Reveal ──────────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section-header-centered, .about-card-primary, .about-visual-col, .flagship-card, .product-filter-bar, .biocat-grid, .facility-card-display, .quality-grid, .director-card, .c-info-card, .seal-card').forEach(el => {
+      el.classList.add('reveal');
+      revealObserver.observe(el);
+    });
+
+    // ── Header Scroll Effect ────────────────────────────────────
+    const header = document.getElementById('mainHeader');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+
+  <script>
+    // ── Locked to Best Brand Theme: Adeep Signature (Solar Amber & Bio-Emerald) ──
+    document.documentElement.setAttribute('data-theme', 'adeep-signature');
+    localStorage.removeItem('adeep-theme');
+    window.getThemeColors = function() {
+      return ['rgba(245,130,32,', 'rgba(56,203,86,', 'rgba(255,158,21,', 'rgba(141,198,63,'];
+    };
+  </script>
+</body>
+</html>
