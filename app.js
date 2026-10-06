@@ -499,6 +499,7 @@ let inquiryBasket = [];
 
 // Initialize on DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
+  initSplashScreen();
   initHeroSlider();
   initProductCounts();
   renderProductsTable();
@@ -1142,7 +1143,7 @@ function initHeroSlider() {
 
   let currentIdx = 0;
   let autoPlayTimer = null;
-  const slideDuration = 5500; // 5.5 seconds per slide
+  const slideDuration = 3000; // 3 seconds per slide
 
   function showSlide(index) {
     if (index < 0) index = slides.length - 1;
@@ -1207,3 +1208,73 @@ function initHeroSlider() {
   showSlide(0);
   startAutoPlay();
 }
+
+// ── Premium Biocatalytic Splash Screen Loader ──────────────────────
+function initSplashScreen() {
+  const splash = document.getElementById("siteSplashScreen");
+  if (!splash) return;
+
+  const bar = document.getElementById("splashProgressBar");
+  const pct = document.getElementById("splashPercentage");
+  const text = document.getElementById("splashTelemetryText");
+  const skipBtn = document.getElementById("splashSkipBtn");
+
+  const telemetryMessages = [
+    "Initializing green biocatalytic synthesis...",
+    "Calibrating continuous multi-ton reactors...",
+    "Loading commercial API frameworks...",
+    "Verifying WHO-GMP & cGMP quality parameters...",
+    "Ready for excellence • Welcome to ADEEP Group"
+  ];
+
+  let progress = 0;
+  let msgIdx = 0;
+  let finished = false;
+
+  function finishSplash() {
+    if (finished) return;
+    finished = true;
+    splash.classList.add("splash-hidden");
+    setTimeout(() => {
+      splash.style.display = "none";
+    }, 800);
+  }
+
+  if (skipBtn) {
+    skipBtn.addEventListener("click", finishSplash);
+  }
+
+  // Telemetry cycle at readable speed (850ms)
+  const textInterval = setInterval(() => {
+    if (finished) { clearInterval(textInterval); return; }
+    msgIdx = (msgIdx + 1) % telemetryMessages.length;
+    if (text) {
+      text.style.opacity = "0";
+      text.style.transform = "translateY(4px)";
+      setTimeout(() => {
+        text.textContent = telemetryMessages[msgIdx];
+        text.style.opacity = "1";
+        text.style.transform = "translateY(0)";
+      }, 180);
+    }
+  }, 850);
+
+  // Smooth Progress animation (0% -> 100% in ~3.3 seconds)
+  const progressInterval = setInterval(() => {
+    if (finished) { clearInterval(progressInterval); return; }
+    progress += 0.9;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(progressInterval);
+      clearInterval(textInterval);
+      if (bar) bar.style.width = "100%";
+      if (pct) pct.textContent = "100%";
+      if (text) text.textContent = "Ready for excellence • Welcome to ADEEP Group";
+      setTimeout(finishSplash, 400);
+    } else {
+      if (bar) bar.style.width = `${progress}%`;
+      if (pct) pct.textContent = `${Math.round(progress)}%`;
+    }
+  }, 30);
+}
+

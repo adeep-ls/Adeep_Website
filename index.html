@@ -13,6 +13,135 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ═══════════════════════════════════════════════════════════
+       PREMIUM BIOCATALYTIC LOADING SCREEN (Splash Experience)
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="siteSplashScreen" class="site-splash-screen" aria-label="Loading ADEEP Group Portal">
+    <!-- Ambient Aurora Glow Orbs -->
+    <div class="splash-aurora-wrap">
+      <div class="splash-aurora splash-aurora-1"></div>
+      <div class="splash-aurora splash-aurora-2"></div>
+      <div class="splash-aurora splash-aurora-3"></div>
+      <div class="splash-grid-mesh"></div>
+    </div>
+
+    <!-- Central Orbital Molecular Reactor -->
+    <div class="splash-reactor">
+      <!-- 3 Concentric Rotating Rings -->
+      <div class="splash-ring splash-ring-outer"></div>
+      <div class="splash-ring splash-ring-middle"></div>
+      <div class="splash-ring splash-ring-inner"></div>
+
+      <!-- Orbiting Molecular Atoms -->
+      <div class="splash-atom atom-1"></div>
+      <div class="splash-atom atom-2"></div>
+      <div class="splash-atom atom-3"></div>
+      <div class="splash-atom atom-4"></div>
+      <div class="splash-atom atom-5"></div>
+      <div class="splash-atom atom-6"></div>
+      <div class="splash-atom atom-7"></div>
+      <div class="splash-atom atom-8"></div>
+
+      <!-- Center Logo Card -->
+      <div class="splash-logo-card">
+        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="splash-logo-img" />
+      </div>
+    </div>
+
+    <!-- Telemetry & Info Content -->
+    <div class="splash-info">
+      <div class="splash-tag-pill">
+        <span class="splash-pill-dot"></span>
+        <span>EXCELLENCY IN CHEMISTRY &amp; GREEN BIOCATALYSIS</span>
+      </div>
+      <p class="splash-telemetry-text" id="splashTelemetryText">Initializing biocatalytic enzyme synthesis...</p>
+    </div>
+
+    <!-- Progress Bar & Skip Control -->
+    <div class="splash-progress-wrapper">
+      <div class="splash-progress-track">
+        <div class="splash-progress-bar" id="splashProgressBar"></div>
+      </div>
+      <div class="splash-progress-meta">
+        <span class="splash-percentage" id="splashPercentage">0%</span>
+        <button class="splash-skip-btn" id="splashSkipBtn" type="button" aria-label="Skip introduction">
+          <span>Skip</span>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M5 13l4 4L19 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Self-Contained Splash Screen Engine (Instant Execution) -->
+    <script>
+      (function() {
+        const splash = document.getElementById('siteSplashScreen');
+        if (!splash) return;
+        const bar = document.getElementById('splashProgressBar');
+        const pct = document.getElementById('splashPercentage');
+        const text = document.getElementById('splashTelemetryText');
+        const skipBtn = document.getElementById('splashSkipBtn');
+
+        const telemetryMessages = [
+          'Initializing green biocatalytic synthesis...',
+          'Calibrating continuous multi-ton reactors...',
+          'Loading commercial API frameworks...',
+          'Verifying WHO-GMP & cGMP quality parameters...',
+          'Ready for excellence • Welcome to ADEEP Group'
+        ];
+
+        let progress = 0;
+        let msgIdx = 0;
+        let finished = false;
+
+        function finishSplash() {
+          if (finished) return;
+          finished = true;
+          splash.classList.add('splash-hidden');
+          setTimeout(() => {
+            splash.style.display = 'none';
+          }, 850);
+        }
+
+        if (skipBtn) {
+          skipBtn.addEventListener('click', finishSplash);
+        }
+
+        // Cycle high-tech telemetry status messages at comfortable readable speed (850ms)
+        const textTimer = setInterval(() => {
+          if (finished) { clearInterval(textTimer); return; }
+          msgIdx = (msgIdx + 1) % telemetryMessages.length;
+          if (text) {
+            text.style.opacity = '0';
+            text.style.transform = 'translateY(4px)';
+            setTimeout(() => {
+              text.textContent = telemetryMessages[msgIdx];
+              text.style.opacity = '1';
+              text.style.transform = 'translateY(0)';
+            }, 180);
+          }
+        }, 850);
+
+        // Smooth progress animation: 0% -> 100% in ~3.3 seconds
+        const progressTimer = setInterval(() => {
+          if (finished) { clearInterval(progressTimer); return; }
+          progress += 0.9;
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(progressTimer);
+            clearInterval(textTimer);
+            if (bar) bar.style.width = '100%';
+            if (pct) pct.textContent = '100%';
+            if (text) text.textContent = 'Ready for excellence • Welcome to ADEEP Group';
+            setTimeout(finishSplash, 400);
+          } else {
+            if (bar) bar.style.width = progress + '%';
+            if (pct) pct.textContent = Math.round(progress) + '%';
+          }
+        }, 30);
+      })();
+    </script>
+  </div>
+
   <!-- Animated Molecule Particle Canvas -->
   <canvas id="particleCanvas"></canvas>
 
@@ -25,13 +154,13 @@
       </a>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About Us</a>
         <a href="products.html" class="nav-link">Product Portfolio</a>
-        <a href="#facilities" class="nav-link">Facilities</a>
-        <a href="#quality" class="nav-link">Quality & USPs</a>
-        <a href="#clients" class="nav-link">Partners</a>
-        <a href="#leadership" class="nav-link">Leadership</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="quality.html" class="nav-link">Quality &amp; USPs</a>
+        <a href="partners.html" class="nav-link">Partners</a>
+        <a href="leadership.html" class="nav-link">Leadership</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
@@ -939,11 +1068,11 @@
       <div class="footer-col">
         <h4>Key Navigation</h4>
         <ul class="footer-links">
-          <li><a href="#about">Corporate Journey</a></li>
-          <li><a href="#facilities">Manufacturing Infrastructure</a></li>
-          <li><a href="#quality">WHO-GMP &amp; USFDA Accreditations</a></li>
-          <li><a href="#leadership">Board of Directors</a></li>
-          <li><a href="#inquiry">Request RFQ &amp; Dossiers</a></li>
+          <li><a href="about.html">Corporate Journey</a></li>
+          <li><a href="facilities.html">Manufacturing Infrastructure</a></li>
+          <li><a href="quality.html">WHO-GMP &amp; USFDA Accreditations</a></li>
+          <li><a href="leadership.html">Board of Directors</a></li>
+          <li><a href="contact.html">Request RFQ &amp; Dossiers</a></li>
         </ul>
       </div>
 
@@ -968,11 +1097,11 @@
         © 2008 - 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
       </div>
       <div class="footer-legal">
-        <a href="#about">Corporate Governance</a>
+        <a href="about.html">Corporate Governance</a>
         <span>•</span>
-        <a href="#quality">Quality Policy</a>
+        <a href="quality.html">Quality Policy</a>
         <span>•</span>
-        <a href="#contact">Contact Support</a>
+        <a href="contact.html">Contact Support</a>
       </div>
     </div>
   </footer>
@@ -1052,7 +1181,7 @@
   <!-- Scroll-to-Top Button -->
   <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top" aria-label="Scroll to top">↑</button>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=3"></script>
   <script>
     // ── Interactive Molecular Particle Constellation ──────────────────────
     (function() {
@@ -1192,11 +1321,11 @@
   </script>
 
   <script>
-    // ── Locked to Best Brand Theme: Adeep Signature (Solar Amber & Bio-Emerald) ──
+    // ── Dark Luxury Glass Theme: Electric Cyan & Cyber Emerald ──
     document.documentElement.setAttribute('data-theme', 'adeep-signature');
     localStorage.removeItem('adeep-theme');
     window.getThemeColors = function() {
-      return ['rgba(245,130,32,', 'rgba(56,203,86,', 'rgba(255,158,21,', 'rgba(141,198,63,'];
+      return ['rgba(0,240,255,', 'rgba(0,245,160,', 'rgba(56,189,248,', 'rgba(168,85,247,'];
     };
   </script>
 </body>

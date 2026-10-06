@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | ADEEP GROUP — 17+ Years of Pharmaceutical Excellence</title>
+  <meta name="description" content="Learn about ADEEP GROUP's 17+ year legacy, vision, corporate journey, core values, and India's pharmaceutical manufacturing mission." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero { min-height: 480px; display: flex; align-items: center; position: relative; padding: 140px 0 80px; overflow: hidden; background: linear-gradient(135deg, #030510 0%, #081026 50%, #0e1e48 100%); }
+    .page-hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,240,255,0.12) 0%, transparent 65%); pointer-events: none; animation: orbFloat 8s ease-in-out infinite alternate; }
+    .page-hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,245,160,0.1) 0%, transparent 65%); pointer-events: none; }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.65); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--teal-vivid); text-decoration: none; transition: var(--t); }
+    .breadcrumb a:hover { color: #fff; }
+    .page-title { font-family: var(--font-heading); font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+    .page-title .accent { background: var(--grad-teal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-subtitle { font-size: 1.1rem; color: rgba(226,238,255,0.82); max-width: 640px; line-height: 1.7; margin-bottom: 32px; }
+    .hero-stats-row { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero-stat-chip { display: flex; align-items: center; gap: 10px; padding: 10px 20px; background: rgba(255,255,255,0.07); backdrop-filter: blur(12px); border: 1px solid rgba(0,240,255,0.28); border-radius: var(--r-full); }
+    .hero-stat-chip strong { color: var(--gold); font-size: 1.1rem; }
+    .hero-stat-chip span { font-size: 0.82rem; color: rgba(226,238,255,0.8); }
+    .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+    .mv-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px 36px; position: relative; overflow: hidden; transition: var(--t); }
+    .mv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: var(--r-xl) var(--r-xl) 0 0; }
+    .mv-card-mission::before { background: var(--grad-cyan); }
+    .mv-card-vision::before { background: var(--grad-teal); }
+    .mv-card-values::before { background: var(--grad-gold); }
+    .mv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--border-card-hover); }
+    .mv-icon { width: 60px; height: 60px; border-radius: var(--r-lg); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 20px; }
+    .mv-card-mission .mv-icon { background: rgba(0,240,255,0.15); color: #00f0ff; }
+    .mv-card-vision .mv-icon { background: rgba(0,245,160,0.15); color: #00f5a0; }
+    .mv-card-values .mv-icon { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .mv-card h3 { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .mv-card p { color: var(--text-body); line-height: 1.75; }
+    .timeline-section { padding: 100px 0; }
+    .timeline-container { position: relative; max-width: 900px; margin: 0 auto; }
+    .timeline-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--cyan), var(--teal), var(--gold)); transform: translateX(-50%); opacity: 0.4; }
+    .timeline-item { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; margin-bottom: 56px; align-items: center; }
+    .tl-content { padding: 0 32px; }
+    .tl-year-badge { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background: var(--grad-teal); color: #fff; font-family: var(--font-heading); font-size: 0.75rem; font-weight: 900; box-shadow: 0 0 24px rgba(0,240,255,0.5); position: relative; z-index: 2; justify-self: center; }
+    .tl-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--r-lg); padding: 24px 28px; backdrop-filter: blur(16px); transition: var(--t); }
+    .tl-card:hover { border-color: var(--border-card-hover); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .tl-card h4 { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .tl-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.6; }
+    .tl-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: var(--r-full); background: var(--teal-soft); color: var(--teal-vivid); border: 1px solid rgba(56,203,86,0.3); margin-bottom: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .values-showcase { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+    .value-item { display: flex; gap: 18px; align-items: flex-start; padding: 24px; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--r-lg); transition: var(--t); }
+    .value-item:hover { border-color: var(--border-card-hover); transform: translateY(-3px); }
+    .value-num { font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; flex-shrink: 0; }
+    .value-item h4 { font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .value-item p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; }
+    .entities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; margin-top: 48px; }
+    .entity-card { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(10,20,48,0.95) 100%); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px; position: relative; overflow: hidden; transition: var(--t); }
+    .entity-card:hover { border-color: var(--border-card-hover); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .entity-logo-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: var(--teal-soft); border: 1px solid rgba(56,203,86,0.3); border-radius: var(--r-full); font-size: 0.78rem; font-weight: 700; color: var(--teal-vivid); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 20px; }
+    .entity-card h3 { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 14px; }
+    .entity-card p { color: var(--text-body); line-height: 1.7; margin-bottom: 20px; }
+    .entity-spec-list { display: flex; flex-direction: column; gap: 8px; }
+    .entity-spec-row { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; }
+    .entity-spec-row .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 6px; }
+    .entity-spec-row span { color: var(--text-body); }
+    @media (max-width: 768px) { .timeline-line { left: 30px; } .timeline-item { grid-template-columns: 60px 1fr; } .timeline-item .tl-content { display: none; } .values-showcase { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="logo-img" /></a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="products.html" class="nav-link">Product Portfolio</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="quality.html" class="nav-link">Quality &amp; USPs</a>
+        <a href="partners.html" class="nav-link">Partners</a>
+        <a href="leadership.html" class="nav-link">Leadership</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></div>
+      <h1 class="page-title">A Legacy Built on <br /><span class="accent">Chemistry &amp; Purpose</span></h1>
+      <p class="page-subtitle">For 17+ years, ADEEP GROUP has been at the forefront of India's pharmaceutical manufacturing revolution — transforming complex chemistry into life-saving medicines that reach patients worldwide.</p>
+      <div class="hero-stats-row">
+        <div class="hero-stat-chip"><strong>Est. 2008</strong><span>Founded in Bidar, Karnataka</span></div>
+        <div class="hero-stat-chip"><strong>&#x20B9;110 Cr+</strong><span>Annual Group Turnover</span></div>
+        <div class="hero-stat-chip"><strong>250+</strong><span>Skilled Professionals</span></div>
+        <div class="hero-stat-chip"><strong>50+</strong><span>Global Pharma Partners</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:80px;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">WHO WE ARE</span>
+        <h2 class="section-title">Driven by Science. Guided by Values.</h2>
+        <p class="section-desc">ADEEP GROUP encompasses <strong>Adeep Life Sciences Pvt Ltd</strong> and <strong>Adeep Laboratories Pvt Ltd</strong> — two integrated entities united by a singular commitment to pharmaceutical excellence.</p>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card mv-card-mission"><div class="mv-icon">🎯</div><h3>Our Mission</h3><p>To be India's most trusted API and advanced intermediate manufacturer — delivering world-class pharmaceutical chemistry that eliminates critical import dependencies and empowers the global generic drug industry.</p></div>
+        <div class="mv-card mv-card-vision"><div class="mv-icon">🔭</div><h3>Our Vision</h3><p>To establish ADEEP as a globally recognized, USFDA-grade API powerhouse by 2028 — leveraging green biocatalysis, enzymatic innovation, and full vertical integration across the pharmaceutical value chain.</p></div>
+        <div class="mv-card mv-card-values"><div class="mv-icon">⭐</div><h3>Our Philosophy</h3><p>We believe great chemistry saves lives. Every molecule we manufacture represents a commitment to purity, safety, and the patients who depend on the medicines we help create. Quality is non-negotiable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">OUR JOURNEY</span>
+        <h2 class="section-title">17+ Years of Milestones</h2>
+        <p class="section-desc">From a single manufacturing unit in Bidar to a multi-site pharmaceutical powerhouse spanning Karnataka, Andhra Pradesh, and Telangana.</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">The journey begins in Bidar, Karnataka with a clear vision to manufacture high-quality APIs domestically.</p></div>
+          <div class="tl-year-badge">2008</div>
+          <div class="tl-card"><div class="tl-tag">Foundation</div><h4>Adeep Life Sciences Pvt Ltd Founded</h4><p>Established at Kolhar Industrial Area, Bidar. First commercial API manufacturing operations launched under WHO-GMP standards.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-card"><div class="tl-tag">Commercial Scale</div><h4>Mirtazapine — Flagship Commercial API</h4><p>Achieved multi-ton commercial scale for Mirtazapine, establishing ADEEP as a preferred domestic supplier to India's top pharma companies.</p></div>
+          <div class="tl-year-badge">2012</div>
+          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">First &#x20B9;50 Cr+ revenue milestone crossed on the back of Mirtazapine commercial ramp-up.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">ISO certifications established the quality management framework across all operations.</p></div>
+          <div class="tl-year-badge">2015</div>
+          <div class="tl-card"><div class="tl-tag">Quality Milestone</div><h4>ISO 9001 / 14001 / 45001 Triple Certification</h4><p>Triple ISO certification achieved — Quality, Environmental, and Occupational Health &amp; Safety management systems fully operational.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-card"><div class="tl-tag">Expansion</div><h4>Adeep Laboratories Pvt Ltd — Unit 3 Launched</h4><p>Subsidiary entity established at YSRJ Mega Hub, Kopparthi, Kadapa, dedicated to complex intermediates and chiral chemistry.</p></div>
+          <div class="tl-year-badge">2018</div>
+          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">Strategic entry into Andhra Pradesh's pharmaceutical corridor with the Kopparthi expansion.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">Green enzyme-catalyzed routes deployed commercially for Brivaracetam.</p></div>
+          <div class="tl-year-badge">2020</div>
+          <div class="tl-card"><div class="tl-tag">Innovation</div><h4>Green Biocatalysis Centre Established</h4><p>Advanced enzymatic synthesis routes deployed commercially, reducing hazardous solvents by 40% and achieving &gt;99.8% chiral purity for Brivaracetam intermediates.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-card"><div class="tl-tag">Regulatory</div><h4>USFDA Accredited Plant Acquired — Hyderabad</h4><p>Strategic acquisition of a USFDA-accredited intermediate manufacturing facility in Hyderabad, securing immediate access to tier-1 regulated markets.</p></div>
+          <div class="tl-year-badge">2023</div>
+          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">A transformational milestone — direct gateway to the global regulated pharmaceutical market.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">&#x20B9;110 Cr+ group turnover, 250+ employees, 4 plants across 3 states.</p></div>
+          <div class="tl-year-badge">2026</div>
+          <div class="tl-card"><div class="tl-tag">Present Day</div><h4>Unit 2 Mega Hub Under Construction</h4><p>Mega-scale greenfield expansion at Kopparthi Kadapa underway. Targeting 5x capacity growth with PLI scheme support and USFDA-compliant mega plant.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-surface);padding:80px 0;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">WHAT WE STAND FOR</span>
+        <h2 class="section-title">Core Values That Define ADEEP</h2>
+        <p class="section-desc">Our values are embedded into every batch we manufacture, every partnership we form, and every decision we make.</p>
+      </div>
+      <div class="values-showcase">
+        <div class="value-item"><div class="value-num">01</div><div><h4>Integrity</h4><p>Uncompromising honesty, full transparency, and ethical compliance across all scientific and commercial dealings.</p></div></div>
+        <div class="value-item"><div class="value-num">02</div><div><h4>Innovation</h4><p>Fostering cutting-edge green chemistry, novel enzymatic pathways, and filing process patents that create sustainable competitive advantages.</p></div></div>
+        <div class="value-item"><div class="value-num">03</div><div><h4>Quality</h4><p>Delivering exceptional cGMP &amp; WHO-compliant APIs that consistently surpass international pharmacopoeia requirements.</p></div></div>
+        <div class="value-item"><div class="value-num">04</div><div><h4>Sustainability</h4><p>Prioritizing green enzymatic biocatalysis, reduced hazardous effluents, and Zero Liquid Discharge across all manufacturing sites.</p></div></div>
+        <div class="value-item"><div class="value-num">05</div><div><h4>Self-Reliance</h4><p>Aligned with India's Make in India &amp; PLI initiatives — eliminating critical API import dependencies to strengthen domestic pharmaceutical sovereignty.</p></div></div>
+        <div class="value-item"><div class="value-num">06</div><div><h4>Partnership</h4><p>Building long-term collaborative relationships with global pharmaceutical leaders — going beyond transactions to create enduring alliances.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">CORPORATE STRUCTURE</span>
+        <h2 class="section-title">Two Entities. One Group. One Vision.</h2>
+        <p class="section-desc">ADEEP GROUP operates through two specialized legal entities, each focused on distinct but complementary aspects of pharmaceutical manufacturing.</p>
+      </div>
+      <div class="entities-grid">
+        <div class="entity-card">
+          <div class="entity-logo-badge">🏭 Flagship Entity</div>
+          <h3>Adeep Life Sciences Pvt Ltd</h3>
+          <p>The primary commercial manufacturing powerhouse — responsible for large-scale API synthesis, quality control, and global supply chain operations.</p>
+          <div class="entity-spec-list">
+            <div class="entity-spec-row"><div class="dot"></div><span>Unit 1 — Kolhar Industrial Area, Bidar, Karnataka</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>Unit 2 — YSRJ Mega Hub, Kopparthi, Kadapa, AP (Under Construction)</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>Unit 4 — USFDA Accredited Plant + Central R&amp;D Hub, Hyderabad</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>Commercial APIs: Mirtazapine, Brivaracetam, Duloxetine, Bilastine</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>WHO-GMP, ISO 9001, ISO 14001, ISO 45001 Certified</span></div>
+          </div>
+        </div>
+        <div class="entity-card">
+          <div class="entity-logo-badge">🔬 Subsidiary Entity</div>
+          <h3>Adeep Laboratories Pvt Ltd</h3>
+          <p>A specialized subsidiary focused on high-purity chemical intermediates, chiral building blocks, and contract development manufacturing for complex synthesis.</p>
+          <div class="entity-spec-list">
+            <div class="entity-spec-row"><div class="dot"></div><span>Unit 3 — YSRJ Mega Hub, Kopparthi, Kadapa, AP</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>Specialization: Complex Heterocyclic Intermediates &amp; Chiral Chemistry</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>Key Products: Brivaracetam Lactone, Mirtazapine &amp; Bilastine Intermediates</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>Custom Synthesis &amp; Contract R&amp;D available under NDA</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>cGMP Compliant, ISO 9001:2015 Certified</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding:80px 0;background:linear-gradient(135deg,rgba(3,5,16,0.98) 0%,rgba(8,16,38,0.95) 100%);border-top:1px solid var(--border-card);">
+    <div class="container" style="text-align:center;">
+      <span class="section-tag">CONNECT WITH US</span>
+      <h2 class="section-title" style="margin-top:12px;">Ready to Partner with ADEEP?</h2>
+      <p class="section-desc" style="margin:0 auto 36px;">Whether sourcing APIs, exploring custom synthesis, or strategic partnerships — our commercial team is ready to engage.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="products.html" class="btn btn-primary btn-lg">Explore Product Portfolio</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Request Quotation</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">Excellency in Chemistry &amp; Green Biocatalysis. A 17+ year legacy advancing India's pharmaceutical manufacturing autonomy across global markets.</p>
+        <div class="footer-cert-badges"><span class="fc-badge">WHO-GMP</span><span class="fc-badge">ISO 9001:2015</span><span class="fc-badge">USFDA Aligned</span><span class="fc-badge">ZLD Eco-Compliance</span></div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About ADEEP Group</a></li>
+          <li><a href="products.html">Product Portfolio</a></li>
+          <li><a href="facilities.html">Manufacturing Sites</a></li>
+          <li><a href="quality.html">Quality &amp; Compliance</a></li>
+          <li><a href="partners.html">Partners &amp; Global Footprint</a></li>
+          <li><a href="leadership.html">Leadership &amp; Governance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">Contact &amp; Corporate HQ</h4>
+        <div class="footer-contact">
+          <p><strong>ADEEP GROUP</strong></p>
+          <p>#1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084</p>
+          <p>Email: <a href="mailto:info@adeeplife.com">info@adeeplife.com</a></p>
+          <p>Phone: <a href="tel:+919515114455">+91 9515114455</a></p>
+        </div>
+        <div class="make-in-india-badge"><span>&#127470;&#127475; Supporting India's Self-Reliance (Make in India)</span></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="copyright">© 2008 - 2026 ADEEP GROUP. All Rights Reserved.</div>
+      <div class="footer-legal"><a href="quality.html">Quality Policy</a><span>•</span><a href="contact.html">Contact Support</a></div>
+    </div>
+  </footer>
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top">↑</button>
+  <script>
+    document.documentElement.setAttribute('data-theme','adeep-signature');
+    (function(){const canvas=document.getElementById('particleCanvas');if(!canvas)return;const ctx=canvas.getContext('2d');let W,H,particles=[];const C=['rgba(0,240,255,','rgba(0,245,160,','rgba(56,189,248,','rgba(168,85,247,'];function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}function P(){this.reset=function(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*2+0.8;this.vx=(Math.random()-.5)*.6;this.vy=(Math.random()-.5)*.6;this.c=C[Math.floor(Math.random()*C.length)];this.a=Math.random()*.5+.2;this.ps=Math.random()*.02+.01;this.pa=Math.random()*Math.PI*2;};this.reset();}function init(){particles=[];const c=Math.min(Math.floor((W*H)/18000),80);for(let i=0;i<c;i++)particles.push(new P());}function draw(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.pa+=p.ps;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c+(p.a+Math.sin(p.pa)*.15)+')';ctx.shadowBlur=6;ctx.shadowColor='rgba(0,240,255,.4)';ctx.fill();ctx.shadowBlur=0;particles.forEach(p2=>{const dx=p.x-p2.x,dy=p.y-p2.y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p2.x,p2.y);ctx.strokeStyle=p.c+(.12*(1-d/100))+')';ctx.lineWidth=.5;ctx.stroke();}});p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W||p.y<0||p.y>H)p.reset();});requestAnimationFrame(draw);}window.addEventListener('resize',()=>{resize();init();});resize();init();draw();})();
+    const header=document.getElementById('mainHeader');const st=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60);st.classList.toggle('visible',window.scrollY>400);});st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    document.getElementById('mobileToggle').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('open'));
+  </script>
+</body>
+</html>
