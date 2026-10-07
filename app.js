@@ -1138,6 +1138,7 @@ function initHeroSlider() {
   const prevBtn = document.getElementById("heroPrevBtn");
   const nextBtn = document.getElementById("heroNextBtn");
   const heroSection = document.getElementById("hero");
+  const splash = document.getElementById("siteSplashScreen");
 
   if (!slides.length) return;
 
@@ -1201,16 +1202,56 @@ function initHeroSlider() {
   // Pause on hover, resume on mouse leave
   if (heroSection) {
     heroSection.addEventListener("mouseenter", stopAutoPlay);
-    heroSection.addEventListener("mouseleave", startAutoPlay);
+    heroSection.addEventListener("mouseleave", () => {
+      if (!splash || splash.classList.contains("splash-hidden") || splash.style.display === "none") {
+        startAutoPlay();
+      }
+    });
   }
 
-  // Initial trigger
+  // ALWAYS guarantee Slide 0 (first image) is shown first
   showSlide(0);
-  startAutoPlay();
+  window.showHeroSlide = showSlide;
+
+  let hasStarted = false;
+  function startSliderWhenVisible() {
+    if (hasStarted) return;
+    hasStarted = true;
+    showSlide(0); // Explicitly ensure first image is displayed when site opens
+    startAutoPlay();
+  }
+
+  window.startHeroSlider = startSliderWhenVisible;
+
+  // Check if splash screen is actively visible
+  const isSplashActive = splash && !splash.classList.contains("splash-hidden") && splash.style.display !== "none";
+
+  if (isSplashActive) {
+    // Wait until splash screen is finished before starting rotation timer
+    window.addEventListener("splashComplete", startSliderWhenVisible, { once: true });
+
+    const observer = new MutationObserver(() => {
+      if (splash.classList.contains("splash-hidden") || splash.style.display === "none") {
+        observer.disconnect();
+        startSliderWhenVisible();
+      }
+    });
+    observer.observe(splash, { attributes: true, attributeFilter: ["class", "style"] });
+
+    setTimeout(() => {
+      if (!hasStarted) startSliderWhenVisible();
+    }, 5000);
+  } else {
+    // No splash screen active, start immediately from slide 0
+    startSliderWhenVisible();
+  }
 }
 
 // ── Premium Biocatalytic Splash Screen Loader ──────────────────────
 function initSplashScreen() {
+  if (window.__splashInitialized) return;
+  window.__splashInitialized = true;
+
   const splash = document.getElementById("siteSplashScreen");
   if (!splash) return;
 
@@ -1235,6 +1276,10 @@ function initSplashScreen() {
     if (finished) return;
     finished = true;
     splash.classList.add("splash-hidden");
+    window.dispatchEvent(new CustomEvent("splashComplete"));
+    if (typeof window.startHeroSlider === "function") {
+      window.startHeroSlider();
+    }
     setTimeout(() => {
       splash.style.display = "none";
     }, 800);

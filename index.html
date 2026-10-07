@@ -74,6 +74,9 @@
     <!-- Self-Contained Splash Screen Engine (Instant Execution) -->
     <script>
       (function() {
+        if (window.__splashInitialized) return;
+        window.__splashInitialized = true;
+
         const splash = document.getElementById('siteSplashScreen');
         if (!splash) return;
         const bar = document.getElementById('splashProgressBar');
@@ -97,6 +100,10 @@
           if (finished) return;
           finished = true;
           splash.classList.add('splash-hidden');
+          window.dispatchEvent(new CustomEvent('splashComplete'));
+          if (typeof window.startHeroSlider === 'function') {
+            window.startHeroSlider();
+          }
           setTimeout(() => {
             splash.style.display = 'none';
           }, 850);
