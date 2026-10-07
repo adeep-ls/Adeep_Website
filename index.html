@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="adeep-signature">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -156,11 +156,12 @@
   <!-- Main Navigation -->
   <header class="site-header" id="mainHeader">
     <div class="container header-container">
-      <a href="#hero" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
         <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
       </a>
 
-      <nav class="nav-menu" id="navMenu">
+            <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="products.html" class="nav-link">Product Portfolio</a>
         <a href="facilities.html" class="nav-link">Facilities</a>
@@ -171,6 +172,7 @@
       </nav>
 
       <div class="header-actions">
+
 
 
         <button class="cart-btn" id="cartOpenBtn" title="Inquiry Basket">
@@ -190,7 +192,7 @@
     <!-- 5-Image Background Slider (Quest Pharma UI/UX) -->
     <div class="hero-bg-slider" id="heroBgSlider">
       <div class="hero-slide active" data-index="0">
-        <img src="assets/hero_slide_1.jpg" alt="ADEEP Excellency in Chemistry & Innovation" class="hero-slide-img" />
+        <img src="assets/hero_cinematic.jpg" alt="ADEEP Excellency in Chemistry & Innovation" class="hero-slide-img" />
       </div>
       <div class="hero-slide" data-index="1">
         <img src="assets/plant_facility.jpg" alt="ADEEP World-Class API Manufacturing Facility" class="hero-slide-img" />
@@ -1198,12 +1200,23 @@
       let W, H, particles = [];
       const mouse = { x: null, y: null, radius: 150 };
 
-      const COLORS = [
-        'rgba(0, 240, 255, ',   // Electric Cyan
-        'rgba(0, 230, 153, ',   // Cyber Emerald
-        'rgba(255, 183, 3, ',   // Gold
-        'rgba(139, 92, 246, '   // Electric Violet
-      ];
+      let COLORS = (window.getThemeColors ? window.getThemeColors() : [
+        'rgba(14, 165, 233, ',   // Sky Sapphire
+        'rgba(20, 184, 166, ',   // Clinical Bio-Teal
+        'rgba(16, 185, 129, ',   // Bio-Emerald
+        'rgba(245, 158, 11, '    // 24K Gold
+      ]);
+
+      window.addEventListener('adeepThemeChanged', () => {
+        if (window.getThemeColors) {
+          COLORS = window.getThemeColors();
+          if (particles && particles.length) {
+            particles.forEach(p => {
+              p.baseColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+            });
+          }
+        }
+      });
 
       function resize() {
         W = canvas.width = window.innerWidth;
@@ -1264,7 +1277,7 @@
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(mouse.x, mouse.y);
-              ctx.strokeStyle = 'rgba(0, 240, 255, ' + (0.35 * (1 - dist / mouse.radius)) + ')';
+              ctx.strokeStyle = (COLORS[0] || 'rgba(20, 184, 166, ') + (0.35 * (1 - dist / mouse.radius)) + ')';
               ctx.lineWidth = 0.8;
               ctx.stroke();
             }
@@ -1275,7 +1288,7 @@
           ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
           ctx.fillStyle = p.baseColor + Math.max(0.1, currentAlpha) + ')';
           ctx.shadowBlur = 8;
-          ctx.shadowColor = 'rgba(0, 240, 255, 0.5)';
+          ctx.shadowColor = (COLORS[1] || 'rgba(16, 185, 129, ') + '0.5)';
           ctx.fill();
           ctx.shadowBlur = 0;
 
@@ -1325,15 +1338,6 @@
       scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
     });
     scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
-
-  <script>
-    // ── Dark Luxury Glass Theme: Electric Cyan & Cyber Emerald ──
-    document.documentElement.setAttribute('data-theme', 'adeep-signature');
-    localStorage.removeItem('adeep-theme');
-    window.getThemeColors = function() {
-      return ['rgba(0,240,255,', 'rgba(0,245,160,', 'rgba(56,189,248,', 'rgba(168,85,247,'];
-    };
   </script>
 </body>
 </html>
