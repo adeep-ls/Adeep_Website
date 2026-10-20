@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adeep-signature">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News &amp; Events | ADEEP GROUP — Press Releases, CPhI &amp; Global Milestones</title>
+  <meta name="description" content="Stay updated with ADEEP GROUP: Press releases, CPhI Worldwide &amp; CPhI India participation, plant expansion milestones, US DMF filings, and green biocatalysis innovations." />
+  <meta name="keywords" content="ADEEP news, CPhI Worldwide Frankfurt ADEEP, pharma press release India, Kopparthi Kadapa pharma expansion, US DMF filings API, pharma exhibitions 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
+  <style>
+    .page-hero {
+      min-height: calc(100vh - 76px); height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 40px 0;
+      overflow: hidden;
+      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.88) 0%, rgba(4, 7, 17, 0.95) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -160px; right: -160px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 65%);
+      pointer-events: none;
+      animation: orbFloat 10s ease-in-out infinite alternate;
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.7); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--teal-vivid); text-decoration: none; }
+    .page-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+    .page-title .accent { background: linear-gradient(135deg, #38bdf8, #0ea5e9, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-subtitle { font-size: 1.12rem; color: rgba(226,238,255,0.88); max-width: 760px; line-height: 1.75; margin-bottom: 34px; }
+
+    /* Filter Bar */
+    .news-filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      justify-content: center;
+    }
+    .news-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 9px 20px;
+      border-radius: var(--r-full);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--t);
+    }
+    .news-filter-btn:hover,
+    .news-filter-btn.active {
+      background: var(--teal-soft);
+      border-color: var(--teal-vivid);
+      color: #fff;
+    }
+
+    /* Featured Story Card */
+    .featured-news-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-2xl);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      margin-bottom: 48px;
+      transition: var(--t);
+    }
+    .featured-news-card:hover {
+      border-color: var(--teal-vivid);
+      box-shadow: 0 20px 45px rgba(14, 165, 233, 0.16);
+    }
+    .fnc-image-wrap { position: relative; min-height: 340px; }
+    .fnc-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .fnc-content { padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; }
+    .fnc-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .fnc-category { background: var(--teal-soft); color: var(--teal-vivid); border: 1px solid var(--teal-vivid); font-size: 0.74rem; font-weight: 800; padding: 4px 12px; border-radius: var(--r-full); text-transform: uppercase; }
+    .fnc-date { font-size: 0.84rem; color: var(--text-muted); font-weight: 600; }
+    .fnc-title { font-size: 1.8rem; font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+    .fnc-desc { font-size: 0.95rem; color: var(--text-body); line-height: 1.7; margin-bottom: 24px; }
+
+    /* News Grid */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .news-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      transition: var(--t);
+      display: flex;
+      flex-direction: column;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--teal-vivid);
+      box-shadow: 0 16px 36px rgba(14, 165, 233, 0.12);
+    }
+    .nc-body { padding: 30px 26px; display: flex; flex-direction: column; flex: 1; }
+    .nc-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .nc-badge { font-size: 0.72rem; font-weight: 800; color: var(--teal-vivid); text-transform: uppercase; letter-spacing: 0.05em; }
+    .nc-date { font-size: 0.78rem; color: var(--text-muted); }
+    .nc-title { font-size: 1.2rem; font-weight: 800; color: #fff; line-height: 1.35; margin-bottom: 12px; }
+    .nc-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; flex: 1; }
+    .nc-footer { margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between; }
+    .nc-link { font-size: 0.84rem; font-weight: 700; color: var(--teal-vivid); text-decoration: none; }
+    .nc-link:hover { text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .featured-news-card { grid-template-columns: 1fr; }
+      .fnc-image-wrap { min-height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Global Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+            <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle active">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item active">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartOpenBtn" title="Inquiry Basket">
+          <svg viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="index.html#inquiry" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>News &amp; Events</span>
+      </div>
+      <h1 class="page-title">
+        Corporate Dispatches, <br />
+        <span class="accent">Events &amp; Industry Milestones</span>
+      </h1>
+      <p class="page-subtitle">
+        Follow ADEEP GROUP’s latest regulatory approvals, high-impact manufacturing capacity expansions, global trade exhibition presence, and technical breakthroughs.
+      </p>
+
+      <div class="hero-badges">
+        <div class="h-badge"><div class="h-badge-dot"></div>CPhI Global Exhibitor</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>Kopparthi Mega Hub 45 Acres</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>US DMF Type II Filings</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>Green Biocatalysis Milestones</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Content Section -->
+  <section class="section" style="padding-top: 60px;">
+    <div class="container">
+      <!-- Filter Bar -->
+      <div class="news-filter-bar">
+        <button class="news-filter-btn active" data-filter="all">All News (6)</button>
+        <button class="news-filter-btn" data-filter="events">Global Trade Events</button>
+        <button class="news-filter-btn" data-filter="expansion">Expansion Updates</button>
+        <button class="news-filter-btn" data-filter="regulatory">Regulatory Filings</button>
+        <button class="news-filter-btn" data-filter="esg">ESG &amp; CSR</button>
+      </div>
+
+      <!-- Featured Story -->
+      <div class="featured-news-card" data-category="events">
+        <div class="fnc-image-wrap">
+          <img src="assets/hero_cinematic.jpg" alt="ADEEP at Global Pharma Trade Shows" />
+        </div>
+        <div class="fnc-content">
+          <div class="fnc-meta">
+            <span class="fnc-category">Global Trade Event</span>
+            <span class="fnc-date">October 2026</span>
+          </div>
+          <h2 class="fnc-title">ADEEP GROUP Showcases Green Biocatalytic APIs at CPhI Worldwide</h2>
+          <p class="fnc-desc">
+            ADEEP’s leadership delegation will present our expanded 30+ commercial API portfolio and novel chiral enzymatic synthesis capabilities at CPhI Worldwide Frankfurt and CPhI India. Meet our technical team to discuss commercial contracts and DMF regulatory dossiers.
+          </p>
+          <div>
+            <a href="contact.html" class="btn btn-primary btn-sm">Schedule Meeting with Leadership</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-grid">
+        <!-- News 1 -->
+        <div class="news-card" data-category="expansion">
+          <div class="nc-body">
+            <div class="nc-meta">
+              <span class="nc-badge">Expansion Milestone</span>
+              <span class="nc-date">September 2026</span>
+            </div>
+            <h3 class="nc-title">Groundbreaking of 45-Acre Mega Pharma Hub at Kopparthi, Kadapa</h3>
+            <p class="nc-desc">
+              Construction of Unit 2 and Unit 3 enters Phase II at APIIC YSRJ Mega Industrial Corridor. The dedicated high-containment blocks will expand group reactor capacity to over 600+ KL.
+            </p>
+            <div class="nc-footer">
+              <span class="nc-link">Read Infrastructure Brief →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- News 2 -->
+        <div class="news-card" data-category="regulatory">
+          <div class="nc-body">
+            <div class="nc-meta">
+              <span class="nc-badge">Regulatory Clearance</span>
+              <span class="nc-date">August 2026</span>
+            </div>
+            <h3 class="nc-title">Successful Zero-483 USFDA Readiness Audit for Hyderabad Unit 4</h3>
+            <p class="nc-desc">
+              Independent international cGMP auditor concludes comprehensive audit of Unit 4 intermediate facility with zero 483-equivalent observations, validating ALCOA+ data integrity systems.
+            </p>
+            <div class="nc-footer">
+              <span class="nc-link">View Regulatory Profile →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- News 3 -->
+        <div class="news-card" data-category="regulatory">
+          <div class="nc-body">
+            <div class="nc-meta">
+              <span class="nc-badge">Product Launch</span>
+              <span class="nc-date">July 2026</span>
+            </div>
+            <h3 class="nc-title">Commercial Scale Launch of High-Purity Brivaracetam &amp; Chiral Building Blocks</h3>
+            <p class="nc-desc">
+              ADEEP scales proprietary non-infringing asymmetric synthesis route for anti-convulsant Brivaracetam API, delivering >99.8% enantiopurity for regulated generic formulation partners.
+            </p>
+            <div class="nc-footer">
+              <span class="nc-link">Explore Molecule Specs →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- News 4 -->
+        <div class="news-card" data-category="esg">
+          <div class="nc-body">
+            <div class="nc-meta">
+              <span class="nc-badge">Sustainability Landmark</span>
+              <span class="nc-date">June 2026</span>
+            </div>
+            <h3 class="nc-title">Commissioning of 1.2 MW Captive Solar Array &amp; Advanced MEE-ZLD Unit</h3>
+            <p class="nc-desc">
+              Bidar flagship facility achieves 100% Zero Liquid Discharge (ZLD) operational status and offsets 35% of utility grid electricity consumption with on-site solar power.
+            </p>
+            <div class="nc-footer">
+              <span class="nc-link">Explore Sustainability Portal →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- News 5 -->
+        <div class="news-card" data-category="regulatory">
+          <div class="nc-body">
+            <div class="nc-meta">
+              <span class="nc-badge">US FDA Filing</span>
+              <span class="nc-date">May 2026</span>
+            </div>
+            <h3 class="nc-title">ADEEP Files 4 New US Type II Drug Master Files (DMF) for High-Growth APIs</h3>
+            <p class="nc-desc">
+              Submission of electronic eCTD dossiers to US FDA covering Duloxetine HCl, Levodopa, and proprietary advanced intermediates to support abbreviated new drug applications (ANDAs).
+            </p>
+            <div class="nc-footer">
+              <span class="nc-link">Request Open-Part Dossiers →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- News 6 -->
+        <div class="news-card" data-category="esg">
+          <div class="nc-body">
+            <div class="nc-meta">
+              <span class="nc-badge">CSR &amp; Community</span>
+              <span class="nc-date">April 2026</span>
+            </div>
+            <h3 class="nc-title">Annual CSR Drive: 10 Rural Clean Drinking Water Kiosks Dedicated in Bidar</h3>
+            <p class="nc-desc">
+              Under the ADEEP Jal Seva initiative, 10 automated Reverse Osmosis clean drinking water kiosks were dedicated to rural communities, benefiting over 15,000 village residents.
+            </p>
+            <div class="nc-footer">
+              <span class="nc-link">Read CSR Impact Report →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Box -->
+      <div style="margin-top: 60px; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(16, 185, 129, 0.12)); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px; text-align: center;">
+        <h3 style="font-size: 1.8rem; font-weight: 900; color: #fff; margin-bottom: 10px;">Subscribe to ADEEP Regulatory &amp; Commercial Bulletins</h3>
+        <p style="color: var(--text-body); max-width: 650px; margin: 0 auto 24px; font-size: 0.95rem;">
+          Receive quarterly notices regarding new DMF filings, product pipeline validations, and upcoming global trade summit schedules.
+        </p>
+        <form style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to ADEEP Corporate Bulletins!'); this.reset();">
+          <input type="email" required placeholder="Enter corporate email..." style="flex: 1; min-width: 260px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-card); border-radius: var(--r-md); padding: 12px 18px; color: #fff; font-size: 0.9rem;" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          A Center for Excellence and Innovation in the Pharmaceutical Industry. Delivering API leadership, green biocatalysis, and robust global compliance since 2008.
+        </p>
+        <div class="footer-entities">
+          <span>• Adeep Life Sciences Pvt. Ltd.</span>
+          <span>• Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Quicklinks</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?therapy=Anti+depressant">Mirtazapine &amp; Duloxetine (CNS)</a></li>
+          <li><a href="products.html?therapy=Anti+convulsant">Brivaracetam &amp; Intermediates</a></li>
+          <li><a href="products.html?therapy=Parkinsons">Entacapone &amp; Levodopa</a></li>
+          <li><a href="products.html?therapy=Anti+bacterial">Moxifloxacin HCl</a></li>
+          <li><a href="products.html?category=speciality">Speciality Chemicals</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Key Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us &amp; Leadership</a></li>
+          <li><a href="facilities.html">Manufacturing Facilities</a></li>
+          <li><a href="quality.html">Quality &amp; Regulatory</a></li>
+          <li><a href="rnd.html">R&amp;D Innovation</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
+          <li><a href="careers.html">Careers &amp; Culture</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Headquarters &amp; Media Desk</h4>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 12px; line-height: 1.5;">
+          #1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084, Telangana, India.
+        </p>
+        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 6px;">
+          Media Contact: <a href="tel:+919515114455" style="color: var(--teal-vivid);">+91 9515114455</a>
+        </div>
+        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 14px;">
+          Email: <a href="mailto:srujanreddyn@adeepgroup.com" style="color: var(--teal-vivid);">srujanreddyn@adeepgroup.com</a>
+        </div>
+        <div class="footer-certs-list">
+          <span class="fc-badge">CPhI Exhibitor</span>
+          <span class="fc-badge">WHO-GMP</span>
+          <span class="fc-badge">USFDA Accredited</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ADEEP GROUP. All Rights Reserved. Excellency in Chemistry.</div>
+      <div class="footer-legal">
+        <a href="contact.html">Contact Us</a>
+        <span>•</span>
+        <a href="downloads.html">Downloads</a>
+        <span>•</span>
+        <a href="sustainability.html">ESG Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=5.0"></script>
+  <script>
+    // News category filter
+    document.querySelectorAll('.news-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.news-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.getAttribute('data-filter');
+        document.querySelectorAll('.news-card, .featured-news-card').forEach(card => {
+          if (f === 'all' || card.getAttribute('data-category') === f) {
+            card.style.display = card.classList.contains('featured-news-card') ? 'grid' : 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

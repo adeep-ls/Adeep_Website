@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adeep-signature">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustainability, ESG &amp; CSR | ADEEP GROUP — Environmental, Social, Governance &amp; Corporate Social Responsibility</title>
+  <meta name="description" content="ADEEP GROUP's auditor-grade Sustainability, ESG &amp; CSR Portal: 100% Zero Liquid Discharge (ZLD), Green Enzymatic Biocatalysis, 92%+ Solvent Recovery, CSR community development, ISO 14001, ISO 45001, and UN SDG alignment." />
+  <meta name="keywords" content="ADEEP Group ESG CSR, environmental social governance pharma, CSR Bidar Karnataka, green chemistry, enzymatic biocatalysis, Zero Liquid Discharge ZLD, solvent recovery pharma, ISO 14001 pharma, ISO 45001 safety" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       ESG & CSR MASTER PORTAL STYLES
+       Sovereign Sapphire · Bio-Emerald · Clinical Precision
+    ═══════════════════════════════════════════════════════════ */
+    .page-hero { 
+      min-height: calc(100vh - 76px); height: calc(100vh - 76px); 
+      display: flex; 
+      align-items: center; 
+      position: relative; 
+      padding: 40px 0; 
+      overflow: hidden; 
+      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.88) 0%, rgba(4, 7, 17, 0.95) 100%), url('assets/hero_green_biocat.jpg') center/cover no-repeat; 
+    }
+    .page-hero::before { 
+      content: ''; 
+      position: absolute; 
+      top: -160px; right: -160px; 
+      width: 700px; height: 700px; 
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, transparent 65%); 
+      pointer-events: none; 
+      animation: orbFloat 10s ease-in-out infinite alternate; 
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.7); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--teal-vivid); text-decoration: none; }
+    .page-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+    .page-title .accent { background: linear-gradient(135deg, #34d399, #10b981, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-subtitle { font-size: 1.12rem; color: rgba(226,238,255,0.88); max-width: 740px; line-height: 1.75; margin-bottom: 34px; }
+
+    /* Sticky Jump Navigation Bar */
+    .sust-subnav-bar {
+      position: sticky;
+      top: 76px;
+      z-index: 900;
+      background: rgba(7, 14, 30, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-card);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .sust-subnav-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sust-subnav-link {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: var(--r-full);
+      text-decoration: none;
+      transition: var(--t);
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sust-subnav-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-card);
+    }
+    .sust-subnav-link.active {
+      color: var(--teal-vivid);
+      background: var(--teal-soft);
+      border-color: var(--teal-vivid);
+    }
+
+    /* Key Metrics Strip */
+    .sust-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .sm-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--t);
+      text-align: center;
+    }
+    .sm-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad-teal); }
+    .sm-card:hover { transform: translateY(-5px); border-color: var(--teal-vivid); box-shadow: 0 16px 36px rgba(16, 185, 129, 0.2); }
+    .sm-value { font-family: var(--font-heading); font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg, #34d399, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px; }
+    .sm-label { font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .sm-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* SDG Alignment Grid */
+    .sdg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 36px;
+    }
+    .sdg-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--t);
+    }
+    .sdg-card:hover { transform: translateY(-5px); border-color: var(--teal-vivid); box-shadow: var(--shadow-md); }
+    .sdg-tag {
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--r-sm);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .sdg-3 { border-left: 4px solid #4c9f38; }
+    .sdg-3 .sdg-tag { background: rgba(76, 159, 56, 0.2); color: #4c9f38; }
+    .sdg-6 { border-left: 4px solid #26bde2; }
+    .sdg-6 .sdg-tag { background: rgba(38, 189, 226, 0.2); color: #26bde2; }
+    .sdg-7 { border-left: 4px solid #fcc30b; }
+    .sdg-7 .sdg-tag { background: rgba(252, 195, 11, 0.2); color: #fcc30b; }
+    .sdg-8 { border-left: 4px solid #a21942; }
+    .sdg-8 .sdg-tag { background: rgba(162, 25, 66, 0.2); color: #e15777; }
+    .sdg-9 { border-left: 4px solid #fd6925; }
+    .sdg-9 .sdg-tag { background: rgba(253, 105, 37, 0.2); color: #fd6925; }
+    .sdg-12 { border-left: 4px solid #bf8b2e; }
+    .sdg-12 .sdg-tag { background: rgba(191, 139, 46, 0.2); color: #bf8b2e; }
+    .sdg-card h4 { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .sdg-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; }
+
+    /* Environment Detailed Cards */
+    .env-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 26px;
+      margin-top: 40px;
+    }
+    .env-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      padding: 34px 28px;
+      position: relative;
+      transition: var(--t);
+    }
+    .env-card:hover { border-color: var(--teal-vivid); transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .env-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--teal-vivid);
+      background: var(--teal-soft);
+      padding: 4px 12px;
+      border-radius: var(--r-full);
+      margin-bottom: 14px;
+      border: 1px solid var(--border-card);
+    }
+    .env-card h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .env-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.68; margin-bottom: 16px; }
+    .env-stats-row {
+      display: flex;
+      gap: 16px;
+      padding: 12px 16px;
+      background: var(--bg-card-secondary);
+      border-radius: var(--r-md);
+      border: 1px solid var(--border-card);
+      margin-bottom: 16px;
+    }
+    .es-item { flex: 1; }
+    .es-val { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 800; color: var(--teal-vivid); }
+    .es-lbl { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; }
+
+    /* Comparison Table */
+    .compare-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-2xl);
+      overflow: hidden;
+      margin-top: 40px;
+    }
+    .cb-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1.3fr 1.3fr;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-card);
+      align-items: center;
+      font-size: 0.88rem;
+    }
+    .cb-head {
+      background: rgba(16, 185, 129, 0.08);
+      font-weight: 800;
+      color: #fff;
+      font-size: 0.94rem;
+    }
+    .cb-row:last-child { border-bottom: none; }
+    .cb-row:hover:not(.cb-head) { background: rgba(255, 255, 255, 0.02); }
+    .param-cell { font-weight: 700; color: #fff; }
+    .conv-cell { color: #f87171; }
+    .adeep-cell { color: var(--teal-vivid); font-weight: 700; }
+
+    /* Safety Dashboard Card */
+    .safety-highlight-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .sh-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(13, 25, 52, 0.75) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: var(--r-xl);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .sh-num { font-family: var(--font-heading); font-size: 2.8rem; font-weight: 900; color: #34d399; line-height: 1; margin-bottom: 6px; }
+    .sh-title { font-size: 0.94rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .sh-sub { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* Performance Progress Trackers */
+    .targets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .target-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      padding: 26px;
+    }
+    .tc-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+    .tc-title { font-size: 0.95rem; font-weight: 800; color: #fff; }
+    .tc-year { font-size: 0.75rem; font-weight: 700; color: var(--teal-vivid); font-family: var(--font-mono); }
+    .tc-bar-bg { width: 100%; height: 8px; background: rgba(255, 255, 255, 0.08); border-radius: 999px; overflow: hidden; margin-bottom: 10px; }
+    .tc-bar-fill { height: 100%; border-radius: 999px; background: var(--grad-teal); }
+    .tc-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); }
+
+    /* Downloads & Documents Grid */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .doc-tile {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-lg);
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: var(--t);
+      text-decoration: none;
+    }
+    .doc-tile:hover {
+      border-color: var(--teal-vivid);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    }
+    .doc-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--r-md);
+      background: rgba(234, 88, 12, 0.15);
+      border: 1px solid rgba(234, 88, 12, 0.35);
+      color: #ea580c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .doc-info h4 { font-size: 0.92rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .doc-info span { font-size: 0.76rem; color: var(--text-muted); }
+
+    /* Photo Gallery Grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 36px;
+    }
+    .photo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      transition: var(--t);
+    }
+    .photo-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--teal-vivid);
+      box-shadow: var(--shadow-lg);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s var(--ease);
+    }
+    .photo-card:hover img { transform: scale(1.05); }
+    .photo-caption { padding: 18px 20px; }
+    .photo-caption h4 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .photo-caption p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    @media (max-width: 768px) {
+      .cb-row { grid-template-columns: 1fr; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+      <!-- Master Navigation Menu with Dropdowns -->
+            <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle active">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item active">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-trigger-btn" id="cartTrigger" aria-label="Open Inquiry Basket">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Jump Navigation Sub-Bar -->
+  <div class="sust-subnav-bar">
+    <div class="container sust-subnav-container">
+      <a href="#commitment" class="sust-subnav-link">1. Sustainability Commitment</a>
+      <a href="#environment" class="sust-subnav-link">2. Environment &amp; ZLD</a>
+      <a href="#safety" class="sust-subnav-link">3. Health &amp; Safety</a>
+      <a href="#csr" class="sust-subnav-link">4. Social Responsibility (CSR)</a>
+      <a href="#governance" class="sust-subnav-link">5. Governance &amp; Ethics</a>
+      <a href="#certifications" class="sust-subnav-link">6. Certifications</a>
+      <a href="#targets" class="sust-subnav-link">7. Targets &amp; Performance</a>
+      <a href="#downloads" class="sust-subnav-link">8. Photos &amp; Downloads</a>
+    </div>
+  </div>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Sustainability, ESG &amp; CSR</span>
+      </div>
+      <h1 class="page-title">
+        Sustainability, ESG &amp; <br />
+        <span class="accent">Corporate Social Responsibility (CSR)</span>
+      </h1>
+      <p class="page-subtitle">
+        Pioneering responsible pharmaceutical manufacturing across India and global supply chains. Guided by 100% Zero Liquid Discharge (ZLD), biocatalytic green chemistry, circular solvent recycling, community education and healthcare CSR initiatives, and transparent corporate governance.
+      </p>
+
+      <!-- Key Impact Metrics Strip -->
+      <div class="sust-metrics-grid">
+        <div class="sm-card">
+          <div class="sm-value">100%</div>
+          <div class="sm-label">Zero Liquid Discharge</div>
+          <div class="sm-desc">Full RO, MEE, and ATFD recovery. Zero effluent discharged beyond plant boundaries.</div>
+        </div>
+        <div class="sm-card">
+          <div class="sm-value">&gt;92%</div>
+          <div class="sm-label">Solvent Recovery Rate</div>
+          <div class="sm-desc">Dedicated fractional distillation columns enabling closed-loop solvent recirculation.</div>
+        </div>
+        <div class="sm-card">
+          <div class="sm-value">40%</div>
+          <div class="sm-label">Solvent Intensity Cut</div>
+          <div class="sm-desc">Enzymatic biocatalysis routes replace volatile petrochemicals in chiral APIs.</div>
+        </div>
+        <div class="sm-card">
+          <div class="sm-value">1,420+</div>
+          <div class="sm-label">LTI-Free Days</div>
+          <div class="sm-desc">Exemplary workplace safety performance certified under ISO 45001:2018.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Our Commitment -->
+  <section class="section" id="commitment">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 1: OUR COMMITMENT</span>
+        <h2 class="section-title">ESG &amp; CSR Policy Statement &amp; Global SDG Alignment</h2>
+        <p class="section-desc">Our charter aligns day-to-day chemical synthesis operations with the United Nations Sustainable Development Goals to ensure environmental preservation and sustainable societal impact.</p>
+      </div>
+
+      <div class="about-feature-box" style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--r-2xl); padding: 40px; margin-bottom: 40px;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800; color: #fff; margin-bottom: 14px;">Official ADEEP ESG &amp; Sustainability Policy Statement</h3>
+        <p style="font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 18px;">
+          "At ADEEP GROUP, we consider environmental protection, worker safety, and ethical corporate governance to be inseparable from chemical excellence. We pledge to design and operate our manufacturing facilities to eliminate hazardous effluent, minimize our carbon footprint, protect our workforce from harm, and continuously advance green biocatalysis as the future of pharmaceutical synthesis."
+        </p>
+        <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--teal-vivid);">
+          Approved by the Board of Directors — Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd
+        </div>
+      </div>
+
+      <div class="sdg-grid">
+        <div class="sdg-card sdg-3">
+          <span class="sdg-tag">UN SDG 3</span>
+          <h4>Good Health &amp; Well-Being</h4>
+          <p>Delivering high-purity, affordable APIs and intermediates for critical CNS, antibacterial, and cardio therapeutics globally.</p>
+        </div>
+        <div class="sdg-card sdg-6">
+          <span class="sdg-tag">UN SDG 6</span>
+          <h4>Clean Water &amp; Sanitation</h4>
+          <p>100% Zero Liquid Discharge infrastructure recycling all industrial water back into cooling towers and boilers.</p>
+        </div>
+        <div class="sdg-card sdg-7">
+          <span class="sdg-tag">UN SDG 7</span>
+          <h4>Affordable &amp; Clean Energy</h4>
+          <p>Captive rooftop solar array and biomass steam generation displacing fossil fuel grid consumption.</p>
+        </div>
+        <div class="sdg-card sdg-8">
+          <span class="sdg-tag">UN SDG 8</span>
+          <h4>Decent Work &amp; Economic Growth</h4>
+          <p>Living wages, strict anti-child labor enforcement, and comprehensive health coverage for our 250+ employees.</p>
+        </div>
+        <div class="sdg-card sdg-9">
+          <span class="sdg-tag">UN SDG 9</span>
+          <h4>Industry, Innovation &amp; Infrastructure</h4>
+          <p>State-of-the-art enzymatic biocatalysis suite engineered under India's national PLI self-reliance scheme.</p>
+        </div>
+        <div class="sdg-card sdg-12">
+          <span class="sdg-tag">UN SDG 12</span>
+          <h4>Responsible Consumption &amp; Production</h4>
+          <p>Over 92% solvent recovery and hazardous waste co-processing in cement kilns ensuring zero landfill disposal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Environment -->
+  <section class="section" id="environment" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 2: ENVIRONMENTAL STEWARDSHIP</span>
+        <h2 class="section-title">Green Chemistry, Zero Liquid Discharge &amp; Air Control</h2>
+        <p class="section-desc">Real operational data demonstrating our closed-loop environmental management systems across Bidar, Kadapa, and Hyderabad facilities.</p>
+      </div>
+
+      <div class="env-grid">
+        <!-- Green Chemistry -->
+        <div class="env-card">
+          <span class="env-badge">🧪 Green Biocatalysis</span>
+          <h3>Enzymatic Synthesis &amp; Atom Economy</h3>
+          <p>Commercial deployment of engineered transaminases, ketoreductases, and hydrolases replaces heavy transition metals (Pd, Ru, Rh) with biological catalysts, slashing organic solvent usage by 40% and lowering E-Factor waste generation.</p>
+          <div class="env-stats-row">
+            <div class="es-item"><div class="es-val">&gt;99.8%</div><div class="es-lbl">Chiral Enantiopurity</div></div>
+            <div class="es-item"><div class="es-val">35 kg</div><div class="es-lbl">Low Process E-Factor</div></div>
+          </div>
+          <ul class="pillar-bullets">
+            <li>Aqueous reaction media (25°C – 37°C ambient)</li>
+            <li>Elimination of toxic metal catalyst carryover</li>
+            <li>Significant reduction in greenhouse gas emissions</li>
+          </ul>
+        </div>
+
+        <!-- Solvent Recovery -->
+        <div class="env-card">
+          <span class="env-badge">🔄 Circular Solvent Loop</span>
+          <h3>Solvent Recovery &amp; Fractionation</h3>
+          <p>Equipped with multi-stage packed distillation columns capable of continuous high-purity fractionation, recovering process solvents back to pharmacopoeial grade specifications for immediate loop reuse.</p>
+          <div class="env-stats-row">
+            <div class="es-item"><div class="es-val">92.4%</div><div class="es-lbl">Audited Recovery</div></div>
+            <div class="es-item"><div class="es-val">800 KL+</div><div class="es-lbl">Annual Solvent Saved</div></div>
+          </div>
+          <ul class="pillar-bullets">
+            <li>Dedicated distillation for high-value process solvents</li>
+            <li>Closed-circuit vapour lines prevent VOC leaks</li>
+            <li>Strict GC analysis validation prior to solvent re-entry</li>
+          </ul>
+        </div>
+
+        <!-- Effluent Treatment & ZLD -->
+        <div class="env-card">
+          <span class="env-badge">💧 100% ZLD Facility</span>
+          <h3>Effluent Treatment &amp; Water Recovery</h3>
+          <p>Comprehensive on-site Effluent Treatment Plant (ETP) featuring biological treatment, multi-stage Reverse Osmosis (RO), Multiple Effect Evaporator (MEE), and Agitated Thin Film Dryer (ATFD). Zero liquid effluent leaves the site.</p>
+          <div class="env-stats-row">
+            <div class="es-item"><div class="es-val">100%</div><div class="es-lbl">Zero Liquid Discharge</div></div>
+            <div class="es-item"><div class="es-val">150 KLD</div><div class="es-lbl">ZLD Processing Cap</div></div>
+          </div>
+          <ul class="pillar-bullets">
+            <li>Permeate water recycled to boilers and cooling towers</li>
+            <li>Dry inorganic salts dispatched to authorized TSDF facilities</li>
+            <li>Automated real-time TDS and TOC continuous sensors</li>
+          </ul>
+        </div>
+
+        <!-- Air Emission Control -->
+        <div class="env-card">
+          <span class="env-badge">💨 24/7 Stack Monitoring</span>
+          <h3>Air Emission Control &amp; Scrubbers</h3>
+          <p>Multi-stage vent gas scrubbing network (two-stage caustic scrubbers, acid scrubbers, and activated carbon adsorption units) neutralizes exhaust vapours. Real-time CEMS telemetry transmits emission levels directly to the SPCB server.</p>
+          <div class="env-stats-row">
+            <div class="es-item"><div class="es-val">&lt;30 mg</div><div class="es-lbl">PM Stack Emission</div></div>
+            <div class="es-item"><div class="es-val">100%</div><div class="es-lbl">CEMS Uptime</div></div>
+          </div>
+          <ul class="pillar-bullets">
+            <li>Stack emissions strictly compliant with MOEF standards</li>
+            <li>Zero chemical odour detected beyond plant perimeters</li>
+            <li>Dust collectors and pulse-jet bag filters across solids area</li>
+          </ul>
+        </div>
+
+        <!-- Waste Management -->
+        <div class="env-card">
+          <span class="env-badge">♻️ Co-Processing</span>
+          <h3>Hazardous Waste Co-Processing</h3>
+          <p>Hazardous organic wastes (distillation residues, spent carbon, organic cakes) are diverted entirely from landfills and sent for high-temperature co-processing in cement kilns as alternative fuel, supporting circular industrial symbiosis.</p>
+          <div class="env-stats-row">
+            <div class="es-item"><div class="es-val">0 kg</div><div class="es-lbl">Organic Waste to Landfill</div></div>
+            <div class="es-item"><div class="es-val">100%</div><div class="es-lbl">Traceable TSDF Manifests</div></div>
+          </div>
+          <ul class="pillar-bullets">
+            <li>Cement kiln co-processing eliminates landfill residue</li>
+            <li>Digital manifest tracking integrated with state boards</li>
+            <li>Flameproof dedicated storage yards with secondary containment</li>
+          </ul>
+        </div>
+
+        <!-- Renewable Energy & Green Belt -->
+        <div class="env-card">
+          <span class="env-badge">🌿 Green Energy &amp; Biodiversity</span>
+          <h3>Solar Integration &amp; 33% Green Cover</h3>
+          <p>Over 1.2 MW of captive rooftop solar installations provide clean power for auxiliary utilities. Over 33% of our industrial campus area is dedicated to a dense green belt containing 12,000+ native trees and rainwater recharge wells.</p>
+          <div class="env-stats-row">
+            <div class="es-item"><div class="es-val">1.2 MW</div><div class="es-lbl">Solar Installed</div></div>
+            <div class="es-item"><div class="es-val">33%+</div><div class="es-lbl">Campus Green Belt</div></div>
+          </div>
+          <ul class="pillar-bullets">
+            <li>12,000+ native oxygenating trees planted across campuses</li>
+            <li>15,000 kL annual rainwater groundwater recharge capacity</li>
+            <li>Variable Frequency Drives (VFDs) on all pumps &amp; fans</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Comparative Green Chemistry Matrix -->
+      <div class="compare-box">
+        <div class="cb-row cb-head">
+          <div>Manufacturing Parameter</div>
+          <div>Conventional Chemical Route</div>
+          <div>ADEEP Green Biocatalysis Route</div>
+        </div>
+        <div class="cb-row">
+          <div class="param-cell">Reaction Medium</div>
+          <div class="conv-cell">Hazardous organic solvents (DMF, DCM, Toluene)</div>
+          <div class="adeep-cell">Aqueous buffer / Green solvents (&gt;75% water-based)</div>
+        </div>
+        <div class="cb-row">
+          <div class="param-cell">Operating Temperature</div>
+          <div class="conv-cell">Extreme cryogenic (-78°C) or high heat (&gt;120°C)</div>
+          <div class="adeep-cell">Ambient physiological conditions (25°C – 35°C)</div>
+        </div>
+        <div class="cb-row">
+          <div class="param-cell">Energy Intensity</div>
+          <div class="conv-cell">Heavy chilling and prolonged high-temp thermal cycles</div>
+          <div class="adeep-cell">Up to 45% electricity reduction via mild kinetics</div>
+        </div>
+        <div class="cb-row">
+          <div class="param-cell">Chiral Purity (Enantiopurity)</div>
+          <div class="conv-cell">95% – 97% (requires multi-step recrystallization)</div>
+          <div class="adeep-cell">&gt;99.8% ee achieved directly in single enzyme step</div>
+        </div>
+        <div class="cb-row">
+          <div class="param-cell">Waste Generation (E-Factor)</div>
+          <div class="conv-cell">80 – 120 kg waste per 1 kg of finished API</div>
+          <div class="adeep-cell">25 – 35 kg waste per 1 kg of finished API (65% cut)</div>
+        </div>
+        <div class="cb-row">
+          <div class="param-cell">Heavy Metal Impurities</div>
+          <div class="conv-cell">Toxic Ruthenium, Palladium, or Platinum catalyst residues</div>
+          <div class="adeep-cell">100% Bio-enzymatic (Zero heavy metal residues)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Health, Safety & Governance (HSG / EHS) -->
+  <section class="section" id="safety">
+    <div id="hsg" style="position:relative; top:-100px;"></div>
+
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 3: HEALTH &amp; SAFETY</span>
+        <h2 class="section-title">Zero-Harm Culture &amp; Process Safety Management</h2>
+        <p class="section-desc">Certified under ISO 45001:2018, ADEEP enforces rigorous process hazard assessments, active industrial hygiene, and extensive safety training across all shifts.</p>
+      </div>
+
+      <!-- Real Safety Statistics -->
+      <div class="safety-highlight-strip">
+        <div class="sh-box">
+          <div class="sh-num">1,420+</div>
+          <div class="sh-title">Days Without Lost-Time Injury</div>
+          <div class="sh-sub">Verified continuous zero-LTI operation</div>
+        </div>
+        <div class="sh-box">
+          <div class="sh-num">100%</div>
+          <div class="sh-title">HAZOP Review Compliance</div>
+          <div class="sh-sub">Every product scale-up fully audited</div>
+        </div>
+        <div class="sh-box">
+          <div class="sh-num">24 Hrs</div>
+          <div class="sh-title">Annual EHS Training / Worker</div>
+          <div class="sh-sub">Mandatory certified safety modules</div>
+        </div>
+        <div class="sh-box">
+          <div class="sh-num">Zero</div>
+          <div class="sh-title">Fatalities Since Inception</div>
+          <div class="sh-sub">17+ year pristine industrial safety track record</div>
+        </div>
+      </div>
+
+      <div class="pillar-grid" style="margin-top: 36px;">
+        <div class="pillar-card p-ehs">
+          <div class="pillar-header">
+            <div class="pillar-icon-box">🛡️</div>
+            <div><h3>Process Safety &amp; HAZOP</h3></div>
+          </div>
+          <p>Every commercial chemical process undergoes rigorous Hazard and Operability (HAZOP) studies, differential scanning calorimetry (DSC), and reaction runaway hazard modeling before plant loading.</p>
+          <ul class="pillar-bullets">
+            <li>Automated emergency nitrogen blanketing across all reactors</li>
+            <li>Rupture discs and safety relief valves calibrated quarterly</li>
+            <li>Flameproof (Ex-d) electrical classification across all solvent areas</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card p-zld">
+          <div class="pillar-header">
+            <div class="pillar-icon-box">🚒</div>
+            <div><h3>Fire Safety &amp; Emergency Readiness</h3></div>
+          </div>
+          <p>Our dedicated fire hydrant ring network with automatic diesel backup pumps maintains 8.0 kg/cm² pressure across the entire industrial perimeter. Medium-velocity water spray systems guard bulk solvent tanks.</p>
+          <ul class="pillar-bullets">
+            <li>On-site trained Emergency Response Team (ERT) on all shifts</li>
+            <li>Monthly unannounced evacuation and fire drills</li>
+            <li>Automated flammable gas leak detectors tied to central alarms</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card p-bio">
+          <div class="pillar-header">
+            <div class="pillar-icon-box">🩺</div>
+            <div><h3>Occupational Hygiene &amp; Health</h3></div>
+          </div>
+          <p>Comprehensive pre-employment and annual health checkups for 100% of personnel, including pulmonary function tests, liver function tests, audiometry, and continuous workplace solvent vapor exposure monitoring.</p>
+          <ul class="pillar-bullets">
+            <li>Personal air sampling monitors for workplace solvent threshold limits</li>
+            <li>Top-grade personal protective equipment (PPE) provided to all</li>
+            <li>Full-time occupational health nurse and on-campus clinic</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Social Responsibility (CSR) -->
+  <section class="section" id="csr" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 4: SOCIAL RESPONSIBILITY</span>
+        <h2 class="section-title">Community Empowerment &amp; Human Capital</h2>
+        <p class="section-desc">We foster inclusive growth by prioritizing local hiring, gender diversity in scientific roles, clean village drinking water projects, and science education scholarships.</p>
+      </div>
+
+      <div class="pillar-grid">
+        <div class="pillar-card p-solar">
+          <div class="pillar-header">
+            <div class="pillar-icon-box">🎓</div>
+            <div><h3>Youth &amp; Science Education</h3></div>
+          </div>
+          <p>Sponsoring laboratories, library infrastructure, and merit-cum-means scholarships for underprivileged science students in Bidar and neighboring rural districts.</p>
+          <ul class="pillar-bullets">
+            <li>Annual ADEEP Chemistry Scholarships awarded to 50+ students</li>
+            <li>Apprenticeship training program with government polytechnics</li>
+            <li>School infrastructure upgrades and computer labs in rural areas</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card p-bio">
+          <div class="pillar-header">
+            <div class="pillar-icon-box">🏥</div>
+            <div><h3>Healthcare &amp; Clean Water Access</h3></div>
+          </div>
+          <p>Constructed high-capacity community reverse osmosis water purification kiosks providing safe drinking water to over 8,000 residents in villages surrounding Kolhar Industrial Area.</p>
+          <ul class="pillar-bullets">
+            <li>Free community RO drinking water kiosks in 4 adjacent villages</li>
+            <li>Quarterly free general health and eye screening camps</li>
+            <li>Essential pharmaceutical medicine support for primary health centers</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card p-cems">
+          <div class="pillar-header">
+            <div class="pillar-icon-box">👥</div>
+            <div><h3>Inclusive Workplace &amp; Fair Labor</h3></div>
+          </div>
+          <p>Over 65% of our technical and operations workforce is recruited directly from Karnataka and Andhra Pradesh. We enforce strict equal-opportunity and non-discrimination charters.</p>
+          <ul class="pillar-bullets">
+            <li>Zero child labor and zero forced labor policy strictly audited</li>
+            <li>Women in Chemistry leadership initiative across R&amp;D and Quality</li>
+            <li>Subsidized dining, transportation, and comprehensive family medical insurance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Governance & Ethics -->
+  <section class="section" id="governance">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 5: GOVERNANCE &amp; ETHICS</span>
+        <h2 class="section-title">Integrity, Responsible Sourcing &amp; ALCOA+</h2>
+        <p class="section-desc">Our corporate governance framework guarantees transparency, zero corruption tolerance, and scientific data integrity aligned with USFDA and global regulatory standards.</p>
+      </div>
+
+      <div class="sdg-grid">
+        <div class="sdg-card sdg-8">
+          <span class="sdg-tag">ETHICS</span>
+          <h4>Code of Business Conduct</h4>
+          <p>Uncompromising commitment to ethical competition, transparent commercial transactions, and zero tolerance for bribery or unethical inducement.</p>
+        </div>
+        <div class="sdg-card sdg-9">
+          <span class="sdg-tag">DATA INTEGRITY</span>
+          <h4>ALCOA+ Compliance</h4>
+          <p>Complete 21 CFR Part 11 compliant digital audit trails on all HPLC, GC, and FTIR spectrophotometers preventing any manual test data manipulation.</p>
+        </div>
+        <div class="sdg-card sdg-12">
+          <span class="sdg-tag">SUPPLY CHAIN</span>
+          <h4>Responsible Vendor Sourcing</h4>
+          <p>Mandatory vendor EHS audits and supplier codes of conduct guaranteeing raw materials are sourced without child labor or environmental non-compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Certifications & Compliance -->
+  <section class="section" id="certifications" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 6: FORMAL AUDITS &amp; CERTIFICATIONS</span>
+        <h2 class="section-title">Recognized by Global &amp; National Regulators</h2>
+        <p class="section-desc">Our integrated management systems are independently audited and accredited by leading international certification registries.</p>
+      </div>
+
+      <div class="sust-cert-grid">
+        <div class="sust-cert-card">
+          <div class="scc-icon">🌿</div>
+          <h4>ISO 14001:2015</h4>
+          <p>Environmental Management System (Certificate No: EMS-2023-ADEEP). Validated emission control and water stewardship.</p>
+        </div>
+        <div class="sust-cert-card">
+          <div class="scc-icon">🛡️</div>
+          <h4>ISO 45001:2018</h4>
+          <p>Occupational Health and Safety Management Systems. Zero-accident safety governance audited by third-party bodies.</p>
+        </div>
+        <div class="sust-cert-card">
+          <div class="scc-icon">📜</div>
+          <h4>ZLD Consent For Operation</h4>
+          <p>State Pollution Control Board Consent For Operation (CFO) valid and current for manufacturing all commercial API blocks.</p>
+        </div>
+        <div class="sust-cert-card">
+          <div class="scc-icon">🌐</div>
+          <h4>Responsible Care Aligned</h4>
+          <p>Implementing global chemical industry Responsible Care principles for continuous ecological improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Targets & Performance -->
+  <section class="section" id="targets">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 7: TARGETS &amp; PROGRESS DATA</span>
+        <h2 class="section-title">Measurable Goals for a Low-Carbon Future</h2>
+        <p class="section-desc">Transparent tracking of our environmental key performance indicators against multi-year decarbonization roadmaps.</p>
+      </div>
+
+      <div class="targets-grid">
+        <div class="target-card">
+          <div class="tc-header">
+            <span class="tc-title">Solvent Recovery Rate</span>
+            <span class="tc-year">Target: 95% by 2026</span>
+          </div>
+          <div class="tc-bar-bg"><div class="tc-bar-fill" style="width: 92%;"></div></div>
+          <div class="tc-meta"><span>Current: 92.4%</span><span>Target: 95.0%</span></div>
+        </div>
+
+        <div class="target-card">
+          <div class="tc-header">
+            <span class="tc-title">Freshwater Intake Reduction</span>
+            <span class="tc-year">Target: 40% by 2027</span>
+          </div>
+          <div class="tc-bar-bg"><div class="tc-bar-fill" style="width: 70%;"></div></div>
+          <div class="tc-meta"><span>Current: 28% cut</span><span>Target: 40% cut</span></div>
+        </div>
+
+        <div class="target-card">
+          <div class="tc-header">
+            <span class="tc-title">Renewable Energy Share</span>
+            <span class="tc-year">Target: 45% by 2027</span>
+          </div>
+          <div class="tc-bar-bg"><div class="tc-bar-fill" style="width: 48%;"></div></div>
+          <div class="tc-meta"><span>Current: 22% Solar</span><span>Target: 45% Solar+Biomass</span></div>
+        </div>
+
+        <div class="target-card">
+          <div class="tc-header">
+            <span class="tc-title">Organic Waste Co-Processing</span>
+            <span class="tc-year">Target: 100% Achieved</span>
+          </div>
+          <div class="tc-bar-bg"><div class="tc-bar-fill" style="width: 100%;"></div></div>
+          <div class="tc-meta"><span>Current: 100% (Zero Landfill)</span><span>Target: 100%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Photos & Downloads -->
+  <section class="section" id="downloads" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PILLAR 8: AUDITOR RESOURCES &amp; GALLERY</span>
+        <h2 class="section-title">Facility Photos &amp; Downloadable Documents</h2>
+        <p class="section-desc">Pharma buyers and regulatory auditors can download verified EHS policies, certification copies, and view facility infrastructure.</p>
+      </div>
+
+      <!-- Infrastructure Photos -->
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="assets/plant_facility.jpg" alt="ADEEP Zero Liquid Discharge Plant &amp; MEE" />
+          <div class="photo-caption">
+            <h4>Zero Liquid Discharge (ZLD) Plant</h4>
+            <p>Multi-stage Reverse Osmosis and Multiple Effect Evaporator system at Unit 1 Bidar.</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="assets/hero_green_biocat.jpg" alt="Enzymatic Biocatalysis Reaction Suite" />
+          <div class="photo-caption">
+            <h4>Enzymatic Biocatalysis Suite</h4>
+            <p>Green aqueous enzyme synthesis vessels delivering &gt;99.8% ee chiral APIs.</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="assets/hero_lab.jpg" alt="Analytical QC Lab &amp; CEMS Emission Monitoring" />
+          <div class="photo-caption">
+            <h4>Environmental Monitoring Lab</h4>
+            <p>Real-time gas chromatography and CEMS continuous emission telemetry center.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Downloadable Policy & Audit Documents -->
+      <div class="doc-grid">
+        <a href="contact.html?req=ehs-policy" class="doc-tile">
+          <div class="doc-icon">📄</div>
+          <div class="doc-info">
+            <h4>ADEEP EHS Policy Statement</h4>
+            <span>PDF Document • Official Board Approved Policy</span>
+          </div>
+        </a>
+        <a href="contact.html?req=iso-14001" class="doc-tile">
+          <div class="doc-icon">🌿</div>
+          <div class="doc-info">
+            <h4>ISO 14001:2015 Certificate Copy</h4>
+            <span>PDF Certificate • Environmental Management</span>
+          </div>
+        </a>
+        <a href="contact.html?req=iso-45001" class="doc-tile">
+          <div class="doc-icon">🛡️</div>
+          <div class="doc-info">
+            <h4>ISO 45001:2018 Certificate Copy</h4>
+            <span>PDF Certificate • Occupational Health &amp; Safety</span>
+          </div>
+        </a>
+        <a href="contact.html?req=zld-audit" class="doc-tile">
+          <div class="doc-icon">💧</div>
+          <div class="doc-info">
+            <h4>Zero Liquid Discharge (ZLD) Audit Summary</h4>
+            <span>PDF Report • Technical Water Balance Audit</span>
+          </div>
+        </a>
+        <a href="contact.html?req=sustainability-report" class="doc-tile">
+          <div class="doc-icon">📊</div>
+          <div class="doc-info">
+            <h4>Annual Sustainability &amp; ESG Report 2025-26</h4>
+            <span>Comprehensive Auditor Factsheet &amp; Data Metrics</span>
+          </div>
+        </a>
+        <a href="contact.html?req=csr-charter" class="doc-tile">
+          <div class="doc-icon">🤝</div>
+          <div class="doc-info">
+            <h4>Corporate Social Responsibility (CSR) Charter</h4>
+            <span>Community Initiatives, Scholarships &amp; Water Kiosks</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Technical Inquiry CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="inquiry-cta-box" style="background: radial-gradient(ellipse at 50% 20%, rgba(16, 185, 129, 0.2) 0%, rgba(13, 25, 52, 0.95) 100%); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: var(--r-2xl); padding: 50px 40px; text-align: center; position: relative; overflow: hidden;">
+        <h2 style="font-family: var(--font-heading); font-size: 2.3rem; font-weight: 900; color: #fff; margin-bottom: 14px;">Schedule an ESG &amp; CSR Audit</h2>
+        <p style="font-size: 1.08rem; color: rgba(226, 238, 255, 0.85); max-width: 680px; margin: 0 auto 30px; line-height: 1.7;">
+          Request verified ESG dossiers, plant environmental audit reports, or explore contract enzymatic synthesis with our regulatory technical team.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request ESG Technical Dossier →</a>
+          <a href="products.html" class="btn btn-outline btn-lg">Explore Sustainable API Catalog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-Over Inquiry Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div class="cart-title-row">
+        <h3>Inquiry Basket</h3>
+        <span class="cart-count-badge" id="drawerCartCount">0 Molecules</span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Basket">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="ce-icon">📋</div>
+        <h4>Your Basket is Empty</h4>
+        <p>Browse our commercial APIs or intermediates table and click "Inquire" to add molecules to this RFQ.</p>
+        <button class="btn btn-sm btn-primary" onclick="closeCart()">Browse Products</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-total-note">
+        <span>Selected for technical quotation &amp; sample review.</span>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-block" id="proceedToRfqBtn">Proceed to Request Quote →</a>
+      <button class="btn btn-text btn-block" id="clearCartBtn">Clear Basket</button>
+    </div>
+  </aside>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          Excellency in Chemistry &amp; Green Biocatalysis. A 17+ year legacy advancing India's pharmaceutical manufacturing autonomy across global markets.
+        </p>
+        <div class="footer-cert-badges">
+          <span class="fc-badge">WHO-GMP</span>
+          <span class="fc-badge">ISO 9001:2015</span>
+          <span class="fc-badge">ISO 14001:2015</span>
+          <span class="fc-badge">ISO 45001:2018</span>
+          <span class="fc-badge">ZLD Compliant</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About ADEEP Group</a></li>
+          <li><a href="products.html">Product Portfolio</a></li>
+          <li><a href="facilities.html">Manufacturing Facilities</a></li>
+          <li><a href="quality.html">Quality &amp; Regulatory</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
+          <li><a href="partners.html">Partners &amp; Global Footprint</a></li>
+          <li><a href="leadership.html">Leadership &amp; Governance</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Key Therapeutic Classes</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?therapy=Anti+depressant">Mirtazapine &amp; Duloxetine (CNS)</a></li>
+          <li><a href="products.html?therapy=Anti+convulsant">Brivaracetam &amp; Intermediates</a></li>
+          <li><a href="products.html?therapy=Parkinsons">Entacapone &amp; Levodopa</a></li>
+          <li><a href="products.html?therapy=Anti+bacterial">Moxifloxacin HCl</a></li>
+          <li><a href="products.html?therapy=Glaucoma">Dorzolamide &amp; Chiral Intermediates</a></li>
+          <li><a href="products.html?category=speciality">Speciality Chemicals &amp; n-Butyl Lithium</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Contact &amp; Corporate HQ</h4>
+        <div class="footer-contact">
+          <p><strong>ADEEP GROUP</strong></p>
+          <p>Kolhar Industrial Area, Bidar – 585401, Karnataka, India</p>
+          <p>Email: <a href="mailto:info@adeeplife.com">info@adeeplife.com</a></p>
+          <p>Support: <a href="mailto:bd@adeeplife.com">bd@adeeplife.com</a></p>
+          <p>Phone: +91 8482 225 678</p>
+        </div>
+        <div class="make-in-india-badge">
+          <span>🇮🇳 Supporting India's Self-Reliance (Make in India)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="copyright">
+        © 2008 - 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
+      </div>
+      <div class="footer-legal">
+        <a href="about.html">Corporate Governance</a>
+        <span>•</span>
+        <a href="quality.html">Quality Policy</a>
+        <span>•</span>
+        <a href="sustainability.html">ESG &amp; CSR Charter</a>
+        <span>•</span>
+        <a href="contact.html">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- Global Application Logic -->
+  <script src="app.js?v=5.0"></script>
+</body>
+</html>

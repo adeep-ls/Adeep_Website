@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adeep-signature">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health, Safety &amp; Governance (HSG / EHS) | ADEEP GROUP</title>
+  <meta name="description" content="Explore ADEEP GROUP's Health, Safety & Governance (HSG / EHS) framework — ISO 45001 certified zero-harm culture, HAZOP process safety, industrial fire readiness, and ALCOA+ corporate governance." />
+  <meta name="keywords" content="ADEEP HSG, EHS pharma manufacturing, ISO 45001 India, process safety management HAZOP, ALCOA+ data integrity, API safety audit" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
+  <style>
+    .page-hero {
+      min-height: calc(100vh - 76px); height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 40px 0;
+      overflow: hidden;
+      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(8, 23, 44, 0.85) 0%, rgba(8, 23, 44, 0.95) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.75); margin-bottom: 20px; }
+    .breadcrumb a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+    .page-title .accent {
+      background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 50%, #00f5a0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-subtitle {
+      font-size: 1.05rem;
+      color: rgba(226,238,255,0.9);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    /* Safety Metric Cards */
+    .hsg-metric-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .hsg-metric-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--r-xl);
+      padding: 26px 20px;
+      box-shadow: var(--shadow-md);
+      transition: var(--t);
+    }
+    .hsg-metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: #0284c7;
+    }
+    .hsg-metric-val {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #0c2340;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hsg-metric-val span { color: #0284c7; }
+    .hsg-metric-title { font-weight: 800; font-size: 0.95rem; color: #0c2340; margin-bottom: 4px; }
+    .hsg-metric-sub { font-size: 0.8rem; color: #64748b; line-height: 1.4; }
+
+    /* HSG Grid */
+    .hsg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .hsg-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--r-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      transition: var(--t);
+    }
+    .hsg-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: #0284c7;
+    }
+    .hsg-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0284c7, #38bdf8);
+    }
+    .hsg-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+    }
+    .hsg-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: #0c2340;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .hsg-card p {
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .hsg-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hsg-bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #334155;
+      font-weight: 500;
+    }
+    .hsg-bullet-list li::before {
+      content: '🛡️';
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* Governance Matrix Grid */
+    .gov-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .gov-box {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--r-xl);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--t);
+    }
+    .gov-box:hover {
+      border-color: #0284c7;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+    .gov-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #0284c7;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .gov-box h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: #0c2340;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .gov-box p {
+      color: #475569;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+      <!-- Master Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle active">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item active">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="sustainability.html">Sustainability &amp; CSR</a>
+        <span>/</span>
+        <span>Health, Safety &amp; Governance</span>
+      </div>
+      <h1 class="page-title">
+        Health, Safety &amp; <br />
+        <span class="accent">Governance (HSG / EHS)</span>
+      </h1>
+      <p class="page-subtitle">
+        Enforcing a zero-harm industrial safety culture certified under ISO 45001:2018, comprehensive HAZOP process engineering, and transparent corporate governance with ALCOA+ data integrity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Safety & Governance Statistics Strip -->
+  <section class="section" style="padding-top: 50px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="hsg-metric-strip">
+        <div class="hsg-metric-card">
+          <div class="hsg-metric-val">1,420<span>+</span></div>
+          <div class="hsg-metric-title">Days Without Lost-Time Injury</div>
+          <div class="hsg-metric-sub">Verified continuous zero-LTI operations in Bidar &amp; Kadapa</div>
+        </div>
+        <div class="hsg-metric-card">
+          <div class="hsg-metric-val">100<span>%</span></div>
+          <div class="hsg-metric-title">HAZOP Process Audited</div>
+          <div class="hsg-metric-sub">Every commercial scale-up cleared by EHS safety board</div>
+        </div>
+        <div class="hsg-metric-card">
+          <div class="hsg-metric-val">24<span> Hrs</span></div>
+          <div class="hsg-metric-title">Annual Training / Worker</div>
+          <div class="hsg-metric-sub">Mandatory certified industrial safety &amp; hazard modules</div>
+        </div>
+        <div class="hsg-metric-card">
+          <div class="hsg-metric-val">Zero</div>
+          <div class="hsg-metric-title">Fatalities Since Inception</div>
+          <div class="hsg-metric-sub">17+ year unblemished industrial safety milestone record</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core HSG Pillars Grid -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">OCCUPATIONAL SAFETY</span>
+        <h2 class="section-title">Industrial Safety &amp; Process Hazard Management</h2>
+        <p class="section-desc">
+          Engineered safety barriers designed to safeguard our workforce, plant machinery, and surrounding industrial corridors.
+        </p>
+      </div>
+
+      <div class="hsg-grid">
+        <!-- Pillar 1: Process Safety & HAZOP -->
+        <div class="hsg-card">
+          <div class="hsg-icon-box">🛡️</div>
+          <h3>Process Safety &amp; HAZOP Studies</h3>
+          <p>Every commercial chemical reaction undergoes comprehensive differential scanning calorimetry (DSC) and runaway modeling before transfer to commercial reactor trains.</p>
+          <ul class="hsg-bullet-list">
+            <li>Automated emergency nitrogen blanketing across all 350+ KL reactors.</li>
+            <li>Rupture discs and dual safety relief valves inspected and calibrated quarterly.</li>
+            <li>Flameproof (Ex-d) electrical classifications across all bulk solvent zones.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Fire Safety & ERT -->
+        <div class="hsg-card">
+          <div class="hsg-icon-box">🚒</div>
+          <h3>Perimeter Fire Ring &amp; ERT</h3>
+          <p>An automated industrial fire ring network maintains continuous 8.0 kg/cm² pressure with dedicated diesel pumps and high-velocity water sprays.</p>
+          <ul class="hsg-bullet-list">
+            <li>Dedicated trained Emergency Response Team (ERT) on all shifts.</li>
+            <li>Quarterly unannounced plant evacuation and chemical spill response drills.</li>
+            <li>Real-time automated flammable gas leak sensors linked to central alarms.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3: Occupational Health -->
+        <div class="hsg-card">
+          <div class="hsg-icon-box">🩺</div>
+          <h3>Occupational Health &amp; Hygiene</h3>
+          <p>Proactive monitoring of employee well-being through annual medical evaluations, biological monitoring, and continuous solvent vapor threshold surveillance.</p>
+          <ul class="hsg-bullet-list">
+            <li>Personal air sampling monitors worn to verify solvent threshold limit values (TLVs).</li>
+            <li>Full-time occupational health nurse and round-the-clock medical room on campus.</li>
+            <li>Comprehensive Level-A, B, and C PPE tailored to specific chemical handling zones.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Governance & ALCOA+ Section -->
+  <section class="section" style="padding-top: 40px; padding-bottom: 70px;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">CORPORATE GOVERNANCE</span>
+        <h2 class="section-title">Integrity, Responsible Sourcing &amp; ALCOA+</h2>
+        <p class="section-desc">
+          Robust governance structures ensuring regulatory compliance, scientific data integrity, and ethical leadership at every tier.
+        </p>
+      </div>
+
+      <div class="gov-matrix-grid">
+        <div class="gov-box">
+          <span class="gov-tag">Data Integrity</span>
+          <h4>ALCOA+ Principles</h4>
+          <p>Strict enforcement of Attributable, Legible, Contemporaneous, Original, and Accurate records with 21 CFR Part 11 compliant digital audit trails.</p>
+        </div>
+
+        <div class="gov-box">
+          <span class="gov-tag">Code of Ethics</span>
+          <h4>Zero-Corruption Charter</h4>
+          <p>Strict corporate policies on anti-bribery, conflict-of-interest declarations, and transparent transactions audited annually by independent firms.</p>
+        </div>
+
+        <div class="gov-box">
+          <span class="gov-tag">Supply Chain</span>
+          <h4>Ethical Vendor Audits</h4>
+          <p>Mandatory vendor EHS assessments ensuring no child labor, fair wages, and environmentally sound transportation of raw chemicals.</p>
+        </div>
+
+        <div class="gov-box">
+          <span class="gov-tag">Whistleblower</span>
+          <h4>Independent Reporting Desk</h4>
+          <p>Secure, confidential channels allowing employees, suppliers, and partners to report any ethical or safety deviation directly to the Board.</p>
+        </div>
+      </div>
+
+      <!-- Action Card -->
+      <div class="facility-card-display" style="padding: 32px; margin-top: 40px;">
+        <div class="fac-display-grid">
+          <div>
+            <span class="section-tag" style="margin-bottom: 8px;">AUDIT ASSURANCE</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #0c2340; margin-bottom: 12px;">Request HSG &amp; EHS Audit Dossiers</h3>
+            <p style="color: #475569; line-height: 1.65; margin-bottom: 20px;">
+              Qualified regulatory agencies, international partners, and corporate auditors can request our comprehensive EHS Manual, ISO 45001 accreditation documents, and HAZOP compliance summaries.
+            </p>
+            <div class="fac-actions">
+              <a href="contact.html?subject=EHS+Audit+Request" class="btn btn-primary btn-sm">Request Safety Dossier</a>
+              <a href="downloads.html" class="btn btn-secondary btn-sm">View ISO Certifications</a>
+            </div>
+          </div>
+          <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: var(--r-xl); padding: 24px;">
+            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: #0c2340; margin-bottom: 12px;">Recognized Certifications:</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 700; color: #0c2340;">
+                <span style="color: #0284c7;">✓</span> ISO 45001:2018 (Occupational Health &amp; Safety)
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 700; color: #0c2340;">
+                <span style="color: #0284c7;">✓</span> ISO 14001:2015 (Environmental Management)
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 700; color: #0c2340;">
+                <span style="color: #0284c7;">✓</span> USFDA Grade ALCOA+ Electronic Data Trails
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 700; color: #0c2340;">
+                <span style="color: #0284c7;">✓</span> Zero Liquid Discharge (ZLD) Environmental Consent
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          Excellency in Chemistry, APIs &amp; Green Biocatalysis. Delivering international regulatory compliance and social responsibility since 2008.
+        </p>
+        <div class="footer-entities">
+          <span>• Adeep Life Sciences Pvt. Ltd.</span>
+          <span>• Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About ADEEP Group</a></li>
+          <li><a href="leadership.html">Leadership &amp; Board</a></li>
+          <li><a href="facilities.html">Manufacturing Hubs</a></li>
+          <li><a href="sustainability.html">Sustainability &amp; ESG</a></li>
+          <li><a href="csr.html">Corporate Social Responsibility</a></li>
+          <li><a href="hsg.html">Health, Safety &amp; Governance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products &amp; Compliance</h4>
+        <ul class="footer-links">
+          <li><a href="products.html">Active Pharmaceutical Ingredients</a></li>
+          <li><a href="rnd.html">Green Biocatalysis R&amp;D</a></li>
+          <li><a href="quality.html">WHO-GMP &amp; USFDA Compliance</a></li>
+          <li><a href="downloads.html">Regulatory Dossiers &amp; DMFs</a></li>
+          <li><a href="contact.html">Request Technical RFQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Certifications</h4>
+        <div class="footer-certs-list">
+          <span class="fc-badge">WHO-GMP Certified</span>
+          <span class="fc-badge">USFDA Grade</span>
+          <span class="fc-badge">ISO 9001:2015</span>
+          <span class="fc-badge">ISO 14001:2015</span>
+          <span class="fc-badge">ISO 45001:2018</span>
+        </div>
+        <div class="make-in-india-badge">
+          <span>🇮🇳 Supporting India's Self-Reliance (Make in India)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="copyright">
+        © 2008 - 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
+      </div>
+      <div class="footer-legal">
+        <a href="about.html">Corporate Governance</a>
+        <span>•</span>
+        <a href="hsg.html">Safety Charter</a>
+        <span>•</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=5.0"></script>
+</body>
+</html>

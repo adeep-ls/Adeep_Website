@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adeep-signature">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research &amp; Development | ADEEP GROUP — Lab Capabilities, Process Chemistry &amp; IP</title>
+  <meta name="description" content="ADEEP GROUP R&amp;D Center in Hyderabad: Lab capabilities, process chemistry, QbD, analytical method validation (ICH Q2), impurity profiling, nitrosamines assessment, scale-up, and non-infringing patents." />
+  <meta name="keywords" content="ADEEP R&D, pharmaceutical process chemistry, biocatalysis R&D, impurity profiling, nitrosamine risk assessment, ICH Q2 validation, kilo lab scale up, non infringing process patents pharma India" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
+  <style>
+    .page-hero {
+      min-height: calc(100vh - 76px); height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 40px 0;
+      overflow: hidden;
+      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.88) 0%, rgba(4, 7, 17, 0.95) 100%), url('assets/hero_lab.jpg') center/cover no-repeat;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -160px; right: -160px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 65%);
+      pointer-events: none;
+      animation: orbFloat 10s ease-in-out infinite alternate;
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.7); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--teal-vivid); text-decoration: none; }
+    .page-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+    .page-title .accent { background: linear-gradient(135deg, #38bdf8, #0ea5e9, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-subtitle { font-size: 1.12rem; color: rgba(226,238,255,0.88); max-width: 760px; line-height: 1.75; margin-bottom: 34px; }
+
+    /* Sticky Jump Navigation Bar */
+    .rnd-subnav-bar {
+      position: sticky;
+      top: 76px;
+      z-index: 900;
+      background: rgba(7, 14, 30, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-card);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .rnd-subnav-container { display: flex; align-items: center; gap: 8px; }
+    .rnd-subnav-link {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: var(--r-full);
+      text-decoration: none;
+      transition: var(--t);
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rnd-subnav-link:hover { color: #fff; background: rgba(255, 255, 255, 0.08); border-color: var(--border-card); }
+    .rnd-subnav-link.active { color: var(--teal-vivid); background: var(--teal-soft); border-color: var(--teal-vivid); }
+
+    /* Feature Cards Grid */
+    .rnd-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 26px;
+      margin-top: 36px;
+    }
+    .rnd-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      padding: 34px 28px;
+      transition: var(--t);
+      position: relative;
+      overflow: hidden;
+    }
+    .rnd-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--teal-vivid);
+      box-shadow: 0 16px 36px rgba(14, 165, 233, 0.16);
+    }
+    .rnd-card-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      background: var(--teal-soft);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-card);
+    }
+    .rnd-card h3 { font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .rnd-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.7; margin-bottom: 18px; }
+
+    /* Instrument Tags */
+    .instrument-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .inst-tag {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--r-sm);
+    }
+
+    /* Process Flow Diagram */
+    .scaleup-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .scaleup-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-lg);
+      padding: 26px 22px;
+      position: relative;
+      transition: var(--t);
+    }
+    .scaleup-step::before {
+      content: attr(data-step);
+      position: absolute;
+      top: -12px; left: 20px;
+      background: var(--teal-vivid);
+      color: #040711;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+    .scaleup-step:hover {
+      border-color: var(--teal-vivid);
+      transform: translateY(-4px);
+    }
+    .scaleup-step h4 { font-size: 1.1rem; font-weight: 800; color: #fff; margin: 10px 0 8px; }
+    .scaleup-step p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; }
+    .scaleup-capacity { font-size: 0.78rem; font-weight: 800; color: var(--teal-vivid); margin-top: 12px; }
+
+    /* Patent Strip */
+    .patent-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .patent-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-lg);
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      transition: var(--t);
+    }
+    .patent-card:hover {
+      border-color: var(--teal-vivid);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .patent-meta { display: flex; flex-direction: column; gap: 4px; }
+    .patent-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.06em; }
+    .patent-title { font-size: 1.05rem; font-weight: 800; color: #fff; }
+    .patent-desc { font-size: 0.84rem; color: var(--text-muted); max-width: 780px; }
+  </style>
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Global Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+            <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle active">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item active">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartOpenBtn" title="Inquiry Basket">
+          <svg viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="index.html#inquiry" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>R&amp;D Innovation</span>
+      </div>
+      <h1 class="page-title">
+        Science That Powers <br />
+        <span class="accent">Global API Leadership</span>
+      </h1>
+      <p class="page-subtitle">
+        Our Central R&amp;D Center in Hyderabad drives high-potency process development, green biocatalysis, ICH-grade analytical validation, and non-infringing intellectual property for regulated pharmaceutical markets worldwide.
+      </p>
+
+      <div class="hero-badges">
+        <div class="h-badge"><div class="h-badge-dot"></div>50+ Research Scientists</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>4,500 Sq.Ft Advanced Facility</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>Non-Infringing Process IP</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>-78°C to +250°C Synthesis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Jump Navigation Bar -->
+  <nav class="rnd-subnav-bar">
+    <div class="container rnd-subnav-container">
+      <a href="#capabilities" class="rnd-subnav-link active">🔬 Lab Capabilities</a>
+      <a href="#process-dev" class="rnd-subnav-link">🧪 Process Development</a>
+      <a href="#analytical-dev" class="rnd-subnav-link">📊 Analytical Development</a>
+      <a href="#impurity" class="rnd-subnav-link">🔍 Impurity Profiling</a>
+      <a href="#scale-up" class="rnd-subnav-link">⚙️ Scale-up &amp; Tech Transfer</a>
+      <a href="#patents" class="rnd-subnav-link">📜 Patents &amp; IP</a>
+    </div>
+  </nav>
+
+  <!-- Section 1: Lab Capabilities -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">INFRASTRUCTURE</span>
+        <h2 class="section-title">World-Class Laboratory Capabilities</h2>
+        <p class="section-desc">
+          Equipped with cutting-edge synthesis hoods, pressure autoclaves, cryo-reactors, and high-end chromatography suites to handle the most challenging chemical transformations.
+        </p>
+      </div>
+
+      <div class="rnd-grid">
+        <div class="rnd-card">
+          <div class="rnd-card-icon">🧪</div>
+          <h3>Synthetic Organic Chemistry Suites</h3>
+          <p>
+            24 walk-in high-velocity fume hoods with continuous nitrogen manifolds, inert gas purge, and automated temperature controllers for complex multi-step convergent synthesis.
+          </p>
+          <div class="instrument-tags">
+            <span class="inst-tag">Cryogenic -78°C</span>
+            <span class="inst-tag">High Temp +250°C</span>
+            <span class="inst-tag">Rotary Evaporators</span>
+            <span class="inst-tag">Photochemical Reactors</span>
+          </div>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">⚡</div>
+          <h3>High-Pressure Catalytic Hydrogenation</h3>
+          <p>
+            Specialized hydrogenation autoclave suite capable of operating up to 50 bar pressure for catalytic reduction, debenzylation, and asymmetric stereoselective hydrogenations.
+          </p>
+          <div class="instrument-tags">
+            <span class="inst-tag">Parr Autoclaves</span>
+            <span class="inst-tag">0.5L – 10L Capacity</span>
+            <span class="inst-tag">50 Bar Operating Limit</span>
+            <span class="inst-tag">Hazard Interlocks</span>
+          </div>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">🧬</div>
+          <h3>Enzyme &amp; Biocatalysis Laboratory</h3>
+          <p>
+            Dedicated enzyme screening and biocatalytic process development laboratory for transaminases, ketoreductases, and esterases, delivering &gt;99.8% enantiomeric excess under aqueous conditions.
+          </p>
+          <div class="instrument-tags">
+            <span class="inst-tag">Enzyme Screening Kits</span>
+            <span class="inst-tag">Incubator Shakers</span>
+            <span class="inst-tag">Chiral HPLC Validation</span>
+            <span class="inst-tag">Low E-Factor Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Process Development -->
+  <section class="section" id="process-dev" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">PROCESS CHEMISTRY</span>
+        <h2 class="section-title">Quality by Design (QbD) &amp; Route Scouting</h2>
+        <p class="section-desc">
+          Designing cost-effective, non-infringing, robust, and environmentally benign chemical routes that scale seamlessly from grams to commercial metric tons.
+        </p>
+      </div>
+
+      <div class="rnd-grid">
+        <div class="rnd-card">
+          <div class="rnd-card-icon">📐</div>
+          <h3>Quality by Design (QbD) Principles</h3>
+          <p>
+            Systematic implementation of ICH Q8(R2) Quality by Design guidelines. Defining Critical Quality Attributes (CQAs) and Critical Process Parameters (CPPs) to establish reliable design spaces.
+          </p>
+          <ul class="pillar-bullets">
+            <li>Design of Experiments (DoE) statistical factor screening</li>
+            <li>Risk assessments via FMEA methodology</li>
+            <li>Robust parameter ranges preventing batch failures</li>
+          </ul>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">🛡️</div>
+          <h3>Non-Infringing Route Engineering</h3>
+          <p>
+            Independent patent landscape analysis to scout non-infringing synthetic pathways, bypassing innovator claims and granting our partners early-to-market generic launch advantages.
+          </p>
+          <ul class="pillar-bullets">
+            <li>Exhaustive Freedom-to-Operate (FTO) patent clearances</li>
+            <li>Alternate starting material strategies</li>
+            <li>Novel crystalline forms and non-infringing salts</li>
+          </ul>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">🌱</div>
+          <h3>Green Chemistry &amp; Atom Economy</h3>
+          <p>
+            Minimizing the process E-Factor by substituting hazardous solvents with greener alternatives, recycling process streams, and optimizing stoichiometric atom efficiency.
+          </p>
+          <ul class="pillar-bullets">
+            <li>Solvent elimination and closed-loop recycling</li>
+            <li>Catalytic processes eliminating stoichiometric reagents</li>
+            <li>Drastic reduction in process effluent volumes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Analytical Development -->
+  <section class="section" id="analytical-dev">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">ANALYTICAL RIGOR</span>
+        <h2 class="section-title">Method Development &amp; Validation (ICH Q2)</h2>
+        <p class="section-desc">
+          State-of-the-art analytical instrumentation verifying molecular identity, assay purity, chiral enantiopurity, residual solvents, and polymorphic stability.
+        </p>
+      </div>
+
+      <div class="rnd-grid">
+        <div class="rnd-card">
+          <div class="rnd-card-icon">📈</div>
+          <h3>Chromatographic Development</h3>
+          <p>
+            Validated HPLC, UPLC, and Gas Chromatography methods with PDA, UV, RI, and FID detectors developed under strict ICH Q2(R1) validation protocols.
+          </p>
+          <div class="instrument-tags">
+            <span class="inst-tag">Waters Alliance HPLC</span>
+            <span class="inst-tag">Shimadzu GC-FID</span>
+            <span class="inst-tag">Headspace Samplers</span>
+            <span class="inst-tag">Chiral Stationary Phases</span>
+          </div>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">🧪</div>
+          <h3>Forced Degradation Studies</h3>
+          <p>
+            Stress testing under acid, base, oxidation, thermal, and photolytic ICH Q1A conditions to demonstrate method specificity and stability-indicating capabilities.
+          </p>
+          <div class="instrument-tags">
+            <span class="inst-tag">Stress Hydrolysis</span>
+            <span class="inst-tag">Photostability Chamber</span>
+            <span class="inst-tag">Thermal Stability</span>
+            <span class="inst-tag">Oxidative Profiling</span>
+          </div>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">❄️</div>
+          <h3>ICH Stability Chambers</h3>
+          <p>
+            Walk-in and reach-in stability chambers continuously monitored with 21 CFR Part 11 compliant data loggers covering long-term, intermediate, and accelerated conditions.
+          </p>
+          <div class="instrument-tags">
+            <span class="inst-tag">25°C / 60% RH Long-Term</span>
+            <span class="inst-tag">30°C / 65% RH Intermediate</span>
+            <span class="inst-tag">40°C / 75% RH Accelerated</span>
+            <span class="inst-tag">21 CFR Part 11 Telemetry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Impurity Profiling -->
+  <section class="section" id="impurity" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">TOXICOLOGY &amp; SAFETY</span>
+        <h2 class="section-title">Impurity Profiling &amp; Nitrosamine Assessment</h2>
+        <p class="section-desc">
+          Auditor-grade characterization of process-related impurities, degradation products, genotoxic impurities (GTIs), and nitrosamines meeting USFDA and EMA thresholds.
+        </p>
+      </div>
+
+      <div class="rnd-grid">
+        <div class="rnd-card">
+          <div class="rnd-card-icon">🔬</div>
+          <h3>Isolation &amp; Structural Elucidation</h3>
+          <p>
+            Preparative HPLC isolation of unknown impurities above 0.05% threshold, followed by multi-nuclear NMR, LC-MS/MS, and high-resolution MS characterization.
+          </p>
+          <ul class="pillar-bullets">
+            <li>Synthesized in-house impurity reference standards</li>
+            <li>Complete spectral characterization dossiers</li>
+            <li>Certificate of Analysis (COA) with assigned purity</li>
+          </ul>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">⚠️</div>
+          <h3>Nitrosamine Risk Assessment (NRA)</h3>
+          <p>
+            Comprehensive risk assessments conducted across all synthesis routes, raw materials, solvents, and recovered reagents to prevent NDMA, NDEA, and complex NDSRIs.
+          </p>
+          <ul class="pillar-bullets">
+            <li>Conforms to USFDA &amp; EMA guidance on nitrosamines</li>
+            <li>LC-MS/MS trace quantification below AI limits</li>
+            <li>Confirmed absence of secondary amine contamination</li>
+          </ul>
+        </div>
+
+        <div class="rnd-card">
+          <div class="rnd-card-icon">⚡</div>
+          <h3>Elemental Impurities (ICH Q3D)</h3>
+          <p>
+            Risk-based elemental impurity evaluation covering Class 1, 2A, 2B, and 3 elements via ICP-MS, ensuring compliance with global pharmacopoeial monographs.
+          </p>
+          <ul class="pillar-bullets">
+            <li>Class 1 toxic heavy metals (Cd, Pb, As, Hg) verified</li>
+            <li>Transition catalyst clearance (Pd, Ru, Rh, Pt)</li>
+            <li>Documented risk assessment summaries for DMF Module 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Scale-up & Tech Transfer -->
+  <section class="section" id="scale-up">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">COMMERCIALIZATION PATHWAY</span>
+        <h2 class="section-title">Seamless Scale-Up &amp; Technology Transfer</h2>
+        <p class="section-desc">
+          Proven tech-transfer protocols transitioning processes from micro-bench testing to 500L pilot reactors and multi-ton commercial manufacturing trains.
+        </p>
+      </div>
+
+      <div class="scaleup-timeline">
+        <div class="scaleup-step" data-step="Phase 1">
+          <h4>Bench Route Scouting</h4>
+          <p>Gram-scale feasibility, reaction screening, safety calorimetry (DSC), and initial impurity identification.</p>
+          <div class="scaleup-capacity">Capacity: 10g – 1 kg</div>
+        </div>
+
+        <div class="scaleup-step" data-step="Phase 2">
+          <h4>Kilo Lab Validation</h4>
+          <p>Demonstrating process reproducibility, solvent recovery parameters, and preliminary ICH stability testing.</p>
+          <div class="scaleup-capacity">Capacity: 5L – 50L Glass Reactors</div>
+        </div>
+
+        <div class="scaleup-step" data-step="Phase 3">
+          <h4>Pilot Plant Scale-Up</h4>
+          <p>Equipment engineering, filtration kinetics, drying curves, and Technology Transfer Dossier (TTD) generation.</p>
+          <div class="scaleup-capacity">Capacity: 100L – 500L GLR / SSR</div>
+        </div>
+
+        <div class="scaleup-step" data-step="Phase 4">
+          <h4>Commercial cGMP Blocks</h4>
+          <p>Process Performance Qualification (PPQ) batches, batch manufacturing records (BMR), and commercial release.</p>
+          <div class="scaleup-capacity">Capacity: 1 KL – 10 KL Trains</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Patents & IP -->
+  <section class="section" id="patents" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">INTELLECTUAL PROPERTY</span>
+        <h2 class="section-title">Proprietary Process Patents &amp; IP Protection</h2>
+        <p class="section-desc">
+          Our dedicated intellectual property cell actively patents novel, non-infringing synthetic processes and provides robust Freedom-to-Operate guarantees to our global customers.
+        </p>
+      </div>
+
+      <div class="patent-list">
+        <div class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-badge">Patent Granted • Indian Patent Office</span>
+            <div class="patent-title">Novel Non-Infringing Process for Synthesis of High-Purity Mirtazapine Free Base</div>
+            <div class="patent-desc">Proprietary high-yield condensation and cyclization method eliminating toxic organohalogen intermediates and minimizing process-related enantiomeric impurities.</div>
+          </div>
+          <div class="btn btn-outline btn-sm">FTO Cleared</div>
+        </div>
+
+        <div class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-badge">Patent Filed • Commercial Priority</span>
+            <div class="patent-title">Enzymatic Asymmetric Resolution Route for Brivaracetam Chiral Intermediates</div>
+            <div class="patent-desc">Biocatalytic hydrolase method yielding &gt;99.8% enantiopure intermediate under mild aqueous conditions with over 40% reduction in production cost.</div>
+          </div>
+          <div class="btn btn-outline btn-sm">Patent Pending</div>
+        </div>
+
+        <div class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-badge">Patent Granted • US / EU Compatible</span>
+            <div class="patent-title">Continuous Flow Synthesis of Sensitive Organolithium Reagents for API Intermediates</div>
+            <div class="patent-desc">Microreactor continuous synthesis protocol for cryogenic lithiation reactions ensuring safe, high-conversion scaling of speciality chemical building blocks.</div>
+          </div>
+          <div class="btn btn-outline btn-sm">FTO Cleared</div>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div style="margin-top: 50px; background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(16, 185, 129, 0.15)); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px; text-align: center;">
+        <h3 style="font-size: 1.8rem; font-weight: 900; color: #fff; margin-bottom: 12px;">Partner with ADEEP R&amp;D for Custom Synthesis &amp; CDMO</h3>
+        <p style="color: var(--text-body); max-width: 680px; margin: 0 auto 24px; font-size: 0.95rem;">
+          From route scouting to commercial validation, ADEEP’s research team accelerates your time-to-market under strict confidentiality and international regulatory compliance.
+        </p>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary">Initiate Confidential R&amp;D Discussion</a>
+          <a href="downloads.html" class="btn btn-outline">Download R&amp;D Capabilities Deck</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          A Center for Excellence and Innovation in the Pharmaceutical Industry. Delivering API leadership, green biocatalysis, and robust global compliance since 2008.
+        </p>
+        <div class="footer-entities">
+          <span>• Adeep Life Sciences Pvt. Ltd.</span>
+          <span>• Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Quicklinks</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?therapy=Anti+depressant">Mirtazapine &amp; Duloxetine (CNS)</a></li>
+          <li><a href="products.html?therapy=Anti+convulsant">Brivaracetam &amp; Intermediates</a></li>
+          <li><a href="products.html?therapy=Parkinsons">Entacapone &amp; Levodopa</a></li>
+          <li><a href="products.html?therapy=Anti+bacterial">Moxifloxacin HCl</a></li>
+          <li><a href="products.html?category=speciality">Speciality Chemicals</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Key Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us &amp; Leadership</a></li>
+          <li><a href="facilities.html">Manufacturing Facilities</a></li>
+          <li><a href="quality.html">Quality &amp; Regulatory</a></li>
+          <li><a href="rnd.html">R&amp;D Innovation</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
+          <li><a href="careers.html">Careers &amp; Culture</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Headquarters &amp; Direct Line</h4>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 12px; line-height: 1.5;">
+          #1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084, Telangana, India.
+        </p>
+        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 6px;">
+          Direct: <a href="tel:+919515114455" style="color: var(--teal-vivid);">+91 9515114455</a>
+        </div>
+        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 14px;">
+          Email: <a href="mailto:srujanreddyn@adeepgroup.com" style="color: var(--teal-vivid);">srujanreddyn@adeepgroup.com</a>
+        </div>
+        <div class="footer-certs-list">
+          <span class="fc-badge">WHO-GMP</span>
+          <span class="fc-badge">USFDA Accredited</span>
+          <span class="fc-badge">ISO 9001</span>
+          <span class="fc-badge">ISO 14001</span>
+          <span class="fc-badge">ISO 45001</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ADEEP GROUP. All Rights Reserved. Excellency in Chemistry.</div>
+      <div class="footer-legal">
+        <a href="contact.html">Contact Us</a>
+        <span>•</span>
+        <a href="downloads.html">Downloads</a>
+        <span>•</span>
+        <a href="sustainability.html">ESG Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=5.0"></script>
+</body>
+</html>

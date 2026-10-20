@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adeep-signature">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Social Responsibility (CSR) | ADEEP GROUP</title>
+  <meta name="description" content="Discover ADEEP GROUP's Corporate Social Responsibility (CSR) initiatives — empowering rural communities through science education scholarships, clean drinking water RO kiosks, healthcare camps, and local inclusive employment." />
+  <meta name="keywords" content="ADEEP CSR, Corporate Social Responsibility Pharma, Chemistry scholarships, clean water kiosks Bidar, healthcare camps, Make in India, sustainable pharmaceutical manufacturing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
+  <style>
+    .page-hero {
+      min-height: calc(100vh - 76px); height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 40px 0;
+      overflow: hidden;
+      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(8, 23, 44, 0.82) 0%, rgba(8, 23, 44, 0.94) 100%), url('assets/hero_pharma_clean.jpg') center/cover no-repeat;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.22) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.75); margin-bottom: 20px; }
+    .breadcrumb a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+    .page-title .accent {
+      background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 50%, #00f5a0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-subtitle {
+      font-size: 1.05rem;
+      color: rgba(226,238,255,0.9);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    /* CSR Metrics Strip */
+    .csr-metric-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .csr-metric-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--r-xl);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-md);
+      transition: var(--t);
+    }
+    .csr-metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: #0284c7;
+    }
+    .csr-metric-val {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #0c2340;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .csr-metric-val span { color: #0284c7; }
+    .csr-metric-title { font-weight: 800; font-size: 0.95rem; color: #0c2340; margin-bottom: 4px; }
+    .csr-metric-sub { font-size: 0.8rem; color: #64748b; line-height: 1.4; }
+
+    /* CSR Pillars Grid */
+    .csr-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .csr-pillar-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--r-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      transition: var(--t);
+    }
+    .csr-pillar-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: #0284c7;
+    }
+    .csr-pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0284c7, #00f5a0);
+    }
+    .csr-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+    }
+    .csr-pillar-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: #0c2340;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .csr-pillar-card p {
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .csr-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .csr-bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #334155;
+      font-weight: 500;
+    }
+    .csr-bullet-list li::before {
+      content: '✓';
+      color: #0284c7;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    /* Program Spotlight Case Box */
+    .csr-spotlight-box {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--r-2xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .csr-spotlight-box { grid-template-columns: 1fr; padding: 28px; }
+    }
+    .csr-spotlight-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: #0c2340;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .csr-spotlight-info p {
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .csr-stat-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .csr-stat-badge {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 10px 18px;
+      border-radius: var(--r-md);
+    }
+    .csr-stat-badge strong {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #0284c7;
+    }
+    .csr-stat-badge span {
+      font-size: 0.78rem;
+      color: #475569;
+      font-weight: 600;
+    }
+    .csr-photo-card {
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: var(--shadow-md);
+    }
+    .csr-photo-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+      <!-- Master Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle active">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item active">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="sustainability.html">Sustainability &amp; CSR</a>
+        <span>/</span>
+        <span>Corporate Social Responsibility</span>
+      </div>
+      <h1 class="page-title">
+        Corporate Social <br />
+        <span class="accent">Responsibility (CSR)</span>
+      </h1>
+      <p class="page-subtitle">
+        Pioneering inclusive rural development, youth science scholarships, clean community drinking water access, and gender parity across industrial pharmaceutical corridors in India.
+      </p>
+    </div>
+  </section>
+
+  <!-- CSR Impact Statistics Strip -->
+  <section class="section" style="padding-top: 50px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="csr-metric-strip">
+        <div class="csr-metric-card">
+          <div class="csr-metric-val">50<span>+</span></div>
+          <div class="csr-metric-title">Annual Chemistry Scholarships</div>
+          <div class="csr-metric-sub">Awarded to rural and underprivileged science scholars</div>
+        </div>
+        <div class="csr-metric-card">
+          <div class="csr-metric-val">8,000<span>+</span></div>
+          <div class="csr-metric-title">Clean Water Beneficiaries</div>
+          <div class="csr-metric-sub">Villagers supplied daily with free RO drinking water</div>
+        </div>
+        <div class="csr-metric-card">
+          <div class="csr-metric-val">4<span>+</span></div>
+          <div class="csr-metric-title">Community RO Plants</div>
+          <div class="csr-metric-sub">Self-sustaining drinking water kiosks in rural Bidar</div>
+        </div>
+        <div class="csr-metric-card">
+          <div class="csr-metric-val">65<span>%</span></div>
+          <div class="csr-metric-title">Local Workforce Hiring</div>
+          <div class="csr-metric-sub">Recruited locally from Karnataka &amp; Andhra Pradesh</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core CSR Pillars -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">COMMUNITY IMPACT</span>
+        <h2 class="section-title">Core Pillars of ADEEP CSR Initiatives</h2>
+        <p class="section-desc">
+          Guided by Schedule VII of the Indian Companies Act and UN Sustainable Development Goals (SDGs 3, 4, 6, and 8).
+        </p>
+      </div>
+
+      <div class="csr-pillars-grid">
+        <!-- Pillar 1: Education -->
+        <div class="csr-pillar-card">
+          <div class="csr-icon-box">🎓</div>
+          <h3>Youth &amp; Science Education</h3>
+          <p>We actively invest in building India's next generation of pharmaceutical chemists, laboratory technicians, and quality analysts through educational empowerment.</p>
+          <ul class="csr-bullet-list">
+            <li><strong>ADEEP Chemistry Merit Scholarships:</strong> Full tuition grants for promising undergraduate chemistry students.</li>
+            <li><strong>Government Polytechnic Apprenticeships:</strong> Hands-on technical stipends and plant exposure for diploma holders.</li>
+            <li><strong>Rural School Infrastructure:</strong> Modernized digital classrooms, libraries, and science labs in neighboring villages.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Healthcare & Water -->
+        <div class="csr-pillar-card">
+          <div class="csr-icon-box">💧</div>
+          <h3>Clean Drinking Water &amp; Health</h3>
+          <p>Securing potable drinking water and preventative primary healthcare to elevate living standards across communities surrounding our manufacturing hubs.</p>
+          <ul class="csr-bullet-list">
+            <li><strong>Automated RO Water Kiosks:</strong> High-capacity reverse osmosis units delivering purified drinking water 24/7.</li>
+            <li><strong>Quarterly Medical Screening Camps:</strong> Free eye, cardiac, and general diagnostic camps conducted by specialist doctors.</li>
+            <li><strong>Primary Health Center Aid:</strong> Essential life-saving pharmaceutical supplies donated to rural clinics.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3: Inclusive Workplace -->
+        <div class="csr-pillar-card">
+          <div class="csr-icon-box">👥</div>
+          <h3>Fair Labor &amp; Inclusive Growth</h3>
+          <p>Fostering dignity of labor, equal employment opportunities, and specialized scientific career pathways for women chemists and rural youth.</p>
+          <ul class="csr-bullet-list">
+            <li><strong>Women in Chemistry Initiative:</strong> Active mentorship and leadership roles across QC, QA, and R&amp;D.</li>
+            <li><strong>Strict Zero-Child-Labor Policy:</strong> Independent third-party audited employment charters across all facilities.</li>
+            <li><strong>Comprehensive Family Healthcare:</strong> Full insurance, subsidized nutrition, and transport provided to all staff.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Spotlight Program Box -->
+      <div class="csr-spotlight-box">
+        <div class="csr-spotlight-info">
+          <span class="section-tag" style="margin-bottom: 10px;">FLAGSHIP CASE STUDY</span>
+          <h3>Bidar Rural Clean Drinking Water &amp; Health Mission</h3>
+          <p>
+            Recognizing that groundwater in semi-arid areas often carries high dissolved solids and fluorides, ADEEP established 4 automated reverse osmosis water kiosks in villages surrounding Kolhar Industrial Area. Each station purifies over 2,000 liters per hour, ensuring zero waterborne illnesses in over 1,500 rural households.
+          </p>
+          <div class="csr-stat-row">
+            <div class="csr-stat-badge">
+              <strong>100% Free</strong>
+              <span>Community Water Access</span>
+            </div>
+            <div class="csr-stat-badge">
+              <strong>4 Villages</strong>
+              <span>Zero Waterborne Disease</span>
+            </div>
+            <div class="csr-stat-badge">
+              <strong>Quarterly</strong>
+              <span>Water Testing by Certified Labs</span>
+            </div>
+          </div>
+        </div>
+        <div class="csr-photo-card">
+          <img src="assets/plant_facility.jpg" alt="ADEEP Community CSR Outreach" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSR Committee & Governance -->
+  <section class="section" style="padding-top: 50px; padding-bottom: 70px;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">TRANSPARENCY &amp; GOVERNANCE</span>
+        <h2 class="section-title">CSR Governance &amp; Policy Alignment</h2>
+        <p class="section-desc">Our CSR Committee ensures transparent fund allocation, verifiable ground execution, and statutory compliance with Indian Ministry of Corporate Affairs regulations.</p>
+      </div>
+
+      <div class="facility-card-display" style="padding: 32px;">
+        <div class="fac-display-grid">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #0c2340; margin-bottom: 12px;">Corporate CSR Charter &amp; Allocation</h3>
+            <p style="color: #475569; line-height: 1.65; margin-bottom: 18px;">
+              ADEEP GROUP allocates a minimum of 2% of average net profits toward verifiable community development projects. All initiatives undergo baseline needs assessments and post-implementation impact auditing by third-party evaluators.
+            </p>
+            <div class="fac-specs-list">
+              <div class="spec-row">
+                <span class="spec-key">Governing Statute:</span>
+                <span class="spec-val">Section 135 of the Companies Act, 2013</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Key Focus Corridors:</span>
+                <span class="spec-val">Bidar (Karnataka) &amp; Kadapa (Andhra Pradesh)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Reporting &amp; Audits:</span>
+                <span class="spec-val">Annual CSR Report filed with statutory auditors</span>
+              </div>
+            </div>
+          </div>
+          <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: var(--r-xl); padding: 28px; text-align: center;">
+            <div style="font-size: 2.4rem; margin-bottom: 8px;">🤝</div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: #0c2340; margin-bottom: 8px;">Partner With Our CSR Desk</h4>
+            <p style="font-size: 0.88rem; color: #64748b; line-height: 1.5; margin-bottom: 20px;">
+              Are you an accredited NGO, educational institution, or local authority seeking support in Bidar or Kadapa?
+            </p>
+            <a href="contact.html?subject=CSR+Initiative" class="btn btn-primary btn-sm">Contact CSR Committee</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          Excellency in Chemistry, APIs &amp; Green Biocatalysis. Delivering international regulatory compliance and social responsibility since 2008.
+        </p>
+        <div class="footer-entities">
+          <span>• Adeep Life Sciences Pvt. Ltd.</span>
+          <span>• Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About ADEEP Group</a></li>
+          <li><a href="leadership.html">Leadership &amp; Board</a></li>
+          <li><a href="facilities.html">Manufacturing Hubs</a></li>
+          <li><a href="sustainability.html">Sustainability &amp; ESG</a></li>
+          <li><a href="csr.html">Corporate Social Responsibility</a></li>
+          <li><a href="hsg.html">Health, Safety &amp; Governance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products &amp; Compliance</h4>
+        <ul class="footer-links">
+          <li><a href="products.html">Active Pharmaceutical Ingredients</a></li>
+          <li><a href="rnd.html">Green Biocatalysis R&amp;D</a></li>
+          <li><a href="quality.html">WHO-GMP &amp; USFDA Compliance</a></li>
+          <li><a href="downloads.html">Regulatory Dossiers &amp; DMFs</a></li>
+          <li><a href="contact.html">Request Technical RFQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Certifications</h4>
+        <div class="footer-certs-list">
+          <span class="fc-badge">WHO-GMP Certified</span>
+          <span class="fc-badge">USFDA Grade</span>
+          <span class="fc-badge">ISO 9001:2015</span>
+          <span class="fc-badge">ISO 14001:2015</span>
+          <span class="fc-badge">ISO 45001:2018</span>
+        </div>
+        <div class="make-in-india-badge">
+          <span>🇮🇳 Supporting India's Self-Reliance (Make in India)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="copyright">
+        © 2008 - 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
+      </div>
+      <div class="footer-legal">
+        <a href="about.html">Corporate Governance</a>
+        <span>•</span>
+        <a href="csr.html">CSR Policy</a>
+        <span>•</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=5.0"></script>
+</body>
+</html>

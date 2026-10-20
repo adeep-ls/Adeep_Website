@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
   <style>
-    .page-hero { min-height: 380px; display: flex; align-items: center; position: relative; padding: 130px 0 60px; overflow: hidden; background: linear-gradient(180deg, rgba(7, 14, 30, 0.84) 0%, rgba(4, 7, 17, 0.94) 100%), url('assets/plant_facility.jpg') center/cover no-repeat; }
+    .page-hero { min-height: calc(100vh - 76px); height: calc(100vh - 76px); display: flex; align-items: center; position: relative; padding: 40px 0; overflow: hidden; background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.84) 0%, rgba(4, 7, 17, 0.94) 100%), url('assets/plant_facility.jpg') center/cover no-repeat; }
     .page-hero::before { content: ''; position: absolute; top: -150px; left: 50%; width: 800px; height: 600px; background: radial-gradient(ellipse, var(--teal-soft) 0%, transparent 60%); transform: translateX(-50%); pointer-events: none; }
     .page-hero-inner { position: relative; z-index: 2; text-align: center; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.65); margin-bottom: 20px; justify-content: center; }
@@ -99,20 +99,63 @@
   <canvas id="particleCanvas"></canvas>
   <header class="site-header" id="mainHeader">
     <div class="container header-container">
-      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="logo-img" /></a>
+      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="logo-img" /></a>
             <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="products.html" class="nav-link">Product Portfolio</a>
-        <a href="facilities.html" class="nav-link">Facilities</a>
-        <a href="quality.html" class="nav-link">Quality &amp; USPs</a>
-        <a href="partners.html" class="nav-link">Partners</a>
-        <a href="leadership.html" class="nav-link">Leadership</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link active">Contact Us</a>
       </nav>
       <div class="header-actions">
-
-        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
         <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -249,7 +292,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-col brand-col">
-        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="footer-logo" />
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
         <p class="footer-tagline">Excellency in Chemistry &amp; Green Biocatalysis. 17+ year legacy in pharmaceutical manufacturing.</p>
         <div class="footer-cert-badges"><span class="fc-badge">WHO-GMP</span><span class="fc-badge">ISO 9001:2015</span><span class="fc-badge">USFDA Aligned</span><span class="fc-badge">ZLD</span></div>
       </div>
@@ -260,6 +303,7 @@
           <li><a href="products.html">Product Portfolio</a></li>
           <li><a href="facilities.html">Manufacturing Sites</a></li>
           <li><a href="quality.html">Quality &amp; Compliance</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="leadership.html">Leadership</a></li>
         </ul>
@@ -293,5 +337,6 @@
     });
     function resetForm(){document.getElementById('contactRfqForm').reset();document.getElementById('rfqFormSection').style.display='block';document.getElementById('formSuccessBox').style.display='none';}
   </script>
+  <script src="app.js?v=5.0"></script>
 </body>
 </html>

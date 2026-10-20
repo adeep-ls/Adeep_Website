@@ -499,17 +499,17 @@ let inquiryBasket = [];
 
 // Initialize on DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
-  initSplashScreen();
-  initHeroSlider();
-  initProductCounts();
-  renderProductsTable();
-  initSearchAndFilters();
-  initCartDrawer();
-  initRfqForm();
-  initFacilityTabs();
-  initCounters();
-  initNavigation();
-  initProductDetailModal();
+  try { initNavigation(); } catch (e) { console.error("initNavigation error:", e); }
+  try { initSplashScreen(); } catch (e) { console.error("initSplashScreen error:", e); }
+  try { initHeroSlider(); } catch (e) { console.error("initHeroSlider error:", e); }
+  try { initProductCounts(); } catch (e) { console.error("initProductCounts error:", e); }
+  try { renderProductsTable(); } catch (e) { console.error("renderProductsTable error:", e); }
+  try { initSearchAndFilters(); } catch (e) { console.error("initSearchAndFilters error:", e); }
+  try { initCartDrawer(); } catch (e) { console.error("initCartDrawer error:", e); }
+  try { initRfqForm(); } catch (e) { console.error("initRfqForm error:", e); }
+  try { initFacilityTabs(); } catch (e) { console.error("initFacilityTabs error:", e); }
+  try { initCounters(); } catch (e) { console.error("initCounters error:", e); }
+  try { initProductDetailModal(); } catch (e) { console.error("initProductDetailModal error:", e); }
 });
 
 // Update Category Counter Badges
@@ -538,7 +538,9 @@ function renderProductsTable() {
 
   const filtered = PRODUCTS_DATA.filter(item => {
     // Category match
-    const catMatch = (currentFilterCategory === "all") || (item.category === currentFilterCategory);
+    const catMatch = (currentFilterCategory === "all") || 
+      (item.category === currentFilterCategory) ||
+      (currentFilterCategory === "custom-synthesis" && (item.category === "speciality" || (item.details && item.details.toLowerCase().includes("synthesis"))));
     
     // Therapy match
     const therapyMatch = !currentTherapyFilter || 
@@ -612,25 +614,51 @@ function renderProductsTable() {
 // Search and Filter Handling
 function initSearchAndFilters() {
   const searchInput = document.getElementById("productSearchInput");
-  if (!searchInput) return;
-  const clearBtn = document.getElementById("clearSearchBtn");
   const catTabs = document.querySelectorAll(".cat-tab");
   const chips = document.querySelectorAll("#therapyChips .chip");
   const resetBtn = document.getElementById("resetFiltersBtn");
+  const clearBtn = document.getElementById("clearSearchBtn");
 
-  searchInput.addEventListener("input", (e) => {
-    currentSearchQuery = e.target.value;
-    clearBtn.style.display = currentSearchQuery ? "block" : "none";
+  window.applyProductCategoryFilter = function(category) {
+    currentFilterCategory = category || "all";
+    catTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-category") === currentFilterCategory));
     renderProductsTable();
-  });
+  };
 
-  clearBtn.addEventListener("click", () => {
-    searchInput.value = "";
-    currentSearchQuery = "";
-    clearBtn.style.display = "none";
-    searchInput.focus();
+  // Parse URL search params (e.g. ?category=commercial-api)
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get("category");
+  if (catParam) {
+    currentFilterCategory = catParam;
+    catTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-category") === catParam));
+  }
+  const therapyParam = urlParams.get("therapy");
+  if (therapyParam) {
+    currentTherapyFilter = therapyParam;
+    chips.forEach(c => c.classList.toggle("active", c.getAttribute("data-filter") && c.getAttribute("data-filter").toLowerCase() === therapyParam.toLowerCase()));
+  }
+
+  if (catParam || therapyParam) {
     renderProductsTable();
-  });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      currentSearchQuery = e.target.value;
+      if (clearBtn) clearBtn.style.display = currentSearchQuery ? "block" : "none";
+      renderProductsTable();
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        currentSearchQuery = "";
+        clearBtn.style.display = "none";
+        searchInput.focus();
+        renderProductsTable();
+      });
+    }
+  }
 
   catTabs.forEach(tab => {
     tab.addEventListener("click", () => {
@@ -652,11 +680,11 @@ function initSearchAndFilters() {
 
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
-      searchInput.value = "";
+      if (searchInput) searchInput.value = "";
       currentSearchQuery = "";
       currentFilterCategory = "all";
       currentTherapyFilter = "";
-      clearBtn.style.display = "none";
+      if (clearBtn) clearBtn.style.display = "none";
 
       catTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-category") === "all"));
       chips.forEach(c => c.classList.toggle("active", c.getAttribute("data-filter") === ""));
@@ -791,35 +819,45 @@ function initCartDrawer() {
   const clearCartBtn = document.getElementById("clearCartBtn");
   const proceedBtn = document.getElementById("proceedToRfqBtn");
 
+  if (!cartBtn || !cartDrawer) return;
+
   cartBtn.addEventListener("click", openCart);
-  cartCloseBtn.addEventListener("click", closeCart);
-  cartOverlay.addEventListener("click", closeCart);
+  if (cartCloseBtn) cartCloseBtn.addEventListener("click", closeCart);
+  if (cartOverlay) cartOverlay.addEventListener("click", closeCart);
 
-  clearCartBtn.addEventListener("click", () => {
-    inquiryBasket = [];
-    updateCartUI();
-    renderProductsTable();
-    showToast("Inquiry basket cleared.");
-  });
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener("click", () => {
+      inquiryBasket = [];
+      updateCartUI();
+      renderProductsTable();
+      showToast("Inquiry basket cleared.");
+    });
+  }
 
-  proceedBtn.addEventListener("click", () => {
-    closeCart();
-    const rfqSec = document.getElementById("inquiry");
-    if (rfqSec) {
-      rfqSec.scrollIntoView({ behavior: "smooth" });
-    }
-  });
+  if (proceedBtn) {
+    proceedBtn.addEventListener("click", () => {
+      closeCart();
+      const rfqSec = document.getElementById("inquiry");
+      if (rfqSec) {
+        rfqSec.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 }
 
 function openCart() {
-  document.getElementById("cartDrawer").classList.add("active");
-  document.getElementById("cartOverlay").classList.add("active");
+  const drawer = document.getElementById("cartDrawer");
+  const overlay = document.getElementById("cartOverlay");
+  if (drawer) drawer.classList.add("active");
+  if (overlay) overlay.classList.add("active");
   document.body.style.overflow = "hidden";
 }
 
 window.closeCart = function() {
-  document.getElementById("cartDrawer").classList.remove("active");
-  document.getElementById("cartOverlay").classList.remove("active");
+  const drawer = document.getElementById("cartDrawer");
+  const overlay = document.getElementById("cartOverlay");
+  if (drawer) drawer.classList.remove("active");
+  if (overlay) overlay.classList.remove("active");
   document.body.style.overflow = "";
 };
 
@@ -977,8 +1015,10 @@ function initProductDetailModal() {
   const closeBtn = document.getElementById("modalCloseBtn");
   const closeAction = document.getElementById("modalCloseAction");
 
-  closeBtn.addEventListener("click", closeModal);
-  closeAction.addEventListener("click", closeModal);
+  if (!overlay) return;
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (closeAction) closeAction.addEventListener("click", closeModal);
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) closeModal();
   });
@@ -988,54 +1028,67 @@ window.openProductModal = function(productId) {
   const p = PRODUCTS_DATA.find(item => item.id === productId);
   if (!p) return;
 
-  document.getElementById("modalTitle").textContent = p.name;
-  document.getElementById("modalCat").textContent = p.category.replace("-", " ").toUpperCase();
-  document.getElementById("modalCas").textContent = p.cas;
-  document.getElementById("modalIndication").textContent = p.therapy;
-  document.getElementById("modalTarget").textContent = p.targetApi || "Direct Finished Molecule";
-  document.getElementById("modalCompliance").textContent = p.compliance || "WHO-GMP Compliant & cGMP Verified";
+  const titleEl = document.getElementById("modalTitle");
+  if (titleEl) titleEl.textContent = p.name;
+  const catEl = document.getElementById("modalCat");
+  if (catEl) catEl.textContent = p.category.replace("-", " ").toUpperCase();
+  const casEl = document.getElementById("modalCas");
+  if (casEl) casEl.textContent = p.cas;
+  const indEl = document.getElementById("modalIndication");
+  if (indEl) indEl.textContent = p.therapy;
+  const targetEl = document.getElementById("modalTarget");
+  if (targetEl) targetEl.textContent = p.targetApi || "Direct Finished Molecule";
+  const compEl = document.getElementById("modalCompliance");
+  if (compEl) compEl.textContent = p.compliance || "WHO-GMP Compliant & cGMP Verified";
 
   const turnoverSec = document.getElementById("modalTurnoverSec");
   const turnoverText = document.getElementById("modalTurnover");
-  if (p.turnover) {
-    turnoverSec.style.display = "block";
-    turnoverText.textContent = p.turnover;
-  } else {
-    turnoverSec.style.display = "none";
+  if (turnoverSec && turnoverText) {
+    if (p.turnover) {
+      turnoverSec.style.display = "block";
+      turnoverText.textContent = p.turnover;
+    } else {
+      turnoverSec.style.display = "none";
+    }
   }
 
   const modalInquireBtn = document.getElementById("modalInquireBtn");
-  const isAdded = inquiryBasket.some(b => b.id === p.id);
-  modalInquireBtn.textContent = isAdded ? "Remove from Basket" : "Add to Inquiry Basket";
+  if (modalInquireBtn) {
+    const isAdded = inquiryBasket.some(b => b.id === p.id);
+    modalInquireBtn.textContent = isAdded ? "Remove from Basket" : "Add to Inquiry Basket";
 
-  modalInquireBtn.onclick = () => {
-    toggleInquiryItem(p.id);
-    closeModal();
-  };
+    modalInquireBtn.onclick = () => {
+      toggleInquiryItem(p.id);
+      closeModal();
+    };
+  }
 
-  document.getElementById("productModalOverlay").classList.add("active");
+  const overlay = document.getElementById("productModalOverlay");
+  if (overlay) overlay.classList.add("active");
 };
 
 function closeModal() {
-  document.getElementById("productModalOverlay").classList.remove("active");
+  const overlay = document.getElementById("productModalOverlay");
+  if (overlay) overlay.classList.remove("active");
 }
 
 // RFQ Form Submission & Validation
 function initRfqForm() {
   const form = document.getElementById("rfqForm");
+  if (!form) return;
   const successAlert = document.getElementById("formSuccessAlert");
   const resetBtn = document.getElementById("resetRfqBtn");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("rfqName").value;
-    const company = document.getElementById("rfqCompany").value;
-    const email = document.getElementById("rfqEmail").value;
-    const phone = document.getElementById("rfqPhone").value;
-    const requirement = document.getElementById("rfqRequirement").value;
-    const extraMolecule = document.getElementById("rfqMolecule").value;
-    const message = document.getElementById("rfqMessage").value;
+    const name = document.getElementById("rfqName") ? document.getElementById("rfqName").value : "";
+    const company = document.getElementById("rfqCompany") ? document.getElementById("rfqCompany").value : "";
+    const email = document.getElementById("rfqEmail") ? document.getElementById("rfqEmail").value : "";
+    const phone = document.getElementById("rfqPhone") ? document.getElementById("rfqPhone").value : "";
+    const requirement = document.getElementById("rfqRequirement") ? document.getElementById("rfqRequirement").value : "";
+    const extraMolecule = document.getElementById("rfqMolecule") ? document.getElementById("rfqMolecule").value : "";
+    const message = document.getElementById("rfqMessage") ? document.getElementById("rfqMessage").value : "";
 
     const basketMolecules = inquiryBasket.map(m => m.name).join(", ");
     const finalMolecules = [basketMolecules, extraMolecule].filter(Boolean).join(" | ") || "General Commercial Inquiries";
@@ -1045,18 +1098,20 @@ function initRfqForm() {
     });
 
     form.style.display = "none";
-    successAlert.style.display = "block";
+    if (successAlert) successAlert.style.display = "block";
     showToast("Quotation request dispatched successfully!");
   });
 
-  resetBtn.addEventListener("click", () => {
-    form.reset();
-    form.style.display = "block";
-    successAlert.style.display = "none";
-    inquiryBasket = [];
-    updateCartUI();
-    renderProductsTable();
-  });
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      form.reset();
+      form.style.display = "block";
+      if (successAlert) successAlert.style.display = "none";
+      inquiryBasket = [];
+      updateCartUI();
+      renderProductsTable();
+    });
+  }
 }
 
 // Animated Statistics Counter on Scroll
@@ -1096,20 +1151,170 @@ function initCounters() {
   }
 }
 
-// Mobile Navigation Toggle & Smooth Scrolling
+// Mobile Navigation Toggle & Smooth Scrolling & Dropdown Interaction
 function initNavigation() {
   const toggle = document.getElementById("mobileToggle");
   const navMenu = document.getElementById("navMenu");
 
-  toggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+  if (toggle && navMenu) {
+    toggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      navMenu.classList.toggle("active");
+    });
+  }
+
+  // Desktop and mobile dropdown interaction
+  document.querySelectorAll(".nav-item-dropdown").forEach(dropdown => {
+    const toggleBtn = dropdown.querySelector(".nav-dropdown-toggle");
+    const menu = dropdown.querySelector(".nav-dropdown-menu");
+    let leaveTimeout = null;
+    
+    // Desktop hover with seamless bridge & 400ms grace debounce
+    const openDropdown = () => {
+      if (leaveTimeout) {
+        clearTimeout(leaveTimeout);
+        leaveTimeout = null;
+      }
+      dropdown.classList.remove("closed");
+      if (window.innerWidth > 1100) {
+        // Close other dropdowns
+        document.querySelectorAll(".nav-item-dropdown").forEach(other => {
+          if (other !== dropdown) {
+            other.classList.remove("open");
+          }
+        });
+        dropdown.classList.add("open");
+      }
+    };
+
+    const closeDropdown = () => {
+      if (window.innerWidth > 1100) {
+        if (leaveTimeout) clearTimeout(leaveTimeout);
+        leaveTimeout = setTimeout(() => {
+          dropdown.classList.remove("open");
+          dropdown.classList.remove("closed");
+        }, 400); // 400ms grace period prevents closing when moving cursor down
+      }
+    };
+
+    dropdown.addEventListener("mouseenter", openDropdown);
+    dropdown.addEventListener("mouseleave", closeDropdown);
+
+    if (menu) {
+      menu.addEventListener("mouseenter", openDropdown);
+      menu.addEventListener("mouseleave", closeDropdown);
+    }
+
+    // Touch / click toggle for mobile
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", (e) => {
+        if (window.innerWidth <= 1100) {
+          e.preventDefault();
+          dropdown.classList.toggle("open");
+        }
+      });
+    }
   });
 
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-item-dropdown")) {
+      document.querySelectorAll(".nav-item-dropdown").forEach(d => {
+        d.classList.remove("open");
+        d.classList.remove("closed");
+      });
+    }
+  });
+
+  // Universal click handler for navigation links and dropdown items
+  document.querySelectorAll(".nav-link:not(.nav-dropdown-toggle), .dropdown-item").forEach(link => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (!href) return;
+
+      const currentPath = window.location.pathname.replace(/\/$/, "");
+      const currentFile = currentPath.split("/").pop() || "index.html";
+
+      // Close mobile menu if open
+      if (navMenu) {
+        navMenu.classList.remove("active");
+        navMenu.classList.remove("open");
+      }
+
+      // Immediately dismiss dropdown
+      const parentDropdown = link.closest(".nav-item-dropdown");
+      if (parentDropdown) {
+        parentDropdown.classList.remove("open");
+        parentDropdown.classList.add("closed");
+        setTimeout(() => {
+          parentDropdown.classList.remove("closed");
+        }, 300);
+      }
+
+      // 1. Handle in-page category filter on products.html
+      if (href.includes("products.html?category=") || href.startsWith("?category=")) {
+        if (currentFile === "products.html") {
+          e.preventDefault();
+          const targetUrl = new URL(href, window.location.href);
+          const cat = targetUrl.searchParams.get("category");
+          if (cat && typeof window.applyProductCategoryFilter === "function") {
+            window.applyProductCategoryFilter(cat);
+            window.history.pushState(null, null, href);
+            const tableEl = document.getElementById("productsTable") || document.getElementById("productSearchInput");
+            if (tableEl) tableEl.scrollIntoView({ behavior: "smooth" });
+          }
+          return;
+        }
+      }
+
+      // 2. Handle hash scrolling on the current page
+      if (href.includes("#")) {
+        const parts = href.split("#");
+        const linkFile = parts[0].split("/").pop();
+        const hash = "#" + parts[1];
+
+        // Is this target on the current page?
+        const isCurrentPage = (!linkFile || linkFile === "" || linkFile === currentFile || (currentFile === "" && linkFile === "index.html"));
+
+        if (isCurrentPage) {
+          e.preventDefault();
+          const targetEl = document.querySelector(hash);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, null, hash);
+          } else {
+            if (hash === "#overview" || hash === "#top") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.history.pushState(null, null, hash);
+            }
+          }
+          return;
+        }
+      } else {
+        // If clicking link without hash that points to current page, scroll to top
+        const linkFile = href.split("?")[0].split("/").pop();
+        if (linkFile === currentFile && !href.includes("?")) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
     });
   });
+
+  // Handle URL hash on initial page load (with delay for layout & splash screen)
+  function handleInitialHash() {
+    if (window.location.hash) {
+      setTimeout(() => {
+        const targetEl = document.querySelector(window.location.hash);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 350);
+    }
+  }
+
+  handleInitialHash();
+  window.addEventListener("splashComplete", handleInitialHash);
 }
 
 // Toast Alert System

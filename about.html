@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
   <style>
-    .page-hero { min-height: 480px; display: flex; align-items: center; position: relative; padding: 140px 0 80px; overflow: hidden; background: linear-gradient(180deg, rgba(7, 14, 30, 0.84) 0%, rgba(4, 7, 17, 0.94) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat; }
+    .page-hero { min-height: calc(100vh - 76px); height: calc(100vh - 76px); display: flex; align-items: center; position: relative; padding: 40px 0; overflow: hidden; background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.84) 0%, rgba(4, 7, 17, 0.94) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat; }
     .page-hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; background: radial-gradient(circle, var(--teal-soft) 0%, transparent 65%); pointer-events: none; animation: orbFloat 8s ease-in-out infinite alternate; }
     .page-hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, var(--emerald-glow) 0%, transparent 65%); pointer-events: none; }
     .page-hero-inner { position: relative; z-index: 2; }
@@ -20,11 +20,7 @@
     .breadcrumb a:hover { color: #fff; }
     .page-title { font-family: var(--font-heading); font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
     .page-title .accent { background: var(--grad-teal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .page-subtitle { font-size: 1.1rem; color: rgba(226,238,255,0.82); max-width: 640px; line-height: 1.7; margin-bottom: 32px; }
-    .hero-stats-row { display: flex; flex-wrap: wrap; gap: 16px; }
-    .hero-stat-chip { display: flex; align-items: center; gap: 10px; padding: 10px 20px; background: rgba(255,255,255,0.07); backdrop-filter: blur(12px); border: 1px solid rgba(0,240,255,0.28); border-radius: var(--r-full); }
-    .hero-stat-chip strong { color: var(--gold); font-size: 1.1rem; }
-    .hero-stat-chip span { font-size: 0.82rem; color: rgba(226,238,255,0.8); }
+    .page-subtitle { font-size: 1.1rem; color: rgba(226,238,255,0.82); max-width: 640px; line-height: 1.7; margin-bottom: 0; }
     .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
     .mv-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px 36px; position: relative; overflow: hidden; transition: var(--t); }
     .mv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: var(--r-xl) var(--r-xl) 0 0; }
@@ -72,40 +68,78 @@
   <canvas id="particleCanvas"></canvas>
   <header class="site-header" id="mainHeader">
     <div class="container header-container">
-      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="logo-img" /></a>
+      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="logo-img" /></a>
             <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About Us</a>
-        <a href="products.html" class="nav-link">Product Portfolio</a>
-        <a href="facilities.html" class="nav-link">Facilities</a>
-        <a href="quality.html" class="nav-link">Quality &amp; USPs</a>
-        <a href="partners.html" class="nav-link">Partners</a>
-        <a href="leadership.html" class="nav-link">Leadership</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle active">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item active">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
       <div class="header-actions">
-
-        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
         <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero" id="overview">
     <div class="container page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></div>
       <h1 class="page-title">A Legacy Built on <br /><span class="accent">Chemistry &amp; Purpose</span></h1>
       <p class="page-subtitle">For 17+ years, ADEEP GROUP has been at the forefront of India's pharmaceutical manufacturing revolution — transforming complex chemistry into life-saving medicines that reach patients worldwide.</p>
-      <div class="hero-stats-row">
-        <div class="hero-stat-chip"><strong>Est. 2008</strong><span>Founded in Bidar, Karnataka</span></div>
-        <div class="hero-stat-chip"><strong>&#x20B9;110 Cr+</strong><span>Annual Group Turnover</span></div>
-        <div class="hero-stat-chip"><strong>250+</strong><span>Skilled Professionals</span></div>
-        <div class="hero-stat-chip"><strong>50+</strong><span>Global Pharma Partners</span></div>
-      </div>
+
     </div>
   </section>
 
-  <section class="section" style="padding-top:80px;">
+  <section class="section" id="vision" >
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">WHO WE ARE</span>
@@ -120,7 +154,7 @@
     </div>
   </section>
 
-  <section class="timeline-section">
+  <section class="timeline-section" id="milestones">
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">OUR JOURNEY</span>
@@ -168,11 +202,98 @@
     </div>
   </section>
 
-  <section class="section" style="background:var(--bg-surface);padding:80px 0;">
+  <!-- Leadership Preview Section -->
+  <section class="section" id="leadership" style="padding:80px 0;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">EXECUTIVE GOVERNANCE</span>
+        <h2 class="section-title">Visionary Leadership Team</h2>
+        <p class="section-desc">Guided by pharmaceutical industry veterans with over 100+ years of cumulative expertise spanning API synthesis, advanced R&amp;D, regulatory compliance, and large-scale manufacturing operations.</p>
+      </div>
+      <div class="directors-showcase">
+        <div class="dir-card">
+          <div class="dir-header">
+            <div class="dir-avatar">NRS<div class="dir-exp-badge">25+ Yrs</div></div>
+            <div>
+              <div class="dir-name">Mr. Narasimha Reddy Sangati</div>
+              <div class="dir-role">Founder &amp; Managing Director</div>
+              <div class="dir-tags"><span class="dir-tag">Production</span><span class="dir-tag">R&amp;D</span><span class="dir-tag">Quality</span></div>
+            </div>
+          </div>
+          <div class="dir-body">
+            <p class="dir-bio">25+ years spearheading API production, green chemistry, and global strategy. Technical pioneer behind ADEEP's commercial biocatalytic synthesis programs.</p>
+            <div class="dir-expertise">
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Technical architect of Mirtazapine, Brivaracetam &amp; Duloxetine</span></div>
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Champion of WHO-GMP and international cGMP certifications</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dir-card">
+          <div class="dir-header">
+            <div class="dir-avatar">SRN<div class="dir-exp-badge">30+ Yrs</div></div>
+            <div>
+              <div class="dir-name">Mr. Srinivasa Reddy Nallagatla</div>
+              <div class="dir-role">Founder &amp; Executive Director</div>
+              <div class="dir-tags"><span class="dir-tag">Pharma</span><span class="dir-tag">Infrastructure</span><span class="dir-tag">Supply Chain</span></div>
+            </div>
+          </div>
+          <div class="dir-body">
+            <p class="dir-bio">30+ years orchestrating large-scale pharmaceutical facilities, infrastructure development, and seamless pan-India raw material supply networks.</p>
+            <div class="dir-expertise">
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Led design &amp; execution of 3 state-of-the-art manufacturing plants</span></div>
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Strategist behind the YSRJ Mega Industrial Hub, Kadapa</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dir-card">
+          <div class="dir-header">
+            <div class="dir-avatar">NRK<div class="dir-exp-badge">26+ Yrs</div></div>
+            <div>
+              <div class="dir-name">Mr. Narasimha Reddy Kalluru</div>
+              <div class="dir-role">Executive Director of Operations</div>
+              <div class="dir-tags"><span class="dir-tag">Operations</span><span class="dir-tag">Regulatory</span><span class="dir-tag">Scale-Up</span></div>
+            </div>
+          </div>
+          <div class="dir-body">
+            <p class="dir-bio">26+ years governing day-to-day multi-ton plant operations and global regulatory compliance, maintaining ADEEP's flawless zero-warning-letter audit record.</p>
+            <div class="dir-expertise">
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Oversees continuous multi-ton API batch campaigns</span></div>
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Directs USFDA, WHO-GMP &amp; CDSCO audit readiness</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dir-card">
+          <div class="dir-header">
+            <div class="dir-avatar">SRY<div class="dir-exp-badge">35+ Yrs</div></div>
+            <div>
+              <div class="dir-name">Mr. Suresh Reddy Yellipalem</div>
+              <div class="dir-role">Executive Director of Finance</div>
+              <div class="dir-tags"><span class="dir-tag">Corporate Finance</span><span class="dir-tag">Capital Strategy</span><span class="dir-tag">PLI Scheme</span></div>
+            </div>
+          </div>
+          <div class="dir-body">
+            <p class="dir-bio">35+ years in enterprise finance, capital allocation, and corporate growth. Led capital strategies for the USFDA Hyderabad plant acquisition and PLI schemes.</p>
+            <div class="dir-expertise">
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Drives fiscal governance &amp; enterprise capital allocation</span></div>
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Key coordinator for India's PLI pharmaceutical incentives</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="leadership.html" class="btn btn-outline btn-lg">View Full Executive Profiles &amp; Corporate Governance →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why-us" style="background:var(--bg-surface);padding:80px 0;">
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">WHAT WE STAND FOR</span>
-        <h2 class="section-title">Core Values That Define ADEEP</h2>
+        <h2 class="section-title">Core Values &amp; Why Choose ADEEP</h2>
         <p class="section-desc">Our values are embedded into every batch we manufacture, every partnership we form, and every decision we make.</p>
       </div>
       <div class="values-showcase">
@@ -237,7 +358,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-col brand-col">
-        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="footer-logo" />
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
         <p class="footer-tagline">Excellency in Chemistry &amp; Green Biocatalysis. A 17+ year legacy advancing India's pharmaceutical manufacturing autonomy across global markets.</p>
         <div class="footer-cert-badges"><span class="fc-badge">WHO-GMP</span><span class="fc-badge">ISO 9001:2015</span><span class="fc-badge">USFDA Aligned</span><span class="fc-badge">ZLD Eco-Compliance</span></div>
       </div>
@@ -248,6 +369,7 @@
           <li><a href="products.html">Product Portfolio</a></li>
           <li><a href="facilities.html">Manufacturing Sites</a></li>
           <li><a href="quality.html">Quality &amp; Compliance</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
           <li><a href="partners.html">Partners &amp; Global Footprint</a></li>
           <li><a href="leadership.html">Leadership &amp; Governance</a></li>
         </ul>
@@ -275,5 +397,6 @@
     const header=document.getElementById('mainHeader');const st=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60);st.classList.toggle('visible',window.scrollY>400);});st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
     document.getElementById('mobileToggle').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('open'));
   </script>
+  <script src="app.js?v=5.0"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
   <style>
-    .page-hero { min-height: 440px; display: flex; align-items: center; position: relative; padding: 130px 0 70px; overflow: hidden; background: linear-gradient(180deg, rgba(7, 14, 30, 0.84) 0%, rgba(4, 7, 17, 0.94) 100%), url('assets/hero_lab.jpg') center/cover no-repeat; }
+    .page-hero { min-height: calc(100vh - 76px); height: calc(100vh - 76px); display: flex; align-items: center; position: relative; padding: 40px 0; overflow: hidden; background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.84) 0%, rgba(4, 7, 17, 0.94) 100%), url('assets/hero_lab.jpg') center/cover no-repeat; }
     .page-hero::before { content: ''; position: absolute; top: -180px; right: -180px; width: 650px; height: 650px; background: radial-gradient(circle, rgba(139,92,246,0.14) 0%, transparent 65%); pointer-events: none; animation: orbFloat 8s ease-in-out infinite alternate; }
     .page-hero-inner { position: relative; z-index: 2; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.65); margin-bottom: 20px; }
@@ -94,20 +94,63 @@
   <canvas id="particleCanvas"></canvas>
   <header class="site-header" id="mainHeader">
     <div class="container header-container">
-      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="logo-img" /></a>
+      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="logo-img" /></a>
             <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="products.html" class="nav-link">Product Portfolio</a>
-        <a href="facilities.html" class="nav-link">Facilities</a>
-        <a href="quality.html" class="nav-link active">Quality &amp; USPs</a>
-        <a href="partners.html" class="nav-link">Partners</a>
-        <a href="leadership.html" class="nav-link">Leadership</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle active">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item active">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
       <div class="header-actions">
-
-        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
         <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -128,7 +171,7 @@
   </section>
 
   <!-- Certifications -->
-  <section class="section" style="padding-top:70px;">
+  <section class="section" id="certifications" style="padding-top:70px;">
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">GLOBAL CERTIFICATIONS</span>
@@ -146,13 +189,49 @@
     </div>
   </section>
 
-  <!-- Quality Stats -->
-  <section class="section" style="background:var(--bg-surface);padding:70px 0;">
+  <!-- Regulatory Filings (US DMF, CEP, WC) -->
+  <section class="section" id="regulatory-filings" style="padding:70px 0;background:linear-gradient(180deg, rgba(14,28,60,0.6) 0%, rgba(7,14,30,0.8) 100%);border-top:1px solid var(--border-card);border-bottom:1px solid var(--border-card);">
     <div class="container">
       <div class="section-header-centered">
-        <span class="section-tag">QUALITY METRICS</span>
-        <h2 class="section-title">Numbers That Define Excellence</h2>
-        <p class="section-desc">17+ years of impeccable quality track record across all product categories and manufacturing sites.</p>
+        <span class="section-tag">GLOBAL COMPLIANCE</span>
+        <h2 class="section-title">Regulatory Filings &amp; Drug Master Files</h2>
+        <p class="section-desc">Active technical dossiers, regulatory filings, and official certificates supporting global customer filings across regulated markets.</p>
+      </div>
+      <div class="cert-hero-grid">
+        <div class="cert-card cert-fda">
+          <div class="cert-circle">🇺🇸</div>
+          <h3>US DMF Filings</h3>
+          <p>Active Drug Master Files filed with the US FDA for commercial APIs (Mirtazapine, Duloxetine HCl) enabling fast-track ANDA referencing by US formulation sponsors.</p>
+        </div>
+        <div class="cert-card cert-who">
+          <div class="cert-circle">🇪🇺</div>
+          <h3>CEP / EDQM Dossiers</h3>
+          <p>Certificates of Suitability (CEP) dossiers aligned with the European Directorate for the Quality of Medicines (EDQM) and European Pharmacopoeia monographs.</p>
+        </div>
+        <div class="cert-card cert-api">
+          <div class="cert-circle">📜</div>
+          <h3>Written Confirmation (WC)</h3>
+          <p>Official Written Confirmation from CDSCO / Government of India under Directive 2011/62/EU certifying GMP compliance for lawful active substance exports to EU nations.</p>
+        </div>
+        <div class="cert-card cert-iso9">
+          <div class="cert-circle">📑</div>
+          <h3>ICH CTD Dossiers</h3>
+          <p>Full CTD Module 3 dossiers containing complete Route of Synthesis, ICH Q3A/B impurity profiles, batch analysis, and 36-month ICH Q1A stability data.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a href="downloads.html" class="btn btn-primary btn-md">Download Audit Certificates &amp; Licenses →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Stats & Audit History -->
+  <section class="section" id="audit-history" style="background:var(--bg-surface);padding:70px 0;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">AUDIT HISTORY &amp; METRICS</span>
+        <h2 class="section-title">Numbers &amp; Audits That Define Excellence</h2>
+        <p class="section-desc">17+ years of impeccable quality track record across all product categories, customer inspections, and regulatory audits.</p>
       </div>
       <div class="quality-stats">
         <div class="q-stat"><div class="q-stat-value">100%</div><div class="q-stat-label">Batch Quality Conformance Rate</div></div>
@@ -177,7 +256,7 @@
         <div class="usp-card"><div class="usp-icon-circle">🔗</div><div><h4>Fully Backward-Integrated</h4><p>Complete backward integration from starting materials to finished APIs — eliminating supply chain risks and ensuring consistent quality &amp; competitive pricing.</p></div></div>
         <div class="usp-card"><div class="usp-icon-circle">⚡</div><div><h4>24-Hour Commercial Response</h4><p>Guaranteed commercial quote, technical dossier, and COA delivery within 24 hours for all qualified inquiries — fastest in the Indian API sector.</p></div></div>
         <div class="usp-card"><div class="usp-icon-circle">📄</div><div><h4>Full Regulatory Documentation</h4><p>Complete DMF (Drug Master File), CoA, Route of Synthesis, ICH Q3 impurity profiles, and ICH Q1 stability data available for all commercial products.</p></div></div>
-        <div class="usp-card"><div class="usp-icon-circle">🌱</div><div><h4>ESG &amp; Sustainability</h4><p>Zero Liquid Discharge systems, automated gas scrubbers, solvent recovery units, and solar energy integration across manufacturing sites.</p></div></div>
+        <div class="usp-card"><div class="usp-icon-circle">🌱</div><div><h4>ESG &amp; CSR Excellence</h4><p>Zero Liquid Discharge systems, automated gas scrubbers, solvent recovery units, CSR community education &amp; healthcare, and solar energy integration across manufacturing sites.</p></div></div>
         <div class="usp-card"><div class="usp-icon-circle">👥</div><div><h4>250+ Expert Workforce</h4><p>Industry's lowest attrition rate. PhD chemists, QA specialists, and regulatory affairs professionals with cumulative 2,500+ years of pharma expertise.</p></div></div>
         <div class="usp-card"><div class="usp-icon-circle">🇮🇳</div><div><h4>PLI Scheme Beneficiary</h4><p>Active participation in India's Production Linked Incentive scheme for APIs — ensuring capacity expansion, price competitiveness, and long-term supply security.</p></div></div>
         <div class="usp-card"><div class="usp-icon-circle">🔬</div><div><h4>In-House QC Laboratories</h4><p>State-of-the-art analytical labs with HPLC, GC, UV-Vis spectroscopy, NMR, and microbial testing — eliminating third-party delays in release testing.</p></div></div>
@@ -186,11 +265,11 @@
   </section>
 
   <!-- QC Methods -->
-  <section class="section" style="background:var(--bg-surface);padding:70px 0;">
+  <section class="section" id="qa-qc" style="background:var(--bg-surface);padding:70px 0;">
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">ANALYTICAL CAPABILITIES</span>
-        <h2 class="section-title">In-House QC Testing Methods</h2>
+        <h2 class="section-title">In-House QA &amp; QC Testing Laboratories</h2>
         <p class="section-desc">Comprehensive analytical testing performed throughout every stage of production — from raw material qualification to final product release.</p>
       </div>
       <div class="qc-table">
@@ -220,7 +299,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-col brand-col">
-        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="footer-logo" />
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
         <p class="footer-tagline">Excellency in Chemistry &amp; Green Biocatalysis. 17+ year legacy in pharmaceutical manufacturing.</p>
         <div class="footer-cert-badges"><span class="fc-badge">WHO-GMP</span><span class="fc-badge">ISO 9001:2015</span><span class="fc-badge">USFDA Aligned</span><span class="fc-badge">ZLD</span></div>
       </div>
@@ -231,6 +310,7 @@
           <li><a href="products.html">Product Portfolio</a></li>
           <li><a href="facilities.html">Manufacturing Sites</a></li>
           <li><a href="quality.html">Quality &amp; Compliance</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="leadership.html">Leadership</a></li>
         </ul>
@@ -257,5 +337,6 @@
     const h=document.getElementById('mainHeader');const st=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{h.classList.toggle('scrolled',window.scrollY>60);st.classList.toggle('visible',window.scrollY>400);});st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
     document.getElementById('mobileToggle').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('open'));
   </script>
+  <script src="app.js?v=5.0"></script>
 </body>
 </html>

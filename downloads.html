@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adeep-signature">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downloads &amp; Documentation | ADEEP GROUP — Brochure, Catalogues &amp; Certificates</title>
+  <meta name="description" content="Download ADEEP GROUP corporate brochures, commercial API catalogues, WHO-GMP, ISO 9001, ISO 14001, ISO 45001 certificates, EU Written Confirmation, and ESG reports." />
+  <meta name="keywords" content="ADEEP brochure download, API catalogue PDF, WHO GMP certificate download, ISO 14001 pharma certificate, EU written confirmation, pharmaceutical DMF request" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
+  <style>
+    .page-hero {
+      min-height: calc(100vh - 76px); height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 40px 0;
+      overflow: hidden;
+      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.88) 0%, rgba(4, 7, 17, 0.95) 100%), url('assets/hero_pharma_clean.jpg') center/cover no-repeat;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -160px; right: -160px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 65%);
+      pointer-events: none;
+      animation: orbFloat 10s ease-in-out infinite alternate;
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.7); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--teal-vivid); text-decoration: none; }
+    .page-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+    .page-title .accent { background: linear-gradient(135deg, #38bdf8, #0ea5e9, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-subtitle { font-size: 1.12rem; color: rgba(226,238,255,0.88); max-width: 760px; line-height: 1.75; margin-bottom: 34px; }
+
+    /* Filter Tabs */
+    .dl-filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      justify-content: center;
+    }
+    .dl-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 9px 20px;
+      border-radius: var(--r-full);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--t);
+    }
+    .dl-filter-btn:hover,
+    .dl-filter-btn.active {
+      background: var(--teal-soft);
+      border-color: var(--teal-vivid);
+      color: #fff;
+    }
+
+    /* Downloads Grid */
+    .dl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 26px;
+    }
+    .dl-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-xl);
+      padding: 30px 28px;
+      transition: var(--t);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .dl-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--teal-vivid);
+      box-shadow: 0 16px 36px rgba(14, 165, 233, 0.15);
+    }
+    .dl-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
+    .dl-icon-box {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      background: var(--teal-soft);
+      border: 1px solid var(--border-card);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+    }
+    .dl-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--r-full);
+      color: var(--teal-vivid);
+      text-transform: uppercase;
+    }
+    .dl-title { font-size: 1.22rem; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.35; }
+    .dl-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 22px; flex: 1; }
+    .dl-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+    .dl-meta-text { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+
+    /* Dossier Request Box */
+    .dossier-box {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--r-2xl);
+      padding: 40px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Molecule Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Global Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="ADEEP GROUP Homepage">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
+      </a>
+
+            <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle active">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item active">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartOpenBtn" title="Inquiry Basket">
+          <svg viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="index.html#inquiry" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Downloads &amp; Documentation</span>
+      </div>
+      <h1 class="page-title">
+        Official Catalogues, <br />
+        <span class="accent">Certificates &amp; Dossiers</span>
+      </h1>
+      <p class="page-subtitle">
+        Access official corporate literature, technical product specifications, accredited quality certificates (WHO-GMP, ISO 9001, 14001, 45001), and annual sustainability reports.
+      </p>
+
+      <div class="hero-badges">
+        <div class="h-badge"><div class="h-badge-dot"></div>Official PDF Downloads</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>WHO-GMP Certified</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>Triple ISO Accredited</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>EU Written Confirmation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads Center Section -->
+  <section class="section" style="padding-top: 60px;">
+    <div class="container">
+      <!-- Filter Tabs -->
+      <div class="dl-filter-bar">
+        <button class="dl-filter-btn active" data-cat="all">All Documents (9)</button>
+        <button class="dl-filter-btn" data-cat="catalogues">Brochures &amp; Catalogues</button>
+        <button class="dl-filter-btn" data-cat="certs">Quality Certificates</button>
+        <button class="dl-filter-btn" data-cat="esg">ESG &amp; Policy Reports</button>
+      </div>
+
+      <!-- Downloads Grid -->
+      <div class="dl-grid">
+        <!-- Document 1 -->
+        <div class="dl-card" data-category="catalogues">
+          <div class="dl-top">
+            <div class="dl-icon-box">📘</div>
+            <span class="dl-badge">Corporate Deck</span>
+          </div>
+          <h3 class="dl-title">ADEEP GROUP Corporate Profile &amp; Infrastructure 2026</h3>
+          <p class="dl-desc">Comprehensive overview of manufacturing capacities across Bidar, Kadapa, and Hyderabad, leadership profiles, R&amp;D suites, and global partnerships.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 4.8 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading ADEEP Corporate Profile 2026 PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 2 -->
+        <div class="dl-card" data-category="catalogues">
+          <div class="dl-top">
+            <div class="dl-icon-box">💊</div>
+            <span class="dl-badge">Product Basket</span>
+          </div>
+          <h3 class="dl-title">Commercial APIs &amp; Advanced Intermediates Catalogue</h3>
+          <p class="dl-desc">Complete molecular specifications, CAS numbers, therapeutic indications, pharmacopoeial grades (USP/EP/IP), and packaging standards for 30+ products.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 6.2 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading API & Intermediates Catalogue PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 3 -->
+        <div class="dl-card" data-category="certs">
+          <div class="dl-top">
+            <div class="dl-icon-box">🏆</div>
+            <span class="dl-badge">Quality License</span>
+          </div>
+          <h3 class="dl-title">WHO-GMP Certificate of Good Manufacturing Practices</h3>
+          <p class="dl-desc">Statutory GMP compliance certificate issued by State Licensing Authority in accordance with World Health Organization technical guidelines.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 1.4 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading WHO-GMP Certificate PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 4 -->
+        <div class="dl-card" data-category="certs">
+          <div class="dl-top">
+            <div class="dl-icon-box">🏅</div>
+            <span class="dl-badge">ISO Standard</span>
+          </div>
+          <h3 class="dl-title">ISO 9001:2015 Quality Management System Certificate</h3>
+          <p class="dl-desc">Accredited certification validating systematic quality control, supplier audits, batch documentation, and continuous process optimization.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 1.1 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading ISO 9001:2015 Certificate PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 5 -->
+        <div class="dl-card" data-category="certs">
+          <div class="dl-top">
+            <div class="dl-icon-box">🌿</div>
+            <span class="dl-badge">Environmental</span>
+          </div>
+          <h3 class="dl-title">ISO 14001:2015 Environmental Management Certificate</h3>
+          <p class="dl-desc">International accreditation confirming 100% Zero Liquid Discharge (ZLD) effluent governance, emission control, and solvent recovery compliance.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 1.2 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading ISO 14001:2015 Certificate PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 6 -->
+        <div class="dl-card" data-category="certs">
+          <div class="dl-top">
+            <div class="dl-icon-box">🛡️</div>
+            <span class="dl-badge">Occupational Safety</span>
+          </div>
+          <h3 class="dl-title">ISO 45001:2018 Occupational Health &amp; Safety Certificate</h3>
+          <p class="dl-desc">Verified safety management framework supporting 1,420+ continuous lost-time-injury-free operations across all shifts and manufacturing blocks.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 1.2 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading ISO 45001:2018 Certificate PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 7 -->
+        <div class="dl-card" data-category="certs">
+          <div class="dl-top">
+            <div class="dl-icon-box">🇪🇺</div>
+            <span class="dl-badge">EU Regulated</span>
+          </div>
+          <h3 class="dl-title">European Union Written Confirmation (WC)</h3>
+          <p class="dl-desc">Official certification under Directive 2001/83/EC confirming standards of GMP equivalent to those in the European Union for export of active substances.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 1.5 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading EU Written Confirmation PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 8 -->
+        <div class="dl-card" data-category="esg">
+          <div class="dl-top">
+            <div class="dl-icon-box">📊</div>
+            <span class="dl-badge">ESG Report</span>
+          </div>
+          <h3 class="dl-title">Annual Sustainability &amp; ESG Progress Report 2025–26</h3>
+          <p class="dl-desc">Audited environmental footprint data, solvent recycling metrics (92.4%), solar generation, carbon offset goals, and UN SDG alignment metrics.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 5.1 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading Annual ESG Report PDF...');">Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Document 9 -->
+        <div class="dl-card" data-category="esg">
+          <div class="dl-top">
+            <div class="dl-icon-box">📜</div>
+            <span class="dl-badge">Governance</span>
+          </div>
+          <h3 class="dl-title">Corporate EHS Policy &amp; CSR Community Charter</h3>
+          <p class="dl-desc">Board-approved policy statements on environmental preservation, occupational safety, fair labor practices, anti-corruption, and rural community programs.</p>
+          <div class="dl-footer">
+            <span class="dl-meta-text">PDF • 1.8 MB</span>
+            <button class="btn btn-outline btn-sm" onclick="showToast('Downloading EHS Policy & CSR Charter PDF...');">Download PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confidential Regulatory Dossier Request Pane -->
+      <div class="dossier-box" id="dossier">
+        <div class="section-header-centered" style="margin-bottom: 24px;">
+          <span class="section-tag">REGULATORY CLEARANCE</span>
+          <h3 style="font-size: 1.8rem; font-weight: 900; color: #fff;">Request Confidential DMF Open-Part &amp; Tech Dossiers</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 700px; margin: 0 auto;">
+            Access to US FDA Type II DMF Open Parts, ICH Stability Reports, and Route of Synthesis is provided to authorized pharmaceutical quality and regulatory teams under standard NDA protocols.
+          </p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); showToast('DMF access request submitted! Our regulatory desk will issue credentials within 24 hours.'); this.reset();">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" required placeholder="Dr. / Mr. / Ms. Name" />
+            </div>
+            <div class="form-group">
+              <label>Corporate Organization / Company *</label>
+              <input type="text" required placeholder="Pharmaceutical Company Name" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Corporate Email (Official Domain) *</label>
+              <input type="email" required placeholder="name@company.com" />
+            </div>
+            <div class="form-group">
+              <label>Target API / Molecule Dossier *</label>
+              <input type="text" required placeholder="e.g. Mirtazapine / Brivaracetam / Duloxetine" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Specific Dossier Requirements</label>
+            <textarea rows="2" placeholder="Mention target market (US / EU / Rest of World), DMF access letter requirement, or ICH stability data pack..."></textarea>
+          </div>
+
+          <div class="form-actions" style="margin-top: 20px;">
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Request Technical Dossier Access</span>
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </button>
+          </div>
+          <div style="text-align: center; margin-top: 10px; font-size: 0.76rem; color: var(--text-muted);">
+            🔒 All regulatory requests are processed under strict mutual non-disclosure and 21 CFR Part 11 security guidelines.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
+        <p class="footer-tagline">
+          A Center for Excellence and Innovation in the Pharmaceutical Industry. Delivering API leadership, green biocatalysis, and robust global compliance since 2008.
+        </p>
+        <div class="footer-entities">
+          <span>• Adeep Life Sciences Pvt. Ltd.</span>
+          <span>• Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Quicklinks</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?therapy=Anti+depressant">Mirtazapine &amp; Duloxetine (CNS)</a></li>
+          <li><a href="products.html?therapy=Anti+convulsant">Brivaracetam &amp; Intermediates</a></li>
+          <li><a href="products.html?therapy=Parkinsons">Entacapone &amp; Levodopa</a></li>
+          <li><a href="products.html?therapy=Anti+bacterial">Moxifloxacin HCl</a></li>
+          <li><a href="products.html?category=speciality">Speciality Chemicals</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Key Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us &amp; Leadership</a></li>
+          <li><a href="facilities.html">Manufacturing Facilities</a></li>
+          <li><a href="quality.html">Quality &amp; Regulatory</a></li>
+          <li><a href="rnd.html">R&amp;D Innovation</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
+          <li><a href="careers.html">Careers &amp; Culture</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Headquarters &amp; Direct Line</h4>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 12px; line-height: 1.5;">
+          #1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084, Telangana, India.
+        </p>
+        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 6px;">
+          Direct: <a href="tel:+919515114455" style="color: var(--teal-vivid);">+91 9515114455</a>
+        </div>
+        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 14px;">
+          Email: <a href="mailto:srujanreddyn@adeepgroup.com" style="color: var(--teal-vivid);">srujanreddyn@adeepgroup.com</a>
+        </div>
+        <div class="footer-certs-list">
+          <span class="fc-badge">WHO-GMP</span>
+          <span class="fc-badge">USFDA Accredited</span>
+          <span class="fc-badge">ISO 9001</span>
+          <span class="fc-badge">ISO 14001</span>
+          <span class="fc-badge">ISO 45001</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ADEEP GROUP. All Rights Reserved. Excellency in Chemistry.</div>
+      <div class="footer-legal">
+        <a href="contact.html">Contact Us</a>
+        <span>•</span>
+        <a href="downloads.html">Downloads</a>
+        <span>•</span>
+        <a href="sustainability.html">ESG Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=5.0"></script>
+  <script>
+    // Downloads filter tabs
+    document.querySelectorAll('.dl-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.dl-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.getAttribute('data-cat');
+        document.querySelectorAll('.dl-card').forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

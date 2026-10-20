@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=19.0" />
   <style>
-    .page-hero { min-height: 440px; display: flex; align-items: center; position: relative; padding: 130px 0 70px; overflow: hidden; background: linear-gradient(180deg, rgba(7, 14, 30, 0.82) 0%, rgba(4, 7, 17, 0.92) 100%), url('assets/plant_facility.jpg') center/cover no-repeat; }
+    .page-hero { min-height: calc(100vh - 76px); height: calc(100vh - 76px); display: flex; align-items: center; position: relative; padding: 40px 0; overflow: hidden; background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.82) 0%, rgba(4, 7, 17, 0.92) 100%), url('assets/plant_facility.jpg') center/cover no-repeat; }
     .page-hero::before { content: ''; position: absolute; top: -150px; right: -150px; width: 600px; height: 600px; background: radial-gradient(circle, var(--teal-soft) 0%, transparent 65%); pointer-events: none; animation: orbFloat 9s ease-in-out infinite alternate; }
     .page-hero-inner { position: relative; z-index: 2; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.65); margin-bottom: 20px; }
@@ -82,20 +82,63 @@
   <canvas id="particleCanvas"></canvas>
   <header class="site-header" id="mainHeader">
     <div class="container header-container">
-      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="logo-img" /></a>
+      <a href="index.html" class="brand-logo"><img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="logo-img" /></a>
             <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="products.html" class="nav-link">Product Portfolio</a>
-        <a href="facilities.html" class="nav-link active">Facilities</a>
-        <a href="quality.html" class="nav-link">Quality &amp; USPs</a>
-        <a href="partners.html" class="nav-link">Partners</a>
-        <a href="leadership.html" class="nav-link">Leadership</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+
+        <div class="nav-item-dropdown">
+          <a href="about.html" class="nav-link nav-dropdown-toggle active">
+            About Us <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html" class="dropdown-item">About ADEEP Group</a>
+            <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
+            <a href="facilities.html" class="dropdown-item active">Manufacturing Facilities</a>
+            <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
+            <a href="news.html" class="dropdown-item">News &amp; Events</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link nav-dropdown-toggle">
+            Products <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">All Products</a>
+            <a href="products.html?category=commercial-api" class="dropdown-item">APIs (Active Ingredients)</a>
+            <a href="products.html?category=intermediate" class="dropdown-item">Advanced Intermediates</a>
+            <a href="products.html?category=custom-synthesis" class="dropdown-item">Custom Synthesis &amp; CDMO</a>
+            <a href="products.html?category=pipeline-api" class="dropdown-item">R&amp;D Pipeline</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="quality.html" class="nav-link nav-dropdown-toggle">
+            Quality &amp; R&amp;D <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="quality.html" class="dropdown-item">Quality &amp; Regulatory Assurance</a>
+            <a href="rnd.html" class="dropdown-item">R&amp;D &amp; Green Biocatalysis</a>
+            <a href="downloads.html" class="dropdown-item">Certificates &amp; DMF Downloads</a>
+            <a href="partners.html" class="dropdown-item">Global CDMO &amp; Partnerships</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
+            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
+            <a href="csr.html" class="dropdown-item">CSR &amp; Community Empowerment</a>
+            <a href="hsg.html" class="dropdown-item">Health, Safety &amp; Governance (HSG)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
       <div class="header-actions">
-
-        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Request RFQ</a>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
         <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -115,7 +158,7 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:70px;">
+  <section class="section" id="locations" style="padding-top:70px;">
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">GLOBAL INFRASTRUCTURE</span>
@@ -124,8 +167,8 @@
       </div>
       <div class="facilities-grid">
 
-        <!-- Unit 1 -->
-        <div class="facility-full-card">
+        <!-- Unit 1 - Reactor Capacity -->
+        <div class="facility-full-card" id="capacity">
           <div class="ffc-img-wrapper">
             <img src="assets/plant_facility.jpg" alt="Unit 1 Bidar Plant" />
             <div class="ffc-img-overlay"></div>
@@ -134,7 +177,7 @@
           </div>
           <div class="ffc-body">
             <div class="ffc-entity">Adeep Life Sciences Pvt Ltd</div>
-            <div class="ffc-title">Kolhar Industrial Area, Bidar</div>
+            <div class="ffc-title">Kolhar Industrial Area, Bidar — Commercial Reactor Capacity</div>
             <div class="ffc-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Plot 131/A-1, 130 C&amp;D, Kolhar Industrial Area, Bidar – 585401, Karnataka</div>
             <div class="ffc-desc">Our flagship commercial API and advanced intermediate production plant. Features world-class glass-lined and stainless-steel reactor trains, cleanroom finishing suites, automated powder processing, and dedicated QC testing laboratories.</div>
             <div class="ffc-specs">
@@ -146,8 +189,8 @@
           </div>
         </div>
 
-        <!-- Unit 2 -->
-        <div class="facility-full-card">
+        <!-- Unit 2 - Expansion Plans -->
+        <div class="facility-full-card" id="expansion">
           <div class="ffc-img-wrapper">
             <img src="assets/plant_facility.jpg" alt="Unit 2 Kadapa Mega Hub" />
             <div class="ffc-img-overlay"></div>
@@ -156,7 +199,7 @@
           </div>
           <div class="ffc-body">
             <div class="ffc-entity">Adeep Life Sciences Pvt Ltd</div>
-            <div class="ffc-title">YSRJ Mega Industrial Hub, Kadapa</div>
+            <div class="ffc-title">YSRJ Mega Industrial Hub, Kadapa — Mega Expansion Plant</div>
             <div class="ffc-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>APIIC Plot 27A, YSRJ Mega Industrial Hub, Kopparthi, Kadapa, YSR District, Andhra Pradesh</div>
             <div class="ffc-desc">A massive state-of-the-art expansion engineered for high-volume biocatalysis and continuous flow chemistry. Designed from ground up to comply with USFDA and EU-GMP regulatory benchmarks under the PLI scheme.</div>
             <div class="ffc-specs">
@@ -168,8 +211,8 @@
           </div>
         </div>
 
-        <!-- Unit 3 -->
-        <div class="facility-full-card">
+        <!-- Unit 3 - Production Blocks -->
+        <div class="facility-full-card" id="blocks">
           <div class="ffc-img-wrapper">
             <img src="assets/plant_facility.jpg" alt="Unit 3 Adeep Laboratories" />
             <div class="ffc-img-overlay"></div>
@@ -178,7 +221,7 @@
           </div>
           <div class="ffc-body">
             <div class="ffc-entity">Adeep Laboratories Pvt Ltd</div>
-            <div class="ffc-title">YSRJ Mega Hub — Subsidiary Plant</div>
+            <div class="ffc-title">YSRJ Mega Hub — Intermediates &amp; Dedicated Production Blocks</div>
             <div class="ffc-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>APIIC Plot 162, YSRJ Mega Industrial Hub, Kopparthi, Kadapa, YSR District, Andhra Pradesh</div>
             <div class="ffc-desc">Dedicated to high-purity chemical intermediates and contract development. Equipped with flexible production modules enabling seamless pilot-to-commercial scale-up of novel chemical pathways.</div>
             <div class="ffc-specs">
@@ -191,7 +234,7 @@
         </div>
 
         <!-- Unit 4 -->
-        <div class="facility-full-card">
+        <div class="facility-full-card" id="rnd-facility">
           <div class="ffc-img-wrapper">
             <img src="assets/hero_lab.jpg" alt="Unit 4 Hyderabad USFDA R&D" />
             <div class="ffc-img-overlay"></div>
@@ -232,21 +275,38 @@
     </div>
   </section>
 
-  <!-- Core Capabilities -->
-  <section class="section">
+  <!-- Plant Utilities & Engineering Capabilities -->
+  <section class="section" id="utilities">
     <div class="container">
       <div class="section-header-centered">
-        <span class="section-tag">TECHNICAL CAPABILITIES</span>
-        <h2 class="section-title">Engineering Excellence Across All Sites</h2>
-        <p class="section-desc">Our plants are equipped with cutting-edge infrastructure to handle complex chemical transformations at commercial scale.</p>
+        <span class="section-tag">ENGINEERING &amp; UTILITIES</span>
+        <h2 class="section-title">Plant Utilities &amp; Infrastructure</h2>
+        <p class="section-desc">Robust industrial utilities engineered for uninterrupted 24x7 commercial synthesis and finishing operations.</p>
       </div>
       <div class="capabilities-strip">
-        <div class="cap-item"><div class="cap-icon">⚗️</div><h4>Multi-Ton Reactors</h4><p>Glass-lined &amp; SS reactor trains for multi-ton API synthesis</p></div>
-        <div class="cap-item"><div class="cap-icon">🧬</div><h4>Biocatalysis Suite</h4><p>Dedicated enzymatic synthesis for chiral APIs with &gt;99.8% ee</p></div>
-        <div class="cap-item"><div class="cap-icon">🔬</div><h4>In-House QC Labs</h4><p>HPLC, GC, UV-Vis, NMR, and microbial analysis throughout production</p></div>
-        <div class="cap-item"><div class="cap-icon">♻️</div><h4>Zero Liquid Discharge</h4><p>Full ZLD systems and solvent recovery across all operational units</p></div>
-        <div class="cap-item"><div class="cap-icon">🏭</div><h4>Cleanroom Suites</h4><p>ISO-classified cleanrooms for finished API powder processing</p></div>
-        <div class="cap-item"><div class="cap-icon">💻</div><h4>SCADA Controls</h4><p>Computerized process control &amp; automated batch record systems</p></div>
+        <div class="cap-item"><div class="cap-icon">⚡</div><h4>Captive Power &amp; DG</h4><p>100% uninterrupted power backup with dedicated diesel generators and redundant substation lines</p></div>
+        <div class="cap-item"><div class="cap-icon">❄️</div><h4>Cryogenic &amp; Chillers</h4><p>Temperature control from -20°C up to +250°C with automated circulation loops</p></div>
+        <div class="cap-item"><div class="cap-icon">💨</div><h4>Purified N₂ &amp; High Vacuum</h4><p>High-purity liquid nitrogen plant &amp; multi-stage steam ejector vacuum systems (&lt;1 Torr)</p></div>
+        <div class="cap-item"><div class="cap-icon">🏭</div><h4>Class 100,000 Cleanrooms</h4><p>HEPA-filtered clean finishing suites with micro-differential pressure cascades</p></div>
+        <div class="cap-item"><div class="cap-icon">💻</div><h4>SCADA Automation</h4><p>Computerized batch process controls and automated fail-safe interlock systems</p></div>
+        <div class="cap-item"><div class="cap-icon">💧</div><h4>Purified Water (USP/EP)</h4><p>RO + EDI water generation systems meeting international pharmacopoeial standards</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solvent Recovery & ETP Section -->
+  <section class="section" id="etp" style="background:var(--bg-surface);padding:70px 0;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-tag">ENVIRONMENTAL SAFETY</span>
+        <h2 class="section-title">Solvent Recovery &amp; Zero Liquid Discharge (ETP)</h2>
+        <p class="section-desc">Fully integrated state-of-the-art effluent treatment and solvent reclamation plants guaranteeing zero environmental release.</p>
+      </div>
+      <div class="capabilities-strip">
+        <div class="cap-item"><div class="cap-icon">♻️</div><h4>Fractional Solvent Recovery</h4><p>Multi-column fractional distillation units achieving &gt;95% solvent recovery and purity reclamation</p></div>
+        <div class="cap-item"><div class="cap-icon">🌊</div><h4>Multi-Stage ETP</h4><p>Equalization, biological treatment (aerobic/anaerobic), and specialized chemical coagulation</p></div>
+        <div class="cap-item"><div class="cap-icon">🔬</div><h4>MEE &amp; ATFD Evaporators</h4><p>Forced circulation Multiple Effect Evaporators and Agitated Thin Film Dryers for total solids recovery</p></div>
+        <div class="cap-item"><div class="cap-icon">🌿</div><h4>Zero Liquid Discharge (ZLD)</h4><p>100% process wastewater treated and recycled back into utility boilers and cooling towers</p></div>
       </div>
     </div>
   </section>
@@ -266,7 +326,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-col brand-col">
-        <img src="assets/adeep_logo_horizontal.png" alt="ADEEP GROUP" class="footer-logo" />
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
         <p class="footer-tagline">Excellency in Chemistry &amp; Green Biocatalysis. 17+ year legacy in pharmaceutical manufacturing.</p>
         <div class="footer-cert-badges"><span class="fc-badge">WHO-GMP</span><span class="fc-badge">ISO 9001:2015</span><span class="fc-badge">USFDA Aligned</span><span class="fc-badge">ZLD</span></div>
       </div>
@@ -277,6 +337,7 @@
           <li><a href="products.html">Product Portfolio</a></li>
           <li><a href="facilities.html">Manufacturing Sites</a></li>
           <li><a href="quality.html">Quality &amp; Compliance</a></li>
+          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="leadership.html">Leadership</a></li>
         </ul>
@@ -303,5 +364,6 @@
     const h=document.getElementById('mainHeader');const st=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{h.classList.toggle('scrolled',window.scrollY>60);st.classList.toggle('visible',window.scrollY>400);});st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
     document.getElementById('mobileToggle').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('open'));
   </script>
+  <script src="app.js?v=5.0"></script>
 </body>
 </html>
