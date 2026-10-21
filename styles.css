@@ -4979,32 +4979,43 @@ table tr:hover td {
 }
 
 
-/* 2. Compact Modern Subpage Hero Banners (.page-hero Across Total Website) */
-.page-hero {
-  min-height: auto !important;
-  height: auto !important;
+/* ═══════════════════════════════════════════════════════════
+   2. Full Screen Cover Subpage Hero Banners (.page-hero Across Total Website)
+   ═══════════════════════════════════════════════════════════ */
+.page-hero,
+.page-hero-banner {
+  min-height: calc(100vh - 76px) !important;
+  height: calc(100vh - 76px) !important;
   display: flex !important;
   align-items: center !important;
   position: relative !important;
-  padding: 100px 0 50px !important;
+  padding: 40px 0 !important;
   overflow: hidden !important;
-  background: radial-gradient(circle at 85% 25%, rgba(56, 203, 86, 0.16) 0%, transparent 55%),
-              radial-gradient(circle at 15% 75%, rgba(245, 130, 32, 0.13) 0%, transparent 55%),
-              linear-gradient(135deg, #07152d 0%, #0a2240 50%, #072927 100%) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-.page-title, .page-hero-title {
-  font-size: clamp(1.75rem, 3.2vw, 2.4rem) !important;
-  line-height: 1.18 !important;
-  margin-bottom: 10px !important;
+.page-hero {
+  background: linear-gradient(180deg, rgba(7, 14, 30, 0.62) 0%, rgba(4, 7, 17, 0.86) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat !important;
 }
 
-.page-subtitle, .page-hero-subtitle {
-  font-size: 0.92rem !important;
-  line-height: 1.55 !important;
+#overview.page-hero {
+  background: linear-gradient(180deg, rgba(7, 14, 30, 0.62) 0%, rgba(4, 7, 17, 0.86) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat !important;
+}
+
+.page-hero-title, .page-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem) !important;
+  line-height: 1.12 !important;
   margin-bottom: 16px !important;
-  max-width: 660px !important;
+}
+
+.page-hero-subtitle, .page-subtitle {
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 20px !important;
+  max-width: 720px !important;
 }
 
 .breadcrumb {
