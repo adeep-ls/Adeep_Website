@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css?v=21.0" />
+  <link rel="stylesheet" href="styles.css?v=34.0" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -308,30 +308,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background: rgba(4, 9, 22, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  gap: 10px;
+  background: rgba(4, 9, 22, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   border-radius: 8px;
-  padding: 7px 14px;
+  padding: 8px 16px;
   margin: 0 auto;
-  max-width: 420px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  max-width: 460px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.12);
 }
 
 .telemetry-icon {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5));
 }
 
-.splash-telemetry-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.74rem;
-  color: #cbd5e1;
-  min-height: 18px;
-  margin: 0;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+#siteSplashScreen .splash-telemetry-text,
+#siteSplashScreen p.splash-telemetry-text,
+.splash-telemetry-text,
+#splashTelemetryText {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: #38bdf8 !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.75), 0 0 2px rgba(255, 255, 255, 0.6) !important;
+  letter-spacing: 0.02em !important;
+  min-height: 20px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 /* Liquid Laser Progress Bar */
@@ -552,7 +560,7 @@
         </div>
         <div class="splash-telemetry-box">
           <span class="telemetry-icon">⚗️</span>
-          <p class="splash-telemetry-text" id="splashTelemetryText">Calibrating continuous enzymatic flow reactors...</p>
+          <div class="splash-telemetry-text" id="splashTelemetryText" style="color: #38bdf8 !important; text-shadow: 0 0 12px rgba(56, 189, 248, 0.7) !important;">Calibrating continuous enzymatic flow reactors...</div>
         </div>
       </div>
 
@@ -589,6 +597,7 @@
         var finished = false;
         var progress = 0;
         var msgIdx = 0;
+        var isPaused = new URLSearchParams(window.location.search).has('pauseSplash');
 
         const splash = document.getElementById('siteSplashScreen');
         if (!splash) return;
@@ -624,26 +633,38 @@
           { msg: 'Systems operational • Welcome to ADEEP Group', badge: 'Online' }
         ];
 
-        // Smooth telemetry message transition (350ms)
+        // Telemetry message transition (600ms per status)
         const textTimer = setInterval(() => {
           if (finished) { clearInterval(textTimer); return; }
+          if (isPaused) {
+            if (text) {
+              text.textContent = 'Resolving enantiomeric purity (> 99.8% ee)...';
+              text.style.opacity = '1';
+            }
+            return;
+          }
           msgIdx = (msgIdx + 1) % telemetryMessages.length;
           const cur = telemetryMessages[msgIdx];
           if (text) {
-            text.style.opacity = '0';
-            text.style.transform = 'translateY(4px)';
-            setTimeout(() => {
-              text.textContent = cur.msg;
-              if (badgeText) badgeText.textContent = cur.badge;
-              text.style.opacity = '1';
-              text.style.transform = 'translateY(0)';
-            }, 120);
+            text.textContent = cur.msg;
+            if (badgeText) badgeText.textContent = cur.badge;
+            text.style.opacity = '1';
           }
-        }, 350);
+        }, 600);
 
-        // Fast & smooth progress flow (0% -> 100% in ~1.6s)
+        // Fast & smooth progress flow (0% -> 100% in ~2.0s)
         const progressTimer = setInterval(() => {
           if (finished) { clearInterval(progressTimer); return; }
+          if (isPaused) {
+            progress = 68;
+            if (bar) bar.style.width = '68%';
+            if (pct) pct.textContent = '68%';
+            if (text) {
+              text.textContent = 'Resolving enantiomeric purity (> 99.8% ee)...';
+              text.style.opacity = '1';
+            }
+            return;
+          }
           progress += 2.2;
           if (progress >= 100) {
             progress = 100;
@@ -716,7 +737,7 @@
 
         <div class="nav-item-dropdown">
           <a href="sustainability.html" class="nav-link nav-dropdown-toggle">
-            Sustainability &amp; CSR <span class="dropdown-chevron">▼</span>
+            Sustainability <span class="dropdown-chevron">▼</span>
           </a>
           <div class="nav-dropdown-menu">
             <a href="sustainability.html" class="dropdown-item">Sustainability &amp; ESG Overview</a>
