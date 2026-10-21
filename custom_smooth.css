@@ -584,22 +584,7 @@ body.light-theme .metric-sub {
 /* ═══════════════════════════════════════════════════════════
    MASTER CORPORATE FOOTER SYSTEM (Sections 1 through 7)
    ═══════════════════════════════════════════════════════════ */
-.site-footer {
-  margin: 0 !important;
-  margin-top: 60px !important;
-  width: 100% !important;
-  box-sizing: border-box;
-  background: linear-gradient(180deg, #070e22 0%, #040816 100%);
-  border-top: 1px solid rgba(56, 189, 248, 0.2);
-  position: relative;
-  overflow: hidden;
-}
 
-[data-theme="pristine-pearl"] .site-footer,
-body.light-theme .site-footer {
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-  border-top: 1px solid #e2e8f0;
-}
 
 /* ── Upper Action Bar: Newsletter + Quick Actions ── */
 .footer-top-action-bar {

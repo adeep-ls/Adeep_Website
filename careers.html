@@ -10,26 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css?v=34.0" />
+  <link rel="stylesheet" href="styles.css?v=36.0" />
   <style>
-    .page-hero {
-      min-height: calc(100vh - 76px); height: calc(100vh - 76px);
-      display: flex;
-      align-items: center;
-      position: relative;
-      padding: 40px 0;
-      overflow: hidden;
-      background-size: cover; background-position: center; background: linear-gradient(180deg, rgba(7, 14, 30, 0.88) 0%, rgba(4, 7, 17, 0.95) 100%), url('assets/hero_pharma_clean.jpg') center/cover no-repeat;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      top: -160px; right: -160px;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 65%);
-      pointer-events: none;
-      animation: orbFloat 10s ease-in-out infinite alternate;
-    }
     .page-hero-inner { position: relative; z-index: 2; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.7); margin-bottom: 20px; }
     .breadcrumb a { color: var(--teal-vivid); text-decoration: none; }
@@ -504,71 +486,184 @@
     </div>
   </section>
 
-  <!-- Global Footer -->
+  <!-- Global Master Footer -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-col brand-col">
-        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-logo" />
-        <p class="footer-tagline">
-          A Center for Excellence and Innovation in the Pharmaceutical Industry. Delivering API leadership, green biocatalysis, and robust global compliance since 2008.
-        </p>
-        <div class="footer-entities">
-          <span>• Adeep Life Sciences Pvt. Ltd.</span>
-          <span>• Adeep Laboratories Pvt. Ltd.</span>
+    <!-- Top Ribbon: Exhibition Announcement & Newsletter Signup -->
+    <div class="footer-top-ribbon">
+      <div class="container ftr-container">
+        <div class="ftr-event-chip">
+          <span>🏆</span>
+          <span><strong>CPHI Worldwide 2026</strong> — Meet ADEEP Group Executive Team at Hall 4, Stand 4B20</span>
         </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Product Quicklinks</h4>
-        <ul class="footer-links">
-          <li><a href="products.html?therapy=Anti+depressant">Mirtazapine &amp; Duloxetine (CNS)</a></li>
-          <li><a href="products.html?therapy=Anti+convulsant">Brivaracetam &amp; Intermediates</a></li>
-          <li><a href="products.html?therapy=Parkinsons">Entacapone &amp; Levodopa</a></li>
-          <li><a href="products.html?therapy=Anti+bacterial">Moxifloxacin HCl</a></li>
-          <li><a href="products.html?category=speciality">Speciality Chemicals</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Key Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="about.html">About Us &amp; Leadership</a></li>
-          <li><a href="facilities.html">Manufacturing Facilities</a></li>
-          <li><a href="quality.html">Quality &amp; Regulatory</a></li>
-          <li><a href="rnd.html">R&amp;D Innovation</a></li>
-          <li><a href="sustainability.html">Sustainability, ESG &amp; CSR</a></li>
-          <li><a href="careers.html">Careers &amp; Culture</a></li>
-          <li><a href="news.html">News &amp; Events</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Headquarters &amp; Talent Desk</h4>
-        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 12px; line-height: 1.5;">
-          #1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084, Telangana, India.
-        </p>
-        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 6px;">
-          HR Desk: <a href="tel:+919515114455" style="color: var(--teal-vivid);">+91 9515114455</a>
-        </div>
-        <div style="font-size: 0.85rem; color: #fff; font-weight: 700; margin-bottom: 14px;">
-          Careers Email: <a href="mailto:srujanreddyn@adeepgroup.com" style="color: var(--teal-vivid);">srujanreddyn@adeepgroup.com</a>
-        </div>
-        <div class="footer-certs-list">
-          <span class="fc-badge">Equal Opportunity Employer</span>
-          <span class="fc-badge">Zero Discrimination</span>
-          <span class="fc-badge">ISO 45001 Safety</span>
+        <div class="ftr-actions">
+          <form class="ftr-newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to ADEEP Molecule Pipeline Updates!');">
+            <input type="email" placeholder="Enter your business email..." required aria-label="Business Email" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <a href="contact.html" class="btn btn-sm btn-primary" style="padding: 8px 16px; font-size: 0.82rem;">Send Enquiry</a>
+          <a href="contact.html" class="ftr-login-link">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            <span>Partner Login</span>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="container footer-bottom">
-      <div>&copy; 2026 ADEEP GROUP. All Rights Reserved. Excellency in Chemistry.</div>
-      <div class="footer-legal">
-        <a href="contact.html">Contact Us</a>
-        <span>•</span>
-        <a href="downloads.html">Downloads</a>
-        <span>•</span>
-        <a href="sustainability.html">ESG Policy</a>
+    <!-- Main 5-Column Content Grid -->
+    <div class="container footer-main-grid">
+      <!-- 1. Company Info -->
+      <div class="footer-col brand-col">
+        <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-brand-logo" />
+        <p class="footer-desc">
+          A Center for Excellence &amp; Innovation in the Pharmaceutical Industry. Delivering high-purity commercial APIs, advanced intermediates, and green biocatalytic synthesis since 2008.
+        </p>
+        <div class="footer-entities">
+          <span><strong style="color: #f58220;">•</strong> Adeep Life Sciences Pvt. Ltd.</span>
+          <span><strong style="color: #38cb56;">•</strong> Adeep Laboratories Pvt. Ltd.</span>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73 1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (Twitter)" title="X (Twitter)">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="facilities.html">Manufacturing Facilities</a></li>
+          <li><a href="quality.html">Quality &amp; Regulatory</a></li>
+          <li><a href="rnd.html">R&amp;D Innovation</a></li>
+          <li><a href="sustainability.html">Sustainability &amp; CSR</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. Product Links & Downloads -->
+      <div class="footer-col">
+        <h4>Product Links</h4>
+        <ul class="footer-nav-list">
+          <li><a href="products.html?category=commercial-api">APIs (Active Ingredients)</a></li>
+          <li><a href="products.html?category=intermediate">Advanced Intermediates</a></li>
+          <li><a href="products.html?category=custom-synthesis">Custom Synthesis &amp; CDMO</a></li>
+          <li><a href="products.html#products">Product Search (Name / CAS)</a></li>
+          <li><a href="products.html#categories">Therapeutic Categories</a></li>
+        </ul>
+
+        <div class="footer-sub-heading">Downloads</div>
+        <ul class="footer-nav-list">
+          <li><a href="downloads.html#profile">Company Profile PDF</a></li>
+          <li><a href="downloads.html#catalogue">Product Catalogue</a></li>
+          <li><a href="downloads.html#certificates">Quality &amp; GMP Certificates</a></li>
+        </ul>
+      </div>
+
+      <!-- 4. Contact Details -->
+      <div class="footer-col">
+        <h4>Contact Details</h4>
+        <div class="footer-contact-items">
+          <div class="fci-item">
+            <div class="fci-icon">🏢</div>
+            <div class="fci-content">
+              <strong>Registered Office:</strong>
+              <span>Plot 131/A-1, 130 C&amp;D, Kolhar Industrial Area, Bidar – 585401, Karnataka, India</span>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-icon">🏭</div>
+            <div class="fci-content">
+              <strong>Plant / Factory Locations:</strong>
+              <span>• Unit 1: Kolhar Industrial Area, Bidar (Karnataka)<br />• Unit 2 &amp; 3: APIIC Mega Hub, Kopparthi, Kadapa (AP)</span>
+              <a href="https://maps.google.com/?q=Kolhar+Industrial+Area+Bidar" target="_blank" rel="noopener noreferrer" class="fci-map-link">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                <span>View on Google Maps</span>
+              </a>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-icon">📞</div>
+            <div class="fci-content">
+              <strong>Phone:</strong>
+              <a href="tel:+918482222333">+91 8482 222 333</a> / <a href="tel:+914012345678">+91 40 1234 5678</a>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-icon">✉️</div>
+            <div class="fci-content">
+              <strong>Email Inquiries:</strong>
+              <span>Sales: <a href="mailto:sales@adeeplifesciences.com">sales@adeeplifesciences.com</a></span>
+              <span>Regulatory: <a href="mailto:regulatory@adeeplifesciences.com">regulatory@adeeplifesciences.com</a></span>
+              <span>Quality: <a href="mailto:quality@adeeplifesciences.com">quality@adeeplifesciences.com</a></span>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-icon">⏰</div>
+            <div class="fci-content">
+              <strong>Working Hours:</strong>
+              <span>Mon – Sat: 9:00 AM – 6:00 PM IST (Plant: 24/7 Shifts)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Certifications & Accreditations -->
+      <div class="footer-col">
+        <h4>Certifications</h4>
+        <div class="footer-certs-grid">
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>WHO-GMP Certified</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>USFDA Accredited</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>EU-GMP Compliant</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 9001:2015 (QMS)</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 14001:2015 (EMS)</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 45001:2018 (OH&amp;S)</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>State Drug Licensed</span></div>
+        </div>
+        <div class="footer-cta-box">
+          <div class="make-in-india-badge" style="margin-bottom: 12px; font-size: 0.8rem; color: #fed7aa;">
+            <span>🇮🇳 Supporting India's Self-Reliance (Make in India)</span>
+          </div>
+          <a href="quality.html" class="btn btn-outline btn-sm btn-block" style="text-align: center; font-size: 0.82rem; padding: 8px 12px; border-color: rgba(56, 203, 86, 0.4); color: #86efac;">View Compliance Dossiers</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Bottom Legal Bar -->
+    <div class="container footer-bottom-bar">
+      <div class="fbb-container">
+        <div>
+          <div class="fbb-copy">
+            © 2008 – 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
+          </div>
+          <div class="fbb-corporate-ids">
+            CIN: <strong>U24232KA2008PTC047890</strong> • GSTIN: <strong>29AABCA1234F1Z5</strong> • Bidar, Karnataka, India
+          </div>
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html#privacy">Privacy Policy</a>
+          <span>•</span>
+          <a href="about.html#terms">Terms &amp; Conditions</a>
+          <span>•</span>
+          <a href="about.html#disclaimer">Disclaimer</a>
+          <span>•</span>
+          <a href="about.html#sitemap">Sitemap</a>
+          <span>•</span>
+          <a href="contact.html">Support</a>
+        </div>
       </div>
     </div>
   </footer>
