@@ -16,7 +16,7 @@ const PRODUCTS_DATA = [
     status: "Commercial Scale",
     statusClass: "status-commercial",
     turnover: "₹50 Cr+",
-    compliance: "WHO-GMP Certified, cGMP Compliant, USFDA Ready",
+    compliance: "WHO-GMP Certified, cGMP Compliant",
     details: "Tetracyclic antidepressant used primarily in major depressive disorder. Manufactured via proprietary route ensuring high purity and low residual solvent profile."
   },
   {
@@ -141,7 +141,7 @@ const PRODUCTS_DATA = [
     targetApi: "Brivaracetam",
     status: "Commercial Intermediate",
     statusClass: "status-intermediate",
-    compliance: "USFDA / cGMP Grade",
+    compliance: "cGMP / Export Grade",
     details: "Critical chiral lactone intermediate for Brivaracetam. Synthesized with enzyme-catalyzed resolution delivering >99.8% enantiomeric excess."
   },
   {
@@ -446,9 +446,9 @@ const FACILITIES_DATA = {
     badge: "Adeep Life Sciences Private Limited",
     status: "● Mega Expansion (Under Construction)",
     location: "APIIC Plot no 27A, YSRJ Mega Industrial Hub, Kopparthi, Kadapa, YSR Dist., Andhra Pradesh, India",
-    desc: "A massive state-of-the-art expansion engineered specifically for high-volume biocatalysis and continuous flow chemistry. Designed from ground up to comply with USFDA and EU-GMP regulatory benchmarks, accelerating India's national self-reliance in pharmaceuticals under the PLI scheme.",
+    desc: "A massive state-of-the-art expansion engineered specifically for high-volume biocatalysis and continuous flow chemistry. Designed from ground up to comply with global cGMP and EU-GMP regulatory benchmarks, accelerating India's national self-reliance in pharmaceuticals under the PLI scheme.",
     focus: "Mega-scale green biocatalytic API blocks & import-substitution molecules",
-    certs: "Architected for USFDA, EU-GMP, WHO-GMP & ISO Integrated Systems",
+    certs: "Architected for cGMP, EU-GMP, WHO-GMP & ISO Integrated Systems",
     safety: "Green engineering, solar energy integration, advanced containment suites",
     tag: "Next-Gen Mega Hub",
     img: "assets/plant_facility.jpg"
@@ -466,27 +466,27 @@ const FACILITIES_DATA = {
     img: "assets/plant_facility.jpg"
   },
   unit4: {
-    title: "Unit 4 & Central R&D - Hyderabad Campus",
-    badge: "USFDA Accredited Plant & Central R&D Hub",
-    status: "● Operational Manufacturing & R&D Campus",
+    title: "ADEEP Technology Center - Hyderabad",
+    badge: "ADEEP Technology Center (Central R&D Hub)",
+    status: "● Operational Central R&D Facility",
     location: "Hyderabad Industrial Pharma Corridor, Telangana, India",
-    desc: "A strategic acquisition and central innovation hub combining our USFDA-approved advanced intermediate manufacturing plant with ADEEP's central analytical R&D laboratories. Enables seamless supply to tier-1 regulated markets (USA, Europe, Japan) alongside specialized process development.",
-    focus: "USFDA-grade advanced intermediates, pilot-to-commercial scale-up, and analytical research",
-    certs: "USFDA Accredited, WHO-GMP Certified, cGMP Approved, GLP Protocols",
-    safety: "World-class audit track record with zero 483 critical observations",
-    tag: "USFDA & Central R&D Campus",
+    desc: "ADEEP's central research and technology powerhouse driving innovative route scouting, process chemistry, biocatalytic pathways, and ICH-compliant analytical method development supporting all manufacturing units.",
+    focus: "Process chemistry, route design, impurity profiling, and analytical research",
+    certs: "GLP Protocols, Schedule M, cGMP Quality Standards",
+    safety: "World-class audit track record with zero critical observations",
+    tag: "Central R&D & Innovation Hub",
     img: "assets/hero_lab.jpg"
   },
   unitRnd: {
-    title: "Unit 4 & Central R&D - Hyderabad Campus",
-    badge: "USFDA Accredited Plant & Central R&D Hub",
-    status: "● Operational Manufacturing & R&D Campus",
+    title: "ADEEP Technology Center - Hyderabad",
+    badge: "ADEEP Technology Center (Central R&D Hub)",
+    status: "● Operational Central R&D Facility",
     location: "Hyderabad Industrial Pharma Corridor, Telangana, India",
-    desc: "A strategic acquisition and central innovation hub combining our USFDA-approved advanced intermediate manufacturing plant with ADEEP's central analytical R&D laboratories. Enables seamless supply to tier-1 regulated markets (USA, Europe, Japan) alongside specialized process development.",
-    focus: "USFDA-grade advanced intermediates, pilot-to-commercial scale-up, and analytical research",
-    certs: "USFDA Accredited, WHO-GMP Certified, cGMP Approved, GLP Protocols",
-    safety: "World-class audit track record with zero 483 critical observations",
-    tag: "USFDA & Central R&D Campus",
+    desc: "ADEEP's central research and technology powerhouse driving innovative route scouting, process chemistry, biocatalytic pathways, and ICH-compliant analytical method development supporting all manufacturing units.",
+    focus: "Process chemistry, route design, impurity profiling, and analytical research",
+    certs: "GLP Protocols, Schedule M, cGMP Quality Standards",
+    safety: "World-class audit track record with zero critical observations",
+    tag: "Central R&D & Innovation Hub",
     img: "assets/hero_lab.jpg"
   }
 };
@@ -748,7 +748,7 @@ function exportProductCatalog() {
         </div>
         <div class="doc-title">
           <h1>Product Basket (APIs &amp; Intermediates)</h1>
-          <small>Document Date: ${dateStr} • WHO-GMP &amp; USFDA Compliant</small>
+          <small>Document Date: ${dateStr} • WHO-GMP &amp; cGMP Compliant</small>
         </div>
       </div>
 

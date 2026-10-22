@@ -2236,7 +2236,7 @@ button, input, select, textarea { font-family: inherit; }
 .f-dot { width: 8px; height: 8px; border-radius: 50%; }
 .dot-active      { background: #10b981; box-shadow: 0 0 6px rgba(16,185,129,0.5); }
 .dot-construction{ background: var(--gold); box-shadow: 0 0 6px var(--gold-glow); }
-.dot-usfda       { background: var(--teal); box-shadow: 0 0 6px var(--teal-glow); }
+.dot-regulatory  { background: var(--teal); box-shadow: 0 0 6px var(--teal-glow); }
 
 .f-sum-card p    { font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 10px; }
 .f-sum-link      { font-size: 0.78rem; font-weight: 700; color: var(--teal-deep); }
@@ -2311,8 +2311,8 @@ button, input, select, textarea { font-family: inherit; }
 
 .seal-who      { background: #e0f7fa; color: #0e7490; }
 .seal-who svg  { fill: #0e7490; }
-.seal-fda      { background: #dbeafe; color: #1e40af; }
-.seal-fda svg  { fill: #1e40af; }
+.seal-regulatory      { background: #dbeafe; color: #1e40af; }
+.seal-regulatory svg  { fill: #1e40af; }
 .seal-iso      { background: #ecfdf5; color: #059669; }
 .seal-iso svg  { fill: #059669; }
 .seal-iso-env  { background: var(--gold-soft); color: #b45309; }

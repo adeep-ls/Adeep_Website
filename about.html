@@ -9,15 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css?v=36.0" />
+  <link rel="stylesheet" href="styles.css?v=57.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <style>
+    .page-hero { min-height: calc(100vh - 76px) !important; height: calc(100vh - 76px) !important; display: flex !important; align-items: center !important; position: relative !important; padding: 40px 0 !important; overflow: hidden !important; background-size: cover !important; background-position: center !important; background: linear-gradient(180deg, rgba(5, 10, 24, 0.78) 0%, rgba(3, 6, 16, 0.92) 100%), url('assets/hero_cinematic.jpg') center/cover no-repeat !important; }
     .page-hero-inner { position: relative; z-index: 2; }
-    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.65); margin-bottom: 20px; }
-    .breadcrumb a { color: var(--teal-vivid); text-decoration: none; transition: var(--t); }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.85); margin-bottom: 20px; }
+    .breadcrumb a { color: #f58220; text-decoration: none; transition: var(--t); font-weight: 600; }
     .breadcrumb a:hover { color: #fff; }
-    .page-title { font-family: var(--font-heading); font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
-    .page-title .accent { background: var(--grad-teal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .page-subtitle { font-size: 1.1rem; color: rgba(226,238,255,0.82); max-width: 640px; line-height: 1.7; margin-bottom: 0; }
+    .page-title { font-family: var(--font-heading); font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 900; color: #ffffff !important; text-shadow: 0 2px 14px rgba(0,0,0,0.8) !important; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+    .page-title .accent { background: linear-gradient(135deg, #f58220 0%, #fb923c 35%, #22c55e 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; color: #f58220 !important; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)) !important; }
+    .page-subtitle,
+    .page-hero p,
+    .page-hero p.page-subtitle,
+    #overview p.page-subtitle,
+    p.page-subtitle { font-size: 1.15rem !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.85) !important; opacity: 1 !important; font-weight: 500 !important; max-width: 700px !important; line-height: 1.75 !important; margin-bottom: 0 !important; }
     .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
     .mv-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px 36px; position: relative; overflow: hidden; transition: var(--t); }
     .mv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: var(--r-xl) var(--r-xl) 0 0; }
@@ -48,16 +56,23 @@
     .value-num { font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; flex-shrink: 0; }
     .value-item h4 { font-weight: 700; color: #fff; margin-bottom: 6px; }
     .value-item p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; }
-    .entities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; margin-top: 48px; }
-    .entity-card { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(10,20,48,0.95) 100%); border: 1px solid var(--border-card); border-radius: var(--r-xl); padding: 40px; position: relative; overflow: hidden; transition: var(--t); }
-    .entity-card:hover { border-color: var(--border-card-hover); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .entity-logo-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: var(--teal-soft); border: 1px solid rgba(56,203,86,0.3); border-radius: var(--r-full); font-size: 0.78rem; font-weight: 700; color: var(--teal-vivid); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 20px; }
-    .entity-card h3 { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 14px; }
-    .entity-card p { color: var(--text-body); line-height: 1.7; margin-bottom: 20px; }
-    .entity-spec-list { display: flex; flex-direction: column; gap: 8px; }
-    .entity-spec-row { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; }
-    .entity-spec-row .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 6px; }
-    .entity-spec-row span { color: var(--text-body); }
+    .entities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 32px; margin-top: 48px; }
+    .entity-card { background: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 20px !important; padding: 36px 32px !important; position: relative !important; overflow: hidden !important; transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important; }
+    .entity-card::before { content: '' !important; position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; height: 4px !important; }
+    .entity-card:nth-child(1)::before { background: linear-gradient(90deg, #f58220 0%, #ff9e15 100%) !important; }
+    .entity-card:nth-child(2)::before { background: linear-gradient(90deg, #10b981 0%, #38cb56 100%) !important; }
+    .entity-card:hover { border-color: #cbd5e1 !important; transform: translateY(-8px) !important; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1) !important; }
+    .entity-card:nth-child(1) .entity-logo-badge { background: #fff7ed !important; border: 1px solid #fed7aa !important; color: #ea580c !important; box-shadow: 0 2px 8px rgba(245, 130, 32, 0.1) !important; }
+    .entity-card:nth-child(2) .entity-logo-badge { background: #f0fdf4 !important; border: 1px solid #bbf7d0 !important; color: #16a34a !important; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1) !important; }
+    .entity-logo-badge { display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 6px 14px !important; border-radius: 9999px !important; font-size: 0.78rem !important; font-weight: 800 !important; text-transform: uppercase !important; letter-spacing: 0.06em !important; margin-bottom: 18px !important; }
+    .entity-card h3 { font-family: 'Outfit', sans-serif !important; font-size: 1.38rem !important; font-weight: 800 !important; color: #0f172a !important; margin-bottom: 12px !important; letter-spacing: -0.01em !important; }
+    .entity-card p { color: #475569 !important; font-size: 0.92rem !important; line-height: 1.65 !important; margin-bottom: 22px !important; }
+    .entity-spec-list { display: flex !important; flex-direction: column !important; gap: 10px !important; background: #f8fafc !important; border: 1px solid #edf2f7 !important; border-radius: 12px !important; padding: 18px 20px !important; }
+    .entity-spec-row { display: flex !important; gap: 10px !important; align-items: flex-start !important; font-size: 0.86rem !important; line-height: 1.5 !important; }
+    .entity-card:nth-child(1) .entity-spec-row .dot { background: #f58220 !important; box-shadow: 0 0 8px rgba(245, 130, 32, 0.4) !important; }
+    .entity-card:nth-child(2) .entity-spec-row .dot { background: #10b981 !important; box-shadow: 0 0 8px rgba(16, 185, 129, 0.4) !important; }
+    .entity-spec-row .dot { width: 7px !important; height: 7px !important; border-radius: 50% !important; flex-shrink: 0 !important; margin-top: 6px !important; }
+    .entity-spec-row span { color: #1e293b !important; font-weight: 500 !important; }
     @media (max-width: 768px) { .timeline-line { left: 30px; } .timeline-item { grid-template-columns: 60px 1fr; } .timeline-item .tl-content { display: none; } .values-showcase { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -78,7 +93,6 @@
             <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
             <a href="facilities.html" class="dropdown-item">Manufacturing Facilities</a>
             <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
-            <a href="news.html" class="dropdown-item">News &amp; Events</a>
           </div>
         </div>
 
@@ -131,7 +145,7 @@
     <div class="container page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></div>
       <h1 class="page-title">A Legacy Built on <br /><span class="accent">Chemistry &amp; Purpose</span></h1>
-      <p class="page-subtitle">For 17+ years, ADEEP GROUP has been at the forefront of India's pharmaceutical manufacturing revolution — transforming complex chemistry into life-saving medicines that reach patients worldwide.</p>
+      <p class="page-subtitle" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.85) !important; opacity: 1 !important; font-weight: 500 !important; font-size: 1.15rem !important; line-height: 1.75 !important; max-width: 700px !important; margin-bottom: 0 !important;">For 17+ years, ADEEP GROUP has been at the forefront of India's pharmaceutical manufacturing revolution — transforming complex chemistry into high-purity commercial APIs and advanced intermediates for global pharmaceutical markets.</p>
 
     </div>
   </section>
@@ -145,8 +159,8 @@
       </div>
       <div class="mv-grid">
         <div class="mv-card mv-card-mission"><div class="mv-icon">🎯</div><h3>Our Mission</h3><p>To be India's most trusted API and advanced intermediate manufacturer — delivering world-class pharmaceutical chemistry that eliminates critical import dependencies and empowers the global generic drug industry.</p></div>
-        <div class="mv-card mv-card-vision"><div class="mv-icon">🔭</div><h3>Our Vision</h3><p>To establish ADEEP as a globally recognized, USFDA-grade API powerhouse by 2028 — leveraging green biocatalysis, enzymatic innovation, and full vertical integration across the pharmaceutical value chain.</p></div>
-        <div class="mv-card mv-card-values"><div class="mv-icon">⭐</div><h3>Our Philosophy</h3><p>We believe great chemistry saves lives. Every molecule we manufacture represents a commitment to purity, safety, and the patients who depend on the medicines we help create. Quality is non-negotiable.</p></div>
+        <div class="mv-card mv-card-vision"><div class="mv-icon">🔭</div><h3>Our Vision</h3><p>To establish ADEEP as a globally recognized, world-class API powerhouse by 2028 — leveraging green biocatalysis, enzymatic innovation, and full vertical integration across the pharmaceutical value chain.</p></div>
+        <div class="mv-card mv-card-values"><div class="mv-icon">⭐</div><h3>Our Philosophy</h3><p>We believe great chemistry drives pharmaceutical progress. Every molecule we manufacture represents an uncompromising commitment to purity, regulatory compliance, and consistent commercial supply for global pharmaceutical formulators. Quality is non-negotiable.</p></div>
       </div>
     </div>
   </section>
@@ -160,40 +174,41 @@
       </div>
       <div class="timeline-container">
         <div class="timeline-line"></div>
+        <!-- 2008: Foundation -->
         <div class="timeline-item">
           <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">The journey begins in Bidar, Karnataka with a clear vision to manufacture high-quality APIs domestically.</p></div>
           <div class="tl-year-badge">2008</div>
           <div class="tl-card"><div class="tl-tag">Foundation</div><h4>Adeep Life Sciences Pvt Ltd Founded</h4><p>Established at Kolhar Industrial Area, Bidar. First commercial API manufacturing operations launched under WHO-GMP standards.</p></div>
         </div>
+        <!-- 2015: ISO Certifications -->
         <div class="timeline-item">
-          <div class="tl-card"><div class="tl-tag">Commercial Scale</div><h4>Mirtazapine — Flagship Commercial API</h4><p>Achieved multi-ton commercial scale for Mirtazapine, establishing ADEEP as a preferred domestic supplier to India's top pharma companies.</p></div>
-          <div class="tl-year-badge">2012</div>
-          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">First &#x20B9;50 Cr+ revenue milestone crossed on the back of Mirtazapine commercial ramp-up.</p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">ISO certifications established the quality management framework across all operations.</p></div>
-          <div class="tl-year-badge">2015</div>
           <div class="tl-card"><div class="tl-tag">Quality Milestone</div><h4>ISO 9001 / 14001 / 45001 Triple Certification</h4><p>Triple ISO certification achieved — Quality, Environmental, and Occupational Health &amp; Safety management systems fully operational.</p></div>
+          <div class="tl-year-badge">2015</div>
+          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">ISO certifications established the integrated quality and EHS management framework across all operations.</p></div>
         </div>
+        <!-- 2021: Hyderabad Central R&D -->
         <div class="timeline-item">
-          <div class="tl-card"><div class="tl-tag">Expansion</div><h4>Adeep Laboratories Pvt Ltd — Unit 3 Launched</h4><p>Subsidiary entity established at YSRJ Mega Hub, Kopparthi, Kadapa, dedicated to complex intermediates and chiral chemistry.</p></div>
-          <div class="tl-year-badge">2018</div>
-          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">Strategic entry into Andhra Pradesh's pharmaceutical corridor with the Kopparthi expansion.</p></div>
+          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">Establishing ADEEP's central innovation, route design, and advanced analytical research powerhouse.</p></div>
+          <div class="tl-year-badge">2021</div>
+          <div class="tl-card"><div class="tl-tag">R&amp;D Center</div><h4>ADEEP Technology Center Established — Hyderabad</h4><p>Dedicated Central R&amp;D facility operationalized in Hyderabad, driving innovative route scouting, process chemistry, green biocatalysis, and ICH-grade analytical research.</p></div>
         </div>
+        <!-- 2024: Adeep Labs (Unit 3) -->
         <div class="timeline-item">
-          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">Green enzyme-catalyzed routes deployed commercially for Brivaracetam.</p></div>
-          <div class="tl-year-badge">2020</div>
-          <div class="tl-card"><div class="tl-tag">Innovation</div><h4>Green Biocatalysis Centre Established</h4><p>Advanced enzymatic synthesis routes deployed commercially, reducing hazardous solvents by 40% and achieving &gt;99.8% chiral purity for Brivaracetam intermediates.</p></div>
+          <div class="tl-card"><div class="tl-tag">Expansion</div><h4>Adeep Laboratories Pvt Ltd — Unit 3</h4><p>Specialized subsidiary entity established at APIIC YSRJ Mega Hub, Kopparthi, Kadapa, dedicated to complex heterocyclic intermediates and chiral building blocks.</p></div>
+          <div class="tl-year-badge">2024</div>
+          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">Strategic entry into Andhra Pradesh's pharmaceutical corridor with the Kopparthi intermediates hub.</p></div>
         </div>
+        <!-- 2024: Unit 2 Mega Hub Under Construction -->
         <div class="timeline-item">
-          <div class="tl-card"><div class="tl-tag">Regulatory</div><h4>USFDA Accredited Plant Acquired — Hyderabad</h4><p>Strategic acquisition of a USFDA-accredited intermediate manufacturing facility in Hyderabad, securing immediate access to tier-1 regulated markets.</p></div>
-          <div class="tl-year-badge">2023</div>
-          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">A transformational milestone — direct gateway to the global regulated pharmaceutical market.</p></div>
+          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">Mega-scale capacity expansion underway to power global multi-ton pharmaceutical supply.</p></div>
+          <div class="tl-year-badge">2024</div>
+          <div class="tl-card"><div class="tl-tag">Mega Expansion</div><h4>Unit 2 Mega Hub Under Construction</h4><p>Mega-scale greenfield expansion underway at APIIC Plot 27A, YSRJ Mega Hub, Kopparthi, Kadapa. Adding 1000+ KL upcoming reactor capacity under PLI scheme support.</p></div>
         </div>
+        <!-- 2025: Unit 1 (Bidar) WHO-GMP Approved -->
         <div class="timeline-item">
-          <div class="tl-content" style="text-align:right;"><p style="color:var(--text-muted);font-size:0.9rem;">&#x20B9;110 Cr+ group turnover, 250+ employees, 4 plants across 3 states.</p></div>
-          <div class="tl-year-badge">2026</div>
-          <div class="tl-card"><div class="tl-tag">Present Day</div><h4>Unit 2 Mega Hub Under Construction</h4><p>Mega-scale greenfield expansion at Kopparthi Kadapa underway. Targeting 5x capacity growth with PLI scheme support and USFDA-compliant mega plant.</p></div>
+          <div class="tl-card"><div class="tl-tag">Regulatory Milestone</div><h4>Unit 1 (Bidar) WHO-GMP Approved</h4><p>Flagship commercial API manufacturing facility at Kolhar Industrial Area, Bidar successfully receives prestigious WHO-GMP certification, validating world-class cGMP standards.</p></div>
+          <div class="tl-year-badge">2025</div>
+          <div class="tl-content"><p style="color:var(--text-muted);font-size:0.9rem;">Prestigious WHO-GMP regulatory approval validates highest standards of quality, safety, and cGMP compliance.</p></div>
         </div>
       </div>
     </div>
@@ -257,7 +272,7 @@
             <p class="dir-bio">26+ years governing day-to-day multi-ton plant operations and global regulatory compliance, maintaining ADEEP's flawless zero-warning-letter audit record.</p>
             <div class="dir-expertise">
               <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Oversees continuous multi-ton API batch campaigns</span></div>
-              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Directs USFDA, WHO-GMP &amp; CDSCO audit readiness</span></div>
+              <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Directs global cGMP, WHO-GMP &amp; CDSCO audit readiness</span></div>
             </div>
           </div>
         </div>
@@ -272,7 +287,7 @@
             </div>
           </div>
           <div class="dir-body">
-            <p class="dir-bio">35+ years in enterprise finance, capital allocation, and corporate growth. Led capital strategies for the USFDA Hyderabad plant acquisition and PLI schemes.</p>
+            <p class="dir-bio">35+ years in enterprise finance, capital allocation, and corporate growth. Led capital strategies for the Hyderabad plant acquisition and PLI schemes.</p>
             <div class="dir-expertise">
               <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Drives fiscal governance &amp; enterprise capital allocation</span></div>
               <div class="dir-exp-row"><div class="dir-exp-dot"></div><span>Key coordinator for India's PLI pharmaceutical incentives</span></div>
@@ -319,7 +334,7 @@
           <div class="entity-spec-list">
             <div class="entity-spec-row"><div class="dot"></div><span>Unit 1 — Kolhar Industrial Area, Bidar, Karnataka</span></div>
             <div class="entity-spec-row"><div class="dot"></div><span>Unit 2 — YSRJ Mega Hub, Kopparthi, Kadapa, AP (Under Construction)</span></div>
-            <div class="entity-spec-row"><div class="dot"></div><span>Unit 4 — USFDA Accredited Plant + Central R&amp;D Hub, Hyderabad</span></div>
+            <div class="entity-spec-row"><div class="dot"></div><span>ADEEP Technology Center — Central R&amp;D Hub, Hyderabad</span></div>
             <div class="entity-spec-row"><div class="dot"></div><span>Commercial APIs: Mirtazapine, Brivaracetam, Duloxetine, Bilastine</span></div>
             <div class="entity-spec-row"><div class="dot"></div><span>WHO-GMP, ISO 9001, ISO 14001, ISO 45001 Certified</span></div>
           </div>
@@ -415,7 +430,6 @@
           <li><a href="rnd.html">R&amp;D Innovation</a></li>
           <li><a href="sustainability.html">Sustainability &amp; CSR</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
@@ -492,7 +506,7 @@
         <h4>Certifications</h4>
         <div class="footer-certs-grid">
           <div class="fc-pill"><span class="fcp-check">✓</span><span>WHO-GMP Certified</span></div>
-          <div class="fc-pill"><span class="fcp-check">✓</span><span>USFDA Accredited</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>cGMP &amp; Schedule M</span></div>
           <div class="fc-pill"><span class="fcp-check">✓</span><span>EU-GMP Compliant</span></div>
           <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 9001:2015 (QMS)</span></div>
           <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 14001:2015 (EMS)</span></div>

@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manufacturing Facilities | ADEEP GROUP — World-Class API Plants</title>
-  <meta name="description" content="Explore ADEEP GROUP's state-of-the-art pharmaceutical manufacturing facilities across Bidar, Kadapa, and Hyderabad. WHO-GMP & USFDA compliant plants." />
+  <meta name="description" content="Explore ADEEP GROUP's state-of-the-art pharmaceutical manufacturing facilities across Bidar, Kadapa, and Hyderabad. WHO-GMP & cGMP compliant plants." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css?v=36.0" />
+  <link rel="stylesheet" href="styles.css?v=49.0" />
   <style>
+    .page-hero { min-height: calc(100vh - 76px) !important; height: calc(100vh - 76px) !important; display: flex !important; align-items: center !important; position: relative !important; padding: 40px 0 !important; overflow: hidden !important; background-size: cover !important; background-position: center !important; background: linear-gradient(180deg, rgba(7, 14, 30, 0.62) 0%, rgba(4, 7, 17, 0.86) 100%), url('assets/plant_facility.jpg') center/cover no-repeat !important; }
     .page-hero-inner { position: relative; z-index: 2; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(203,213,225,0.65); margin-bottom: 20px; }
     .breadcrumb a { color: var(--teal-vivid); text-decoration: none; }
@@ -39,7 +40,7 @@
     .ffc-unit-badge { position: absolute; top: 14px; left: 14px; background: var(--grad-gold); color: #040711; font-size: 0.75rem; font-weight: 800; padding: 5px 12px; border-radius: var(--r-full); }
     .ffc-status-badge { position: absolute; top: 14px; right: 14px; background: rgba(4,7,20,0.8); backdrop-filter: blur(8px); border: 1px solid rgba(56,203,86,0.4); color: var(--teal-vivid); font-size: 0.73rem; font-weight: 700; padding: 4px 10px; border-radius: var(--r-full); }
     .ffc-status-badge.construction { border-color: rgba(255,158,21,0.4); color: var(--gold); }
-    .ffc-status-badge.usfda { border-color: rgba(139,92,246,0.4); color: #c084fc; }
+    .ffc-status-badge.regulatory { border-color: rgba(139,92,246,0.4); color: #c084fc; }
     .ffc-body { padding: 28px; }
     .ffc-entity { font-size: 0.75rem; font-weight: 700; color: var(--teal-vivid); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 8px; }
     .ffc-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.3; }
@@ -93,7 +94,6 @@
             <a href="leadership.html" class="dropdown-item">Leadership &amp; Board</a>
             <a href="facilities.html" class="dropdown-item active">Manufacturing Facilities</a>
             <a href="careers.html" class="dropdown-item">Careers &amp; Culture</a>
-            <a href="news.html" class="dropdown-item">News &amp; Events</a>
           </div>
         </div>
 
@@ -146,11 +146,11 @@
     <div class="container page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Facilities</span></div>
       <h1 class="page-title">World-Class<br /><span class="accent">Manufacturing Facilities</span></h1>
-      <p class="page-subtitle">4 strategic manufacturing sites spanning 3 states — Karnataka, Andhra Pradesh, and Telangana. Engineered to meet USFDA, WHO-GMP, and EU-GMP benchmarks.</p>
+      <p class="page-subtitle">3 strategic manufacturing units &amp; ADEEP Technology Center (Central R&amp;D Hub) spanning Karnataka, Andhra Pradesh, and Telangana. Engineered to meet WHO-GMP, cGMP, and EU-GMP benchmarks.</p>
       <div class="hero-badges">
         <div class="h-badge"><div class="h-badge-dot"></div>3+ Operational Plants</div>
         <div class="h-badge"><div class="h-badge-dot"></div>WHO-GMP Certified</div>
-        <div class="h-badge"><div class="h-badge-dot"></div>USFDA Accredited</div>
+        <div class="h-badge"><div class="h-badge-dot"></div>cGMP &amp; Schedule M</div>
         <div class="h-badge"><div class="h-badge-dot"></div>Zero Liquid Discharge</div>
       </div>
     </div>
@@ -160,7 +160,7 @@
     <div class="container">
       <div class="section-header-centered">
         <span class="section-tag">GLOBAL INFRASTRUCTURE</span>
-        <h2 class="section-title">Strategic Manufacturing Sites</h2>
+        <h2 class="section-title">Strategic Manufacturing Units &amp; Technology Center</h2>
         <p class="section-desc">Strategically located across premier pharmaceutical industrial corridors with continuous multi-ton synthesis capabilities, advanced QC labs, and zero-waste manufacturing systems.</p>
       </div>
       <div class="facilities-grid">
@@ -199,12 +199,12 @@
             <div class="ffc-entity entity-green">Adeep Life Sciences Pvt Ltd</div>
             <div class="ffc-title">YSRJ Mega Industrial Hub, Kadapa — Mega Expansion Plant</div>
             <div class="ffc-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>APIIC Plot 27A, YSRJ Mega Industrial Hub, Kopparthi, Kadapa, YSR District, Andhra Pradesh</div>
-            <div class="ffc-desc">A massive state-of-the-art expansion engineered for high-volume biocatalysis and continuous flow chemistry. Designed from ground up to comply with USFDA and EU-GMP regulatory benchmarks under the PLI scheme.</div>
+            <div class="ffc-desc">A massive state-of-the-art expansion engineered for high-volume biocatalysis and continuous flow chemistry. Designed from ground up to comply with global cGMP and EU-GMP regulatory benchmarks under the PLI scheme.</div>
             <div class="ffc-specs">
               <div class="ffc-spec"><span class="ffc-spec-key">Focus:</span><span class="ffc-spec-val">Mega-scale green biocatalytic API blocks &amp; import-substitution molecules</span></div>
               <div class="ffc-spec"><span class="ffc-spec-key">Green:</span><span class="ffc-spec-val">Solar energy integration, advanced containment suites</span></div>
             </div>
-            <div class="ffc-certs"><span class="cert-tag">USFDA Designed</span><span class="cert-tag">EU-GMP Ready</span><span class="cert-tag">WHO-GMP</span></div>
+            <div class="ffc-certs"><span class="cert-tag">cGMP Compliant</span><span class="cert-tag">EU-GMP Ready</span><span class="cert-tag">WHO-GMP</span></div>
             <div class="ffc-cta"><a href="contact.html" class="btn btn-outline btn-sm">Learn More</a></div>
           </div>
         </div>
@@ -231,25 +231,25 @@
           </div>
         </div>
 
-        <!-- Unit 4 -->
+        <!-- ADEEP Technology Center -->
         <div class="facility-full-card" id="rnd-facility">
           <div class="ffc-img-wrapper">
-            <img src="assets/hero_lab.jpg" alt="Unit 4 Hyderabad USFDA R&D" />
+            <img src="assets/hero_lab.jpg" alt="ADEEP Technology Center Hyderabad Central R&amp;D" />
             <div class="ffc-img-overlay"></div>
-            <div class="ffc-unit-badge" style="background:linear-gradient(135deg,#8b5cf6,#c084fc);">Unit 4 &amp; R&amp;D</div>
-            <div class="ffc-status-badge usfda">★ USFDA Accredited</div>
+            <div class="ffc-unit-badge" style="background:linear-gradient(135deg,#8b5cf6,#c084fc);">Central R&amp;D Hub</div>
+            <div class="ffc-status-badge regulatory">★ Central Innovation Center</div>
           </div>
           <div class="ffc-body">
-            <div class="ffc-entity">Central R&amp;D Hub — Hyderabad</div>
-            <div class="ffc-title">USFDA Accredited Plant &amp; R&amp;D Campus</div>
+            <div class="ffc-entity">ADEEP Technology Center — Hyderabad</div>
+            <div class="ffc-title">ADEEP Technology Center (Central R&amp;D Hub)</div>
             <div class="ffc-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Hyderabad Industrial Pharma Corridor, Telangana, India</div>
-            <div class="ffc-desc">Strategic acquisition combining USFDA-approved advanced intermediate manufacturing with central analytical R&amp;D. Enables seamless supply to tier-1 regulated markets (USA, Europe, Japan) alongside specialized process development.</div>
+            <div class="ffc-desc">Central innovation and research powerhouse driving complex chemical synthesis, route scouting, process optimization, biocatalysis, and ICH-compliant analytical method development supporting all manufacturing units.</div>
             <div class="ffc-specs">
-              <div class="ffc-spec"><span class="ffc-spec-key">Focus:</span><span class="ffc-spec-val">USFDA-grade advanced intermediates, pilot-to-commercial scale-up</span></div>
-              <div class="ffc-spec"><span class="ffc-spec-key">Track Record:</span><span class="ffc-spec-val">Zero 483 critical observations on regulatory audits</span></div>
+              <div class="ffc-spec"><span class="ffc-spec-key">Focus:</span><span class="ffc-spec-val">Process chemistry, route design, impurity profiling &amp; analytical validation</span></div>
+              <div class="ffc-spec"><span class="ffc-spec-key">Capabilities:</span><span class="ffc-spec-val">HPLC, GC-MS, LC-MS, stability chambers, kilo scale-up suites</span></div>
             </div>
-            <div class="ffc-certs"><span class="cert-tag">USFDA Accredited</span><span class="cert-tag">WHO-GMP</span><span class="cert-tag">cGMP</span><span class="cert-tag">GLP</span></div>
-            <div class="ffc-cta"><a href="contact.html" class="btn btn-primary btn-sm">Schedule Audit</a></div>
+            <div class="ffc-certs"><span class="cert-tag">cGMP Compliant</span><span class="cert-tag">Schedule M</span><span class="cert-tag">GLP Certified</span><span class="cert-tag">ICH Guidelines</span></div>
+            <div class="ffc-cta"><a href="contact.html" class="btn btn-primary btn-sm">Schedule Facility Visit</a></div>
           </div>
         </div>
 
@@ -268,7 +268,7 @@
       <div class="map-cards">
         <div class="map-card"><div class="map-dot map-dot-green"></div><div class="map-state">Karnataka</div><div class="map-city">Bidar</div><div class="map-units">Unit 1 — Flagship API Plant</div></div>
         <div class="map-card"><div class="map-dot map-dot-orange"></div><div class="map-state">Andhra Pradesh</div><div class="map-city">Kadapa (Kopparthi)</div><div class="map-units">Unit 2 (Expansion) + Unit 3</div></div>
-        <div class="map-card"><div class="map-dot map-dot-violet"></div><div class="map-state">Telangana</div><div class="map-city">Hyderabad</div><div class="map-units">Unit 4 + Central R&amp;D</div></div>
+        <div class="map-card"><div class="map-dot map-dot-violet"></div><div class="map-state">Telangana</div><div class="map-city">Hyderabad</div><div class="map-units">ADEEP Technology Center (Central R&amp;D)</div></div>
       </div>
     </div>
   </section>
@@ -287,7 +287,7 @@
         <div class="cap-item"><div class="cap-icon">💨</div><h4>Purified N₂ &amp; High Vacuum</h4><p>High-purity liquid nitrogen plant &amp; multi-stage steam ejector vacuum systems (&lt;1 Torr)</p></div>
         <div class="cap-item"><div class="cap-icon">🏭</div><h4>Class 100,000 Cleanrooms</h4><p>HEPA-filtered clean finishing suites with micro-differential pressure cascades</p></div>
         <div class="cap-item"><div class="cap-icon">💻</div><h4>SCADA Automation</h4><p>Computerized batch process controls and automated fail-safe interlock systems</p></div>
-        <div class="cap-item"><div class="cap-icon">💧</div><h4>Purified Water (USP/EP)</h4><p>RO + EDI water generation systems meeting international pharmacopoeial standards</p></div>
+        <div class="cap-item"><div class="cap-icon">💧</div><h4>Purified Water</h4><p>RO + EDI water generation systems meeting international pharmacopoeial standards</p></div>
       </div>
     </div>
   </section>
@@ -384,7 +384,6 @@
           <li><a href="rnd.html">R&amp;D Innovation</a></li>
           <li><a href="sustainability.html">Sustainability &amp; CSR</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
@@ -461,7 +460,7 @@
         <h4>Certifications</h4>
         <div class="footer-certs-grid">
           <div class="fc-pill"><span class="fcp-check">✓</span><span>WHO-GMP Certified</span></div>
-          <div class="fc-pill"><span class="fcp-check">✓</span><span>USFDA Accredited</span></div>
+          <div class="fc-pill"><span class="fcp-check">✓</span><span>cGMP &amp; Schedule M</span></div>
           <div class="fc-pill"><span class="fcp-check">✓</span><span>EU-GMP Compliant</span></div>
           <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 9001:2015 (QMS)</span></div>
           <div class="fc-pill"><span class="fcp-check">✓</span><span>ISO 14001:2015 (EMS)</span></div>
