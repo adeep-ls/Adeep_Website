@@ -15,7 +15,6 @@ const PRODUCTS_DATA = [
     targetApi: "Direct Finished API",
     status: "Commercial Scale",
     statusClass: "status-commercial",
-    turnover: "₹50 Cr+",
     compliance: "WHO-GMP Certified, cGMP Compliant",
     details: "Tetracyclic antidepressant used primarily in major depressive disorder. Manufactured via proprietary route ensuring high purity and low residual solvent profile."
   },
@@ -28,7 +27,6 @@ const PRODUCTS_DATA = [
     targetApi: "Direct Finished API",
     status: "Commercial Scale",
     statusClass: "status-commercial",
-    turnover: "₹35 Cr+",
     compliance: "WHO-GMP Certified, cGMP Compliant, Chiral Purity >99.5%",
     details: "High-affinity synaptic vesicle protein 2A (SV2A) ligand for refractory partial-onset seizures. Produced via high-yield chiral resolution and enzyme-assisted synthesis."
   },
@@ -131,7 +129,7 @@ const PRODUCTS_DATA = [
     details: "Carbonic anhydrase inhibitor reducing intraocular pressure in open-angle glaucoma and ocular hypertension."
   },
 
-  // Key Intermediates
+  // Key Intermediates (Official Technical Dossiers)
   {
     id: "inter-brivaracetam-1",
     name: "(R)-4-propyldihydrofuran-2(3H)-one",
@@ -153,7 +151,6 @@ const PRODUCTS_DATA = [
     targetApi: "Mirtazapine",
     status: "Commercial Intermediate",
     statusClass: "status-intermediate",
-    turnover: "₹50 Cr+ Group Turnover",
     compliance: "Commercial Multiton Scale",
     details: "Key pen-ultimate intermediate in the synthesis of Mirtazapine. High assay purity >99.0%."
   },
@@ -194,90 +191,16 @@ const PRODUCTS_DATA = [
     details: "Key chiral amine intermediate utilized in DPP-4 inhibitor Linagliptin synthesis."
   },
   {
-    id: "inter-linagliptin-2",
-    name: "(R)-3-aminopiperidine dihydrochloride",
+    id: "inter-dulox-3",
+    name: "(S)-3-(Methylamino)-1-(2-thienyl)-1-propanol",
     category: "intermediate",
-    cas: "334618-23-4",
-    therapy: "Anti diabetic",
-    targetApi: "Linagliptin",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    compliance: "Strict Optical Purity",
-    details: "De-protected chiral piperidine salt for DPP-4 antidiabetic molecule synthesis."
-  },
-  {
-    id: "inter-moxifloxacin-1",
-    name: "(S,S)-2,8-Diazabicyclo Nonane",
-    category: "intermediate",
-    cas: "151213-40-0",
-    therapy: "Anti bacterial",
-    targetApi: "Moxifloxacin",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    compliance: "Bicyclic Bridge Architecture",
-    details: "Chiral bicyclic amine side chain essential for the broad antibacterial spectrum of Moxifloxacin."
-  },
-  {
-    id: "inter-labetalol-1",
-    name: "5-Bromoacetyl salicylamide",
-    category: "intermediate",
-    cas: "73866-23-6",
-    therapy: "Cardiovascular",
-    targetApi: "Labetalol",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    turnover: "₹10 Cr+ Turnover",
-    compliance: "High Volume Production",
-    details: "Core haloacetyl building block for Labetalol synthesis with low halogenated byproduct limits."
-  },
-  {
-    id: "inter-entacapone-1",
-    name: "3,4-Dihydroxy-5-nitrobenzaldehyde",
-    category: "intermediate",
-    cas: "116313-85-0",
-    therapy: "Parkinsons",
-    targetApi: "Entacapone",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    turnover: "₹10 Cr+ Group Turnover",
-    compliance: "cGMP Intermediates",
-    details: "Key catechol aldehyde intermediate for Entacapone COMT inhibitor synthesis."
-  },
-  {
-    id: "inter-entacapone-2",
-    name: "N,N-Diethyl-2-cyanoacetoacetamide",
-    category: "intermediate",
-    cas: "26391-06-0",
-    therapy: "Parkinsons",
-    targetApi: "Entacapone",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    compliance: "High Yield Synthesis",
-    details: "Cyanoacetamide coupling agent condensation partner for Parkinson's intermediate synthesis."
-  },
-  {
-    id: "inter-dextro-1",
-    name: "3-Methoxymorphinan",
-    category: "intermediate",
-    cas: "1531-25-5",
-    therapy: "Anti tussives",
-    targetApi: "Dextromethorphan",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    compliance: "Controlled Synthesis Protocol",
-    details: "Tetracyclic core skeleton intermediate for Dextromethorphan synthesis."
-  },
-  {
-    id: "inter-dulox-1",
-    name: "1-Fluoronaphthalene",
-    category: "intermediate",
-    cas: "321-38-0",
+    cas: "116539-55-0",
     therapy: "Anti depressant",
     targetApi: "Duloxetine",
     status: "Commercial Intermediate",
     statusClass: "status-intermediate",
-    compliance: "Distillation Purity >99.2%",
-    details: "Aromatic fluorinated coupling reagent for antidepressant synthesis."
+    compliance: "Biocatalytic Pathway Available",
+    details: "Advanced thiophene chiral building block for Duloxetine HCl."
   },
   {
     id: "inter-dulox-2",
@@ -292,16 +215,76 @@ const PRODUCTS_DATA = [
     details: "Key chiral amino alcohol intermediate for Duloxetine."
   },
   {
-    id: "inter-dulox-3",
-    name: "(S)-3-(Methylamino)-1-(2-thienyl)-1-propanol",
+    id: "inter-dulox-1",
+    name: "1-Fluoronaphthalene",
     category: "intermediate",
-    cas: "116539-55-0",
+    cas: "321-38-0",
     therapy: "Anti depressant",
     targetApi: "Duloxetine",
     status: "Commercial Intermediate",
     statusClass: "status-intermediate",
-    compliance: "Biocatalytic Pathway Available",
-    details: "Advanced thiophene chiral building block for Duloxetine HCl."
+    compliance: "Distillation Purity >99.2%",
+    details: "Aromatic fluorinated coupling reagent for antidepressant synthesis."
+  },
+  {
+    id: "inter-labetalol-1",
+    name: "5-Bromoacetyl salicylamide",
+    category: "intermediate",
+    cas: "73866-23-6",
+    therapy: "Cardiovascular",
+    targetApi: "Labetalol",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "High Volume Production",
+    details: "Core haloacetyl building block for Labetalol synthesis with low halogenated byproduct limits."
+  },
+  {
+    id: "inter-dextro-1",
+    name: "3-Methoxymorphinan",
+    category: "intermediate",
+    cas: "1531-25-5",
+    therapy: "Anti tussives",
+    targetApi: "Dextromethorphan",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "Controlled Synthesis Protocol",
+    details: "Tetracyclic core skeleton intermediate for Dextromethorphan synthesis."
+  },
+  {
+    id: "inter-moxifloxacin-1",
+    name: "(S,S)-2,8-Diazabicyclo Nonane",
+    category: "intermediate",
+    cas: "151213-40-0",
+    therapy: "Anti bacterial",
+    targetApi: "Moxifloxacin",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "Bicyclic Bridge Architecture",
+    details: "Chiral bicyclic amine side chain essential for the broad antibacterial spectrum of Moxifloxacin."
+  },
+  {
+    id: "inter-entacapone-1",
+    name: "3,4-Dihydroxy-5-nitrobenzaldehyde",
+    category: "intermediate",
+    cas: "116313-85-0",
+    therapy: "Parkinsons",
+    targetApi: "Entacapone",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "cGMP Intermediates",
+    details: "Key catechol aldehyde intermediate for Entacapone COMT inhibitor synthesis."
+  },
+  {
+    id: "inter-entacapone-2",
+    name: "N,N-Diethyl-2-cyanoacetoacemide",
+    category: "intermediate",
+    cas: "26391-06-0",
+    therapy: "Parkinsons",
+    targetApi: "Entacapone",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "High Yield Synthesis",
+    details: "Cyanoacetamide coupling agent condensation partner for Parkinson's intermediate synthesis."
   },
   {
     id: "inter-lopinavir-1",
@@ -340,6 +323,18 @@ const PRODUCTS_DATA = [
     details: "Sulfone thienothiophene intermediate for carbonic anhydrase inhibitors."
   },
   {
+    id: "inter-dorzolamide-3",
+    name: "(4R,6S)-5,6-dihydro-4-hydroxy-6-methylthieno[2,3-b]thiopyran-7,7",
+    category: "intermediate",
+    cas: "147128-77-6",
+    therapy: "Glaucoma",
+    targetApi: "Dorzolamide",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "Chiral Stereoselective Intermediate",
+    details: "Key chiral hydroxythienothiopyran precursor for Dorzolamide ocular formulation synthesis."
+  },
+  {
     id: "inter-glimepiride-1",
     name: "Trans-4-Methycyclohexyl Isocyanate",
     category: "intermediate",
@@ -362,18 +357,6 @@ const PRODUCTS_DATA = [
     statusClass: "status-intermediate",
     compliance: "High Reactivity Grade",
     details: "Isocyanate precursor used in sulfonylurea synthesis."
-  },
-  {
-    id: "inter-nadolol-1",
-    name: "5,8-Dihydro-1-naphthol",
-    category: "intermediate",
-    cas: "27673-48-9",
-    therapy: "Cardiovascular",
-    targetApi: "Nadolol",
-    status: "Commercial Intermediate",
-    statusClass: "status-intermediate",
-    compliance: "Tetralin / Naphthol Chemistry",
-    details: "Key bicyclic core for non-selective beta blocker Nadolol."
   },
   {
     id: "inter-bilastine-1",
@@ -410,6 +393,18 @@ const PRODUCTS_DATA = [
     statusClass: "status-intermediate",
     compliance: "Penultimate Intermediate",
     details: "Direct precursor to Bilastine prior to final hydrolysis."
+  },
+  {
+    id: "inter-linagliptin-2",
+    name: "(R)-3-aminopiperidine dihydrochloride",
+    category: "intermediate",
+    cas: "334618-23-4",
+    therapy: "Anti diabetic",
+    targetApi: "Linagliptin",
+    status: "Commercial Intermediate",
+    statusClass: "status-intermediate",
+    compliance: "Strict Optical Purity",
+    details: "De-protected chiral piperidine salt for DPP-4 antidiabetic molecule synthesis."
   },
 
   // Speciality Chemicals
@@ -582,7 +577,7 @@ function renderProductsTable() {
       <tr>
         <td class="product-name-cell">
           <strong>${item.name}</strong>
-          ${item.turnover ? `<small style="color:var(--primary); font-weight:700;">★ Annual Turnover: ${item.turnover}</small>` : `<small>${catDisplayName}</small>`}
+          <small>${catDisplayName}</small>
         </td>
         <td>
           <span class="tag">${catDisplayName}</span>
@@ -1041,16 +1036,7 @@ window.openProductModal = function(productId) {
   const compEl = document.getElementById("modalCompliance");
   if (compEl) compEl.textContent = p.compliance || "WHO-GMP Compliant & cGMP Verified";
 
-  const turnoverSec = document.getElementById("modalTurnoverSec");
-  const turnoverText = document.getElementById("modalTurnover");
-  if (turnoverSec && turnoverText) {
-    if (p.turnover) {
-      turnoverSec.style.display = "block";
-      turnoverText.textContent = p.turnover;
-    } else {
-      turnoverSec.style.display = "none";
-    }
-  }
+
 
   const modalInquireBtn = document.getElementById("modalInquireBtn");
   if (modalInquireBtn) {
