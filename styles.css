@@ -981,7 +981,7 @@ button, input, select, textarea { font-family: inherit; }
 }
 .metric-suffix, .metric-plus { color: var(--teal-vivid); font-size: 0.95rem; font-weight: 800; }
 .metric-label { font-size: 0.62rem; font-weight: 700; color: rgba(255,255,255,0.92); line-height: 1.22; margin-bottom: 0; }
-.metric-sub   { display: none; }
+.metric-sub   { display: block; }
 
 /* ═══════════════════════════════════════════════════════════
    STRATEGIC STRIP — Soft Blue-Gray Band
@@ -4408,218 +4408,190 @@ p:not(.splash-telemetry-text):not(#splashTelemetryText), .section-desc, .text-bo
   transform: translateY(-2px) !important;
 }
 
-/* ── Ultra-Smooth Glassmorphic Hero Metrics Strip (State-of-the-Art) ── */
+/* ══════════════════════════════════════════════════════════════
+   HERO METRICS STRIP — Sleek Executive Glass (Compact & High Contrast)
+══════════════════════════════════════════════════════════════ */
 .hero-metrics-strip {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr) !important;
   align-items: stretch !important;
   gap: 0 !important;
   width: 100% !important;
-  max-width: 980px !important;
-  background: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 20px !important;
-  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.14), 
-              0 6px 20px -2px rgba(15, 23, 42, 0.05), 
-              inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  max-width: 780px !important;
+  background: rgba(9, 21, 41, 0.88) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   position: relative !important;
-  overflow: visible !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  margin-top: 14px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  margin-top: 20px !important;
 }
 
-/* Luminous Dual-Gradient Top Accent Ribbon */
+/* Gradient top accent line */
 .hero-metrics-strip::before {
   content: '' !important;
   position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 4px !important;
-  background: linear-gradient(90deg, #f58220 0%, #ff9e15 35%, #10b981 70%, #22c55e 100%) !important;
+  top: 0; left: 0; right: 0 !important;
+  height: 2.5px !important;
+  background: linear-gradient(90deg, #f58220 0%, #ffaa40 50%, #00c9a7 100%) !important;
   z-index: 3 !important;
 }
 
+.hero-metrics-strip::after { display: none !important; }
+
 .hero-metrics-strip:hover {
-  box-shadow: 0 26px 60px -10px rgba(15, 23, 42, 0.18), 
-              0 8px 24px -2px rgba(15, 23, 42, 0.07), 
-              inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  background: rgba(11, 26, 51, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  box-shadow:
+    0 16px 44px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 
+/* Individual metric card */
 .metric-card {
   position: relative !important;
   background: transparent !important;
-  color: #0f172a !important;
-  border-right: none !important;
-  padding: 16px 14px !important;
+  padding: 10px 14px 9px !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-start !important;
+  justify-content: center !important;
   text-align: left !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: background 0.2s ease !important;
   cursor: default !important;
   box-sizing: border-box !important;
+  z-index: 1 !important;
 }
 
-/* Crisp Elegant Vertical Dividers */
+.metric-card:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Glass vertical dividers */
 .metric-card:not(:last-child)::after {
   content: '' !important;
   position: absolute !important;
   right: 0 !important;
-  top: 14% !important;
-  height: 72% !important;
+  top: 15% !important;
+  height: 70% !important;
   width: 1px !important;
-  background: linear-gradient(180deg, 
-    rgba(226, 232, 240, 0) 0%, 
-    rgba(203, 213, 225, 0.85) 50%, 
-    rgba(226, 232, 240, 0) 100%) !important;
-  pointer-events: none !important;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(255,255,255,0.18) 50%,
+    transparent 100%) !important;
 }
 
-.metric-card:hover {
-  background: rgba(248, 250, 252, 0.85) !important;
-  transform: translateY(-3px) !important;
-}
+/* Hide legacy pills */
+.metric-icon-tag { display: none !important; }
 
-/* Micro Category Tag */
-.metric-icon-tag {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 5px !important;
-  font-size: 0.69rem !important;
-  font-weight: 700 !important;
-  color: #9a3412 !important;
-  background: #fff7ed !important;
-  border: 1px solid #fed7aa !important;
-  padding: 2px 8px !important;
-  border-radius: 9999px !important;
-  width: fit-content !important;
-  margin-bottom: 8px !important;
-  line-height: 1.25 !important;
-  letter-spacing: 0.01em !important;
-}
-
-.metric-icon-tag.mit-green {
-  color: #15803d !important;
-  background: #f0fdf4 !important;
-  border-color: #bbf7d0 !important;
-}
-
+/* Stat number */
 .metric-value {
   font-family: 'Outfit', sans-serif !important;
-  color: #0f172a !important;
-  font-size: 1.95rem !important;
-  font-weight: 900 !important;
+  color: #ffffff !important;
+  font-size: 1.45rem !important;
+  font-weight: 800 !important;
   line-height: 1 !important;
-  letter-spacing: -0.03em !important;
-  margin-bottom: 5px !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 3px !important;
   display: flex !important;
   align-items: baseline !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
 }
 
+/* Unified Brand Orange Suffix */
 .metric-suffix {
-  font-weight: 900 !important;
-  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
   margin-left: 2px !important;
+  color: #f58220 !important;
+  text-shadow: 0 0 10px rgba(245,130,32,0.6) !important;
 }
 
 .metric-suffix.orange,
-.metric-card:nth-child(odd) .metric-suffix {
-  color: #f58220 !important;
-  text-shadow: 0 0 10px rgba(245, 130, 32, 0.35) !important;
-}
-
+.metric-card:nth-child(odd) .metric-suffix,
 .metric-suffix.green,
 .metric-card:nth-child(even) .metric-suffix {
-  color: #16a34a !important;
-  text-shadow: 0 0 10px rgba(22, 163, 74, 0.35) !important;
+  color: #f58220 !important;
+  text-shadow: 0 0 10px rgba(245,130,32,0.6) !important;
 }
 
 .metric-unit {
-  font-size: 1.05rem !important;
+  font-size: 0.85rem !important;
   font-weight: 800 !important;
-  color: #16a34a !important;
-  margin-left: 4px !important;
-  letter-spacing: -0.01em !important;
+  color: #38bdf8 !important;
+  margin-left: 3px !important;
+  letter-spacing: 0.02em !important;
 }
 
+/* Stat label */
 .metric-label {
   font-family: 'Outfit', sans-serif !important;
-  color: #0f172a !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  line-height: 1.3 !important;
-  margin-bottom: 2px !important;
-  letter-spacing: -0.01em !important;
+  color: rgba(226, 232, 240, 0.9) !important;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.01em !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
 }
 
-.metric-sub {
-  color: #64748b !important;
-  font-size: 0.74rem !important;
-  font-weight: 500 !important;
-  line-height: 1.3 !important;
-}
+.metric-sub { display: none !important; }
 
-/* Glowing upcoming reactor expansion badge */
+/* Upcoming badge */
 .metric-facility-upcoming {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
-  margin-top: 5px !important;
-  font-size: 0.7rem !important;
+  gap: 4px !important;
+  margin-top: 3px !important;
+  font-size: 0.58rem !important;
   font-weight: 700 !important;
-  color: #ea580c !important;
-  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%) !important;
-  border: 1px solid #fed7aa !important;
-  padding: 3px 9px !important;
+  color: #fed7aa !important;
+  background: rgba(245,130,32,0.18) !important;
+  border: 1px solid rgba(245,130,32,0.35) !important;
+  padding: 1px 6px !important;
   border-radius: 9999px !important;
   width: fit-content !important;
-  box-shadow: 0 2px 6px rgba(245, 130, 32, 0.12) !important;
-  line-height: 1.25 !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
 }
 
-.metric-facility-upcoming strong {
-  font-weight: 900 !important;
-  color: #c2410c !important;
-}
-
+/* Pulse dot */
 .pulse-dot {
-  width: 6px !important;
-  height: 6px !important;
+  width: 5px !important;
+  height: 5px !important;
   border-radius: 50% !important;
-  background: #f58220 !important;
-  box-shadow: 0 0 6px rgba(245, 130, 32, 0.6) !important;
+  background: #fb923c !important;
+  box-shadow: 0 0 5px rgba(251,146,60,0.9) !important;
   display: inline-block !important;
+  flex-shrink: 0 !important;
   animation: pulseRadarOrange 1.8s infinite !important;
 }
 
 @keyframes pulseRadarOrange {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 130, 32, 0.7); }
-  70% { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(245, 130, 32, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 130, 32, 0); }
+  0%   { transform: scale(0.9); box-shadow: 0 0 0 0   rgba(251,146,60,0.8); }
+  70%  { transform: scale(1.3); box-shadow: 0 0 0 4px rgba(251,146,60,0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0   rgba(251,146,60,0); }
 }
 
+/* Slider nav */
 .hero-slider-nav {
-  background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
 }
 
-.hero-slider-arrow {
-  color: #0f172a !important;
-}
+.hero-slider-arrow { color: rgba(255,255,255,0.9) !important; }
 
-.hero-dot {
-  background: #cbd5e1 !important;
-}
+.hero-dot { background: rgba(255,255,255,0.35) !important; }
 
 .hero-dot.active {
   background: #f58220 !important;
-  box-shadow: 0 0 10px rgba(245, 130, 32, 0.5) !important;
+  box-shadow: 0 0 10px rgba(245,130,32,0.7) !important;
 }
 
 
@@ -5293,9 +5265,61 @@ h1.page-hero-title {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   HERO BADGES & TRUST PILLS (.hero-badges, .h-badge across subpages)
+══════════════════════════════════════════════════════════════ */
+.hero-badges {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
+}
 
+.h-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  padding: 8px 18px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border-radius: 9999px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  white-space: nowrap !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+}
 
-/* ═══════════════════════════════════════════════════════════
+.h-badge:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+.h-badge-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #f58220 !important;
+  box-shadow: 0 0 10px rgba(245, 130, 32, 0.95), 0 0 4px #ffffff !important;
+  flex-shrink: 0 !important;
+  animation: pulseBadgeDot 2s infinite !important;
+}
+
+@keyframes pulseBadgeDot {
+  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(245, 130, 32, 0.85); }
+  70% { transform: scale(1.25); box-shadow: 0 0 0 6px rgba(245, 130, 32, 0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(245, 130, 32, 0); }
+}
    CHOREOGRAPHED OPENING ENTRANCE ANIMATIONS
    Smooth Bloom In on Load · Gyro Unfold · Cascading Elements · Smooth Exit
 ═══════════════════════════════════════════════════════════ */
@@ -5548,10 +5572,14 @@ p.splash-telemetry-text,
 }
 
 .dir-card:nth-child(3)::before {
-  background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%) !important;
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%) !important;
 }
 
 .dir-card:nth-child(4)::before {
+  background: linear-gradient(90deg, #0284c7 0%, #06b6d4 100%) !important;
+}
+
+.dir-card:nth-child(5)::before {
   background: linear-gradient(90deg, #8b5cf6 0%, #a855f7 100%) !important;
 }
 
@@ -5596,12 +5624,18 @@ p.splash-telemetry-text,
 }
 
 .dir-card:nth-child(3) .dir-avatar {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+  color: #1d4ed8 !important;
+  border: 2px solid #bfdbfe !important;
+}
+
+.dir-card:nth-child(4) .dir-avatar {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
   color: #0284c7 !important;
   border: 2px solid #bae6fd !important;
 }
 
-.dir-card:nth-child(4) .dir-avatar {
+.dir-card:nth-child(5) .dir-avatar {
   background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%) !important;
   color: #7c3aed !important;
   border: 2px solid #e9d5ff !important;
@@ -5645,10 +5679,14 @@ p.splash-telemetry-text,
 }
 
 .dir-card:nth-child(3) .dir-role {
-  color: #0284c7 !important;
+  color: #1d4ed8 !important;
 }
 
 .dir-card:nth-child(4) .dir-role {
+  color: #0284c7 !important;
+}
+
+.dir-card:nth-child(5) .dir-role {
   color: #7c3aed !important;
 }
 
@@ -5729,11 +5767,16 @@ p.splash-telemetry-text,
 }
 
 .dir-card:nth-child(3) .dir-exp-dot {
+  background: #1d4ed8 !important;
+  box-shadow: 0 0 6px rgba(29, 78, 216, 0.4) !important;
+}
+
+.dir-card:nth-child(4) .dir-exp-dot {
   background: #0284c7 !important;
   box-shadow: 0 0 6px rgba(2, 132, 199, 0.4) !important;
 }
 
-.dir-card:nth-child(4) .dir-exp-dot {
+.dir-card:nth-child(5) .dir-exp-dot {
   background: #7c3aed !important;
   box-shadow: 0 0 6px rgba(124, 58, 237, 0.4) !important;
 }

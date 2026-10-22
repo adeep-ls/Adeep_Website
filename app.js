@@ -586,8 +586,7 @@ function renderProductsTable() {
           <span class="cas-badge">${item.cas}</span>
         </td>
         <td>
-          <div><strong>${item.therapy}</strong></div>
-          <small style="color:#64748b;">Target: ${item.targetApi}</small>
+          <strong>${item.therapy}</strong>
         </td>
         <td>
           <span class="status-pill ${item.statusClass}">${item.status}</span>
@@ -754,7 +753,7 @@ function exportProductCatalog() {
             <th>Molecule / Intermediate Name</th>
             <th>Category</th>
             <th>CAS Number</th>
-            <th>Therapeutic Area / Target API</th>
+            <th>Therapeutic Area</th>
             <th>Regulatory Status</th>
           </tr>
         </thead>
@@ -768,7 +767,7 @@ function exportProductCatalog() {
         <td><strong>${p.name}</strong></td>
         <td>${p.category.toUpperCase()}</td>
         <td><span class="tag">${p.cas}</span></td>
-        <td>${p.therapy} ${p.targetApi ? `(${p.targetApi})` : ""}</td>
+        <td>${p.therapy}</td>
         <td>${p.status}</td>
       </tr>
     `;
@@ -778,7 +777,7 @@ function exportProductCatalog() {
         </tbody>
       </table>
       <div class="footer">
-        ADEEP GROUP | #1501, Asian Sun City, Kondapur, Hyderabad - 500084, India | Phone: +91 9515114455 | Email: srujanreddyn@adeepgroup.com
+        ADEEP GROUP | #1501, Asian Sun City, Kondapur, Hyderabad - 500084, India | Phone: +91 40 4515 1444 | Email: Marketing@adeepgroup.com
       </div>
       <script>window.print();</script>
     </body>
