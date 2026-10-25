@@ -434,7 +434,7 @@ const FACILITIES_DATA = {
     certs: "WHO-GMP, ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
     safety: "Zero Liquid Discharge (ZLD), automated gas scrubbers & solvent recovery",
     tag: "WHO-GMP Certified Facility",
-    img: "assets/03_plant_area.png"
+    img: "assets/01_green_campus.png"
   },
   unit2: {
     title: "Unit 2 - YSRJ Mega Industrial Hub, Kadapa",
@@ -446,7 +446,8 @@ const FACILITIES_DATA = {
     certs: "Architected for cGMP, EU-GMP, WHO-GMP & ISO Integrated Systems",
     safety: "Green engineering, solar energy integration, advanced containment suites",
     tag: "Next-Gen Mega Hub",
-    img: "assets/01_green_campus.png"
+    img: null,
+    isConstruction: true
   },
   unit3: {
     title: "Unit 3 - Adeep Laboratories Private Limited",
@@ -458,7 +459,7 @@ const FACILITIES_DATA = {
     certs: "cGMP Compliant, ISO 9001:2015, ISO 14001:2015",
     safety: "Advanced automated safety valves, toxic gas monitoring, full thermal abatement",
     tag: "High-Spec Intermediates Hub",
-    img: "assets/02_factory_building.png"
+    img: "assets/03_plant_area.png"
   },
   unit4: {
     title: "ADEEP Technology Center - Hyderabad",
@@ -972,8 +973,21 @@ window.switchFacility = function(key) {
     ${data.location}
   `;
   document.getElementById("facDesc").textContent = data.desc;
-  document.getElementById("facTag").textContent = data.tag;
-  document.getElementById("facImg").src = data.img;
+
+  const photoFrame = document.getElementById("facPhotoFrame");
+  const constructionFrame = document.getElementById("facConstructionFrame");
+
+  if (key === 'unit2' || data.isConstruction || !data.img) {
+    if (photoFrame) photoFrame.style.display = "none";
+    if (constructionFrame) constructionFrame.style.display = "flex";
+  } else {
+    if (photoFrame) photoFrame.style.display = "block";
+    if (constructionFrame) constructionFrame.style.display = "none";
+    const facImg = document.getElementById("facImg");
+    if (facImg) facImg.src = data.img;
+    const facTag = document.getElementById("facTag");
+    if (facTag) facTag.textContent = data.tag;
+  }
 
   const specsContainer = document.getElementById("facSpecs");
   specsContainer.innerHTML = `
