@@ -1,521 +1,631 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="adeep-signature">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ADEEP GROUP | World-Class API & Intermediate Pharmaceutical Manufacturing</title>
-  <meta name="description" content="ADEEP GROUP is a premier pharmaceutical manufacturer with a 17+ year legacy specializing in APIs, advanced intermediates, and green biocatalysis. cGMP & WHO-GMP compliant." />
-  <meta name="keywords" content="ADEEP Group, Adeep Life Sciences, Adeep Laboratories, API manufacturing, Mirtazapine, Brivaracetam, biocatalysis, green chemistry, pharmaceutical manufacturer India" />
+  <meta name="description"
+    content="ADEEP GROUP is a premier pharmaceutical manufacturer with a 17+ year legacy specializing in APIs, advanced intermediates, and green biocatalysis. cGMP & WHO-GMP compliant." />
+  <meta name="keywords"
+    content="ADEEP Group, Adeep Life Sciences, Adeep Laboratories, API manufacturing, Mirtazapine, Brivaracetam, biocatalysis, green chemistry, pharmaceutical manufacturer India" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/adeep_emblem.png" />
-  <link rel="stylesheet" href="styles.css?v=59.0" />
+  <link rel="stylesheet" href="styles.css?v=61.0" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <style id="splashInlineTheme">
-/* ═══════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════════════
    DEEP MIDNIGHT CINEMATIC SPLASH SCREEN (High-Contrast Luxury Glass)
    Rich Midnight Sapphire Backdrop · Holographic 3D Glowing Reactor · Luminous Neon Accents
 ═══════════════════════════════════════════════════════════ */
-.site-splash-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at 50% 35%, #0c1a36 0%, #070e1e 55%, #030712 100%) !important;
-  overflow: hidden;
-  user-select: none;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease, visibility 0.7s;
-  will-change: opacity, transform, filter;
-}
+    .site-splash-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 35%, #0c1a36 0%, #070e1e 55%, #030712 100%) !important;
+      overflow: hidden;
+      user-select: none;
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease, visibility 0.7s;
+      will-change: opacity, transform, filter;
+    }
 
-.site-splash-screen.splash-hidden {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transform: scale(1.08) !important;
-  filter: blur(14px) !important;
-  pointer-events: none !important;
-}
+    .site-splash-screen.splash-hidden {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: scale(1.08) !important;
+      filter: blur(14px) !important;
+      pointer-events: none !important;
+    }
 
-/* Ambient Luminous Aurora Lights */
-.splash-aurora-wrap {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
+    /* Ambient Luminous Aurora Lights */
+    .splash-aurora-wrap {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
 
-.splash-aurora {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.65;
-  animation: midnightAuroraBreath 9s ease-in-out infinite alternate;
-}
+    .splash-aurora {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.65;
+      animation: midnightAuroraBreath 9s ease-in-out infinite alternate;
+    }
 
-.splash-aurora-1 {
-  width: 620px; height: 620px;
-  background: radial-gradient(circle, rgba(29, 78, 216, 0.45) 0%, rgba(56, 189, 248, 0.2) 50%, transparent 70%);
-  top: -15%; left: -10%;
-  animation-duration: 8s;
-}
+    .splash-aurora-1 {
+      width: 620px;
+      height: 620px;
+      background: radial-gradient(circle, rgba(29, 78, 216, 0.45) 0%, rgba(56, 189, 248, 0.2) 50%, transparent 70%);
+      top: -15%;
+      left: -10%;
+      animation-duration: 8s;
+    }
 
-.splash-aurora-2 {
-  width: 650px; height: 650px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(5, 150, 105, 0.15) 50%, transparent 70%);
-  bottom: -20%; right: -10%;
-  animation-duration: 10s;
-}
+    .splash-aurora-2 {
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(5, 150, 105, 0.15) 50%, transparent 70%);
+      bottom: -20%;
+      right: -10%;
+      animation-duration: 10s;
+    }
 
-.splash-aurora-3 {
-  width: 460px; height: 460px;
-  background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, transparent 70%);
-  top: 35%; right: 10%;
-  animation-duration: 7s;
-}
+    .splash-aurora-3 {
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, transparent 70%);
+      top: 35%;
+      right: 10%;
+      animation-duration: 7s;
+    }
 
-.splash-radial-halo {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 700px; height: 700px;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(29, 78, 216, 0.08) 45%, transparent 70%);
-  pointer-events: none;
-}
+    .splash-radial-halo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 700px;
+      height: 700px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(29, 78, 216, 0.08) 45%, transparent 70%);
+      pointer-events: none;
+    }
 
-@keyframes midnightAuroraBreath {
-  0% { transform: scale(1) translate(0, 0); opacity: 0.55; }
-  50% { transform: scale(1.15) translate(30px, -20px); opacity: 0.8; }
-  100% { transform: scale(0.92) translate(-20px, 25px); opacity: 0.55; }
-}
+    @keyframes midnightAuroraBreath {
+      0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.55;
+      }
 
-/* Central Luxury Dark Frosted Glass Capsule */
-.splash-capsule-card {
-  position: relative;
-  z-index: 10;
-  width: 90%;
-  max-width: 490px;
-  background: rgba(10, 20, 42, 0.88);
-  backdrop-filter: blur(36px) saturate(200%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%);
-  border: 1.5px solid rgba(56, 189, 248, 0.35);
-  border-radius: 32px;
-  padding: 42px 38px 34px;
-  box-shadow: 
-    0 35px 80px -15px rgba(0, 0, 0, 0.9),
-    0 0 50px rgba(2, 132, 199, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  animation: capsuleOpeningReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) both, capsuleFloat 5s ease-in-out 0.85s infinite alternate;
-}
+      50% {
+        transform: scale(1.15) translate(30px, -20px);
+        opacity: 0.8;
+      }
 
-/* 3D Holographic Molecular Reactor Core */
-.splash-reactor {
-  position: relative;
-  width: 176px;
-  height: 176px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 22px;
-  perspective: 800px;
-}
+      100% {
+        transform: scale(0.92) translate(-20px, 25px);
+        opacity: 0.55;
+      }
+    }
 
-/* Luminous Expanding Sonar Ripple Waves */
-.splash-sonar {
-  position: absolute;
-  border-radius: 50%;
-  border: 1.5px solid rgba(56, 189, 248, 0.7);
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-  pointer-events: none;
-  animation: sonarPulse 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
+    /* Central Luxury Dark Frosted Glass Capsule */
+    .splash-capsule-card {
+      position: relative;
+      z-index: 10;
+      width: 90%;
+      max-width: 490px;
+      background: rgba(10, 20, 42, 0.88);
+      backdrop-filter: blur(36px) saturate(200%);
+      -webkit-backdrop-filter: blur(36px) saturate(200%);
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: 32px;
+      padding: 42px 38px 34px;
+      box-shadow:
+        0 35px 80px -15px rgba(0, 0, 0, 0.9),
+        0 0 50px rgba(2, 132, 199, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: capsuleOpeningReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) both, capsuleFloat 5s ease-in-out 0.85s infinite alternate;
+    }
 
-.sonar-1 { width: 90px; height: 90px; }
-.sonar-2 { width: 90px; height: 90px; animation-delay: 1.5s; border-color: rgba(16, 185, 129, 0.6); box-shadow: 0 0 15px rgba(16, 185, 129, 0.35); }
+    /* 3D Holographic Molecular Reactor Core */
+    .splash-reactor {
+      position: relative;
+      width: 176px;
+      height: 176px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      perspective: 800px;
+    }
 
-@keyframes sonarPulse {
-  0% { transform: scale(1); opacity: 0.9; }
-  100% { transform: scale(2.2); opacity: 0; }
-}
+    /* Luminous Expanding Sonar Ripple Waves */
+    .splash-sonar {
+      position: absolute;
+      border-radius: 50%;
+      border: 1.5px solid rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      pointer-events: none;
+      animation: sonarPulse 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
 
-/* 3D Holographic Gyroscope Rings */
-.splash-gyro {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  transform-style: preserve-3d;
-}
+    .sonar-1 {
+      width: 90px;
+      height: 90px;
+    }
 
-.splash-gyro-outer {
-  width: 168px;
-  height: 168px;
-  border: 2px dashed #38bdf8;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.65), inset 0 0 12px rgba(56, 189, 248, 0.25);
-  animation: gyroSpinX 14s linear infinite;
-}
+    .sonar-2 {
+      width: 90px;
+      height: 90px;
+      animation-delay: 1.5s;
+      border-color: rgba(16, 185, 129, 0.6);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+    }
 
-.splash-gyro-middle {
-  width: 136px;
-  height: 136px;
-  border: 1.5px dotted #10b981;
-  box-shadow: 0 0 18px rgba(16, 185, 129, 0.55);
-  animation: gyroSpinY 9s linear infinite;
-}
+    @keyframes sonarPulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
 
-.splash-gyro-inner {
-  width: 108px;
-  height: 108px;
-  border: 1.5px solid rgba(56, 189, 248, 0.5);
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
-  animation: gyroSpinZ 6s linear infinite;
-}
+      100% {
+        transform: scale(2.2);
+        opacity: 0;
+      }
+    }
 
-/* Glowing Atomic Electrons */
-.splash-atom {
-  position: absolute;
-  border-radius: 50%;
-}
+    /* 3D Holographic Gyroscope Rings */
+    .splash-gyro {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      transform-style: preserve-3d;
+    }
 
-.atom-cyan-1 {
-  width: 9px; height: 9px;
-  background: #38bdf8;
-  box-shadow: 0 0 16px #38bdf8, 0 0 6px #ffffff;
-  top: 8px; left: 50%;
-  transform: translateX(-50%);
-}
+    .splash-gyro-outer {
+      width: 168px;
+      height: 168px;
+      border: 2px dashed #38bdf8;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.65), inset 0 0 12px rgba(56, 189, 248, 0.25);
+      animation: gyroSpinX 14s linear infinite;
+    }
 
-.atom-cyan-2 {
-  width: 8px; height: 8px;
-  background: #38bdf8;
-  box-shadow: 0 0 14px #38bdf8;
-  bottom: 8px; left: 50%;
-  transform: translateX(-50%);
-}
+    .splash-gyro-middle {
+      width: 136px;
+      height: 136px;
+      border: 1.5px dotted #10b981;
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.55);
+      animation: gyroSpinY 9s linear infinite;
+    }
 
-.atom-emerald-1 {
-  width: 8px; height: 8px;
-  background: #10b981;
-  box-shadow: 0 0 16px #10b981, 0 0 6px #ffffff;
-  top: 50%; right: 4px;
-  transform: translateY(-50%);
-}
+    .splash-gyro-inner {
+      width: 108px;
+      height: 108px;
+      border: 1.5px solid rgba(56, 189, 248, 0.5);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+      animation: gyroSpinZ 6s linear infinite;
+    }
 
-.atom-emerald-2 {
-  width: 7px; height: 7px;
-  background: #10b981;
-  box-shadow: 0 0 12px #10b981;
-  top: 50%; left: 4px;
-  transform: translateY(-50%);
-}
+    /* Glowing Atomic Electrons */
+    .splash-atom {
+      position: absolute;
+      border-radius: 50%;
+    }
 
-/* Elevated Glowing White Logo Jewel Disc */
-.splash-logo-card {
-  position: relative;
-  z-index: 10;
-  width: 86px;
-  height: 86px;
-  background: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 
-    0 0 35px rgba(56, 189, 248, 0.6),
-    0 12px 30px rgba(0, 0, 0, 0.7),
-    0 0 0 5px rgba(56, 189, 248, 0.2);
-  padding: 12px;
-  animation: logoPulse 4s ease-in-out infinite;
-}
+    .atom-cyan-1 {
+      width: 9px;
+      height: 9px;
+      background: #38bdf8;
+      box-shadow: 0 0 16px #38bdf8, 0 0 6px #ffffff;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-@keyframes logoPulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 35px rgba(56, 189, 248, 0.6), 0 12px 30px rgba(0, 0, 0, 0.7); }
-  50% { transform: scale(1.05); box-shadow: 0 0 45px rgba(56, 189, 248, 0.8), 0 16px 36px rgba(0, 0, 0, 0.8); }
-}
+    .atom-cyan-2 {
+      width: 8px;
+      height: 8px;
+      background: #38bdf8;
+      box-shadow: 0 0 14px #38bdf8;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-.splash-logo-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: none !important;
-  -webkit-filter: none !important;
-  box-shadow: none !important;
-}
+    .atom-emerald-1 {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      box-shadow: 0 0 16px #10b981, 0 0 6px #ffffff;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+    }
 
-.splash-disc-shine {
-  position: absolute;
-  top: 3px; left: 10px; right: 10px;
-  height: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
-  border-radius: 50% 50% 40% 40%;
-  pointer-events: none;
-}
+    .atom-emerald-2 {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      box-shadow: 0 0 12px #10b981;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+    }
 
-/* Luminous Metallic Typography */
-.splash-info {
-  width: 100%;
-  margin-bottom: 20px;
-}
+    /* Elevated Glowing White Logo Jewel Disc */
+    .splash-logo-card {
+      position: relative;
+      z-index: 10;
+      width: 86px;
+      height: 86px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255, 255, 255, 0.95);
+      box-shadow:
+        0 0 35px rgba(56, 189, 248, 0.6),
+        0 12px 30px rgba(0, 0, 0, 0.7),
+        0 0 0 5px rgba(56, 189, 248, 0.2);
+      padding: 12px;
+      animation: logoPulse 4s ease-in-out infinite;
+    }
 
-.splash-brand-title {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: -0.015em;
-  background: linear-gradient(135deg, #ffffff 30%, #7dd3fc 60%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(56, 189, 248, 0.45);
-  margin-bottom: 8px;
-}
+    @keyframes logoPulse {
 
-.splash-tag-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(2, 132, 199, 0.2);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  padding: 5px 15px;
-  border-radius: 9999px;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #7dd3fc;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  box-shadow: 0 0 15px rgba(2, 132, 199, 0.25);
-}
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 35px rgba(56, 189, 248, 0.6), 0 12px 30px rgba(0, 0, 0, 0.7);
+      }
 
-.splash-pill-pulse {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 12px #10b981, 0 0 4px #ffffff;
-  animation: pulseBeacon 1.8s infinite;
-}
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 45px rgba(56, 189, 248, 0.8), 0 16px 36px rgba(0, 0, 0, 0.8);
+      }
+    }
 
-/* High-Tech Telemetry Box (Dark Terminal) */
-.splash-telemetry-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(4, 9, 22, 0.92);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  border-radius: 8px;
-  padding: 8px 16px;
-  margin: 0 auto;
-  max-width: 460px;
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.12);
-}
+    .splash-logo-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: none !important;
+      -webkit-filter: none !important;
+      box-shadow: none !important;
+    }
 
-.telemetry-icon {
-  font-size: 0.95rem;
-  line-height: 1;
-  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5));
-}
+    .splash-disc-shine {
+      position: absolute;
+      top: 3px;
+      left: 10px;
+      right: 10px;
+      height: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
+      border-radius: 50% 50% 40% 40%;
+      pointer-events: none;
+    }
 
-#siteSplashScreen .splash-telemetry-text,
-#siteSplashScreen p.splash-telemetry-text,
-.splash-telemetry-text,
-#splashTelemetryText {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
-  font-size: 0.82rem !important;
-  font-weight: 600 !important;
-  color: #38bdf8 !important;
-  opacity: 1 !important;
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.75), 0 0 2px rgba(255, 255, 255, 0.6) !important;
-  letter-spacing: 0.02em !important;
-  min-height: 20px !important;
-  margin: 0 !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
+    /* Luminous Metallic Typography */
+    .splash-info {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
-/* Liquid Laser Progress Bar */
-.splash-progress-wrapper {
-  width: 100%;
-  margin-top: 6px;
-}
+    .splash-brand-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -0.015em;
+      background: linear-gradient(135deg, #ffffff 30%, #7dd3fc 60%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(56, 189, 248, 0.45);
+      margin-bottom: 8px;
+    }
 
-.splash-progress-track {
-  width: 100%;
-  height: 9px;
-  background: rgba(15, 23, 42, 0.95);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 9999px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-  margin-bottom: 14px;
-}
+    .splash-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(2, 132, 199, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 5px 15px;
+      border-radius: 9999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #7dd3fc;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      box-shadow: 0 0 15px rgba(2, 132, 199, 0.25);
+    }
 
-.splash-progress-bar {
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 40%, #38bdf8 75%, #00f5a0 100%);
-  border-radius: 9999px;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.85);
-  transition: width 0.035s linear;
-  position: relative;
-}
+    .splash-pill-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 12px #10b981, 0 0 4px #ffffff;
+      animation: pulseBeacon 1.8s infinite;
+    }
 
-.progress-head-beacon {
-  position: absolute;
-  top: 50%; right: -2px;
-  width: 9px; height: 9px;
-  transform: translateY(-50%);
-  background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 0 16px #00f5a0, 0 0 8px #ffffff;
-}
+    /* High-Tech Telemetry Box (Dark Terminal) */
+    .splash-telemetry-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(4, 9, 22, 0.92);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 8px;
+      padding: 8px 16px;
+      margin: 0 auto;
+      max-width: 460px;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.12);
+    }
 
-.progress-stream-glow {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.7) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: streamGlow 1.4s linear infinite;
-}
+    .telemetry-icon {
+      font-size: 0.95rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5));
+    }
 
-@keyframes streamGlow {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
+    #siteSplashScreen .splash-telemetry-text,
+    #siteSplashScreen p.splash-telemetry-text,
+    .splash-telemetry-text,
+    #splashTelemetryText {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #38bdf8 !important;
+      opacity: 1 !important;
+      text-shadow: 0 0 12px rgba(56, 189, 248, 0.75), 0 0 2px rgba(255, 255, 255, 0.6) !important;
+      letter-spacing: 0.02em !important;
+      min-height: 20px !important;
+      margin: 0 !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
 
-.splash-progress-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+    /* Liquid Laser Progress Bar */
+    .splash-progress-wrapper {
+      width: 100%;
+      margin-top: 6px;
+    }
 
-.splash-meta-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .splash-progress-track {
+      width: 100%;
+      height: 9px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+      margin-bottom: 14px;
+    }
 
-.splash-percentage {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-}
+    .splash-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 40%, #38bdf8 75%, #00f5a0 100%);
+      border-radius: 9999px;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.85);
+      transition: width 0.035s linear;
+      position: relative;
+    }
 
-.splash-status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #34d399;
-  background: rgba(16, 185, 129, 0.16);
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  padding: 3px 9px;
-  border-radius: 6px;
-}
+    .progress-head-beacon {
+      position: absolute;
+      top: 50%;
+      right: -2px;
+      width: 9px;
+      height: 9px;
+      transform: translateY(-50%);
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 16px #00f5a0, 0 0 8px #ffffff;
+    }
 
-.badge-live-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 8px #10b981;
-  animation: pulseBeacon 1.5s infinite;
-}
+    .progress-stream-glow {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.7) 50%, transparent 100%);
+      background-size: 200% 100%;
+      animation: streamGlow 1.4s linear infinite;
+    }
 
-/* Styled Interactive Skip Button (Glass Pill) */
-.splash-skip-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 7px !important;
-  padding: 6px 16px !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  border-radius: 9999px !important;
-  font-family: var(--font-sans) !important;
-  font-size: 0.76rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  cursor: pointer !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.22s ease !important;
-}
+    @keyframes streamGlow {
+      0% {
+        background-position: -200% 0;
+      }
 
-.splash-skip-btn:hover {
-  background: rgba(56, 189, 248, 0.25) !important;
-  border-color: #38bdf8 !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4) !important;
-}
+      100% {
+        background-position: 200% 0;
+      }
+    }
 
-.splash-skip-btn:hover .skip-icon {
-  transform: translateX(3px) !important;
-}
+    .splash-progress-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
-.skip-icon {
-  width: 14px !important;
-  height: 14px !important;
-  fill: none !important;
-  stroke: currentColor !important;
-  stroke-width: 2.2 !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-  transition: transform 0.2s ease !important;
-}
+    .splash-meta-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .splash-percentage {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+
+    .splash-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.16);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+
+    .badge-live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulseBeacon 1.5s infinite;
+    }
+
+    /* Styled Interactive Skip Button (Glass Pill) */
+    .splash-skip-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 7px !important;
+      padding: 6px 16px !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      border-radius: 9999px !important;
+      font-family: var(--font-sans) !important;
+      font-size: 0.76rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      cursor: pointer !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.22s ease !important;
+    }
+
+    .splash-skip-btn:hover {
+      background: rgba(56, 189, 248, 0.25) !important;
+      border-color: #38bdf8 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4) !important;
+    }
+
+    .splash-skip-btn:hover .skip-icon {
+      transform: translateX(3px) !important;
+    }
+
+    .skip-icon {
+      width: 14px !important;
+      height: 14px !important;
+      fill: none !important;
+      stroke: currentColor !important;
+      stroke-width: 2.2 !important;
+      stroke-linecap: round !important;
+      stroke-linejoin: round !important;
+      transition: transform 0.2s ease !important;
+    }
 
 
-/* ═══════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════════════
    3D GYROSCOPIC REACTOR & MIDNIGHT SPLASH ANIMATION ENGINES
    ═══════════════════════════════════════════════════════════ */
-@keyframes gyroSpinX {
-  0% { transform: rotateX(68deg) rotateY(15deg) rotateZ(0deg); }
-  100% { transform: rotateX(68deg) rotateY(15deg) rotateZ(360deg); }
-}
+    @keyframes gyroSpinX {
+      0% {
+        transform: rotateX(68deg) rotateY(15deg) rotateZ(0deg);
+      }
 
-@keyframes gyroSpinY {
-  0% { transform: rotateX(-50deg) rotateY(65deg) rotateZ(0deg); }
-  100% { transform: rotateX(-50deg) rotateY(65deg) rotateZ(-360deg); }
-}
+      100% {
+        transform: rotateX(68deg) rotateY(15deg) rotateZ(360deg);
+      }
+    }
 
-@keyframes gyroSpinZ {
-  0% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg); }
-  100% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg); }
-}
+    @keyframes gyroSpinY {
+      0% {
+        transform: rotateX(-50deg) rotateY(65deg) rotateZ(0deg);
+      }
 
-@keyframes capsuleFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-  100% { transform: translateY(0); }
-}
+      100% {
+        transform: rotateX(-50deg) rotateY(65deg) rotateZ(-360deg);
+      }
+    }
 
-@keyframes pulseBeacon {
-  0%, 100% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 6px #10b981); }
-  50% { transform: scale(1.4); opacity: 0.75; filter: drop-shadow(0 0 14px #10b981); }
-}
+    @keyframes gyroSpinZ {
+      0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
 
-@keyframes brandShimmer {
-  0% { filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4)); }
-  50% { filter: drop-shadow(0 0 26px rgba(56, 189, 248, 0.85)); }
-  100% { filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4)); }
-}
+      100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
 
+    @keyframes capsuleFloat {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseBeacon {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: drop-shadow(0 0 6px #10b981);
+      }
+
+      50% {
+        transform: scale(1.4);
+        opacity: 0.75;
+        filter: drop-shadow(0 0 14px #10b981);
+      }
+    }
+
+    @keyframes brandShimmer {
+      0% {
+        filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 26px rgba(56, 189, 248, 0.85));
+      }
+
+      100% {
+        filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
+      }
+    }
   </style>
 </head>
+
 <body>
   <!-- ═══════════════════════════════════════════════════════════
        CLEAN EXECUTIVE MINIMALIST LOADING SCREEN (Splash Experience)
@@ -562,7 +672,9 @@
         </div>
         <div class="splash-telemetry-box">
           <span class="telemetry-icon">⚗️</span>
-          <div class="splash-telemetry-text" id="splashTelemetryText" style="color: #38bdf8 !important; text-shadow: 0 0 12px rgba(56, 189, 248, 0.7) !important;">Calibrating continuous enzymatic flow reactors...</div>
+          <div class="splash-telemetry-text" id="splashTelemetryText"
+            style="color: #38bdf8 !important; text-shadow: 0 0 12px rgba(56, 189, 248, 0.7) !important;">Calibrating
+            continuous enzymatic flow reactors...</div>
         </div>
       </div>
 
@@ -584,7 +696,9 @@
           </div>
           <button class="splash-skip-btn" id="splashSkipBtn" type="button" aria-label="Skip introduction">
             <span>Skip Intro</span>
-            <svg viewBox="0 0 24 24" class="skip-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24" class="skip-icon">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
       </div>
@@ -592,7 +706,7 @@
 
     <!-- Clean Executive Loading Engine -->
     <script>
-      (function() {
+      (function () {
         if (window.__splashInitialized) return;
         window.__splashInitialized = true;
 
@@ -696,7 +810,7 @@
         <img src="assets/adeep_logo.png" alt="ADEEP GROUP - Excellency in Chemistry" class="logo-img" />
       </a>
 
-            <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link active">Home</a>
 
         <div class="nav-item-dropdown">
@@ -751,7 +865,10 @@
 
       <div class="header-actions">
         <button class="cart-btn" id="cartOpenBtn" title="Inquiry Basket">
-          <svg viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z" />
+          </svg>
           <span class="cart-count" id="cartCount">0</span>
         </button>
         <a href="#inquiry" class="btn btn-primary btn-sm header-cta">Send Enquiry</a>
@@ -767,19 +884,21 @@
     <!-- 5-Image Background Slider (Quest Pharma UI/UX) -->
     <div class="hero-bg-slider" id="heroBgSlider">
       <div class="hero-slide active" data-index="0">
-        <img src="assets/hero_cinematic.jpg" alt="ADEEP Excellency in Chemistry & Innovation" class="hero-slide-img" />
+        <img src="assets/hero_safety_gate.jpg" alt="ADEEP Plant Safety & Infrastructure" class="hero-slide-img" />
       </div>
       <div class="hero-slide" data-index="1">
-        <img src="assets/plant_facility.jpg" alt="ADEEP World-Class API Manufacturing Facility" class="hero-slide-img" />
+        <img src="assets/hero_plant_facility.jpg" alt="ADEEP World-Class API Manufacturing Facility"
+          class="hero-slide-img" />
       </div>
       <div class="hero-slide" data-index="2">
-        <img src="assets/hero_lab.jpg" alt="ADEEP High-Tech Analytical Quality Labs" class="hero-slide-img" />
+        <img src="assets/hero_reactor_cleanroom.jpg" alt="ADEEP Advanced Reaction Vessels & Cleanroom"
+          class="hero-slide-img" />
       </div>
       <div class="hero-slide" data-index="3">
-        <img src="assets/biocatalysis.jpg" alt="ADEEP Advanced Biocatalysis & Enzyme Engineering" class="hero-slide-img" />
+        <img src="assets/hero_qc_lab.jpg" alt="ADEEP High-Tech Analytical Quality Testing Lab" class="hero-slide-img" />
       </div>
       <div class="hero-slide" data-index="4">
-        <img src="assets/hero_pharma_clean.jpg" alt="ADEEP cGMP & WHO-GMP Compliant Manufacturing" class="hero-slide-img" />
+        <img src="assets/hero_boardroom.jpg" alt="ADEEP Scientific Leadership & Strategy" class="hero-slide-img" />
       </div>
       <div class="hero-overlay"></div>
     </div>
@@ -799,7 +918,9 @@
         <div class="hero-cta-group">
           <a href="products.html" class="btn btn-primary">
             <span>Explore Product Basket</span>
-            <svg viewBox="0 0 24 24" class="icon-arrow"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24" class="icon-arrow">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
           <a href="#inquiry" class="btn btn-accent">Send Enquiry / RFQ</a>
         </div>
@@ -807,19 +928,23 @@
         <!-- Trust Metrics Bar: Sleek Compact Strip -->
         <div class="hero-metrics-strip">
           <div class="metric-card">
-            <div class="metric-value"><span class="counter" data-target="17">17</span><span class="metric-suffix">+</span></div>
+            <div class="metric-value"><span class="counter" data-target="17">17</span><span
+                class="metric-suffix">+</span></div>
             <div class="metric-label">Years of Legacy</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value"><span class="counter" data-target="50">50</span><span class="metric-suffix">+</span></div>
+            <div class="metric-value"><span class="counter" data-target="50">50</span><span
+                class="metric-suffix">+</span></div>
             <div class="metric-label">Commercial Products</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value"><span class="counter" data-target="50">50</span><span class="metric-suffix">+</span></div>
+            <div class="metric-value"><span class="counter" data-target="50">50</span><span
+                class="metric-suffix">+</span></div>
             <div class="metric-label">Global Customers</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value"><span class="counter" data-target="250">250</span><span class="metric-suffix">+</span><span class="metric-unit">KL</span></div>
+            <div class="metric-value"><span class="counter" data-target="250">250</span><span
+                class="metric-suffix">+</span><span class="metric-unit">KL</span></div>
             <div class="metric-label">Reactor Capacity</div>
             <div class="metric-facility-upcoming">
               <span class="pulse-dot"></span>
@@ -827,7 +952,8 @@
             </div>
           </div>
           <div class="metric-card">
-            <div class="metric-value"><span class="counter" data-target="250">250</span><span class="metric-suffix">+</span></div>
+            <div class="metric-value"><span class="counter" data-target="250">250</span><span
+                class="metric-suffix">+</span></div>
             <div class="metric-label">Skilled Workforce</div>
           </div>
         </div>
@@ -856,7 +982,9 @@
         <span class="section-tag">WHO WE ARE</span>
         <h2 class="section-title">A Fast-Growing Leader in APIs &amp; Complex Intermediates</h2>
         <p class="section-desc">
-          Founded in 2008, ADEEP GROUP encompasses <strong>Adeep Life Sciences Pvt Ltd</strong> and <strong>Adeep Laboratories Pvt Ltd</strong>. From humble beginnings, we have scaled into an integrated pharmaceutical manufacturing powerhouse.
+          Founded in 2008, ADEEP GROUP encompasses <strong>Adeep Life Sciences Pvt Ltd</strong> and <strong>Adeep
+            Laboratories Pvt Ltd</strong>. From humble beginnings, we have scaled into an integrated pharmaceutical
+          manufacturing powerhouse.
         </p>
       </div>
 
@@ -867,60 +995,78 @@
             <span>Our Journey &amp; Legacy</span>
             <span class="badge-pill-sub">Est. 2008</span>
           </div>
-          <h3>17+ Years of Transforming Chemical Engineering into <span class="text-gradient">Life-Saving Therapies</span></h3>
+          <h3>17+ Years of Transforming Chemical Engineering into <span class="text-gradient">Life-Saving
+              Therapies</span></h3>
           <p class="about-lead">
-            ADEEP is a mission-driven innovator committed to India’s pharmaceutical self-reliance. Aligned deeply with national initiatives, we have systematically expanded domestic manufacturing to eliminate critical dependencies on foreign suppliers.
+            ADEEP is a mission-driven innovator committed to India’s pharmaceutical self-reliance. Aligned deeply with
+            national initiatives, we have systematically expanded domestic manufacturing to eliminate critical
+            dependencies on foreign suppliers.
           </p>
           <div class="journey-highlights">
             <div class="jh-item jh-item-emerald">
               <div class="jh-icon-wrap">
-                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M4 22V6l6 4V4l6 4v14H4zm8-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-6 4h2v-2H6v2zm0-4h2v-2H6v2z"/></svg>
+                <svg viewBox="0 0 24 24" class="jh-svg">
+                  <path d="M4 22V6l6 4V4l6 4v14H4zm8-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-6 4h2v-2H6v2zm0-4h2v-2H6v2z" />
+                </svg>
               </div>
               <div class="jh-content">
                 <div class="jh-title-row">
                   <strong>3 High-Capacity Units &amp; Central R&amp;D</strong>
                   <span class="jh-tag">Scale &amp; Capacity</span>
                 </div>
-                <span>Continuous multi-ton synthesis facilities in Bidar and Kopparthi (Kadapa), supported by ADEEP Technology Center (Central R&amp;D) in Hyderabad.</span>
+                <span>Continuous multi-ton synthesis facilities in Bidar and Kopparthi (Kadapa), supported by ADEEP
+                  Technology Center (Central R&amp;D) in Hyderabad.</span>
               </div>
             </div>
 
             <div class="jh-item jh-item-cyan">
               <div class="jh-icon-wrap">
-                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <svg viewBox="0 0 24 24" class="jh-svg">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
               </div>
               <div class="jh-content">
                 <div class="jh-title-row">
                   <strong>Global Regulatory Footprint</strong>
                   <span class="jh-tag">cGMP &amp; Global Standards</span>
                 </div>
-                <span>Operating advanced cGMP intermediate &amp; API manufacturing facilities compliant with stringent global regulatory guidelines.</span>
+                <span>Operating advanced cGMP intermediate &amp; API manufacturing facilities compliant with stringent
+                  global regulatory guidelines.</span>
               </div>
             </div>
 
             <div class="jh-item jh-item-gold">
               <div class="jh-icon-wrap">
-                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M4 11h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4H5V5zm9-2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6zm5 6h-4V5h4v4zM4 21h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4H5v-4zm9 6h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4v-4z"/></svg>
+                <svg viewBox="0 0 24 24" class="jh-svg">
+                  <path
+                    d="M4 11h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4H5V5zm9-2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6zm5 6h-4V5h4v4zM4 21h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4H5v-4zm9 6h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4v-4z" />
+                </svg>
               </div>
               <div class="jh-content">
                 <div class="jh-title-row">
                   <strong>Diversified Product Portfolio</strong>
                   <span class="jh-tag">50+ Commercial Products</span>
                 </div>
-                <span>Comprehensive basket of 50+ commercial APIs and advanced intermediates across key therapeutic areas (Mirtazapine, Brivaracetam, Labetalol, Entacapone, Droxidopa).</span>
+                <span>Comprehensive basket of 50+ commercial APIs and advanced intermediates across key therapeutic
+                  areas (Mirtazapine, Brivaracetam, Labetalol, Entacapone, Droxidopa).</span>
               </div>
             </div>
 
             <div class="jh-item jh-item-green">
               <div class="jh-icon-wrap">
-                <svg viewBox="0 0 24 24" class="jh-svg"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+                <svg viewBox="0 0 24 24" class="jh-svg">
+                  <path
+                    d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
+                </svg>
               </div>
               <div class="jh-content">
                 <div class="jh-title-row">
                   <strong>Green Chemistry &amp; Sustainable Innovation</strong>
                   <span class="jh-tag">Biocatalysis &amp; ZLD</span>
                 </div>
-                <span>Pioneering enzymatic biocatalysis and Zero-Liquid Discharge (ZLD) technologies for cleaner, atom-efficient pharmaceutical synthesis.</span>
+                <span>Pioneering enzymatic biocatalysis and Zero-Liquid Discharge (ZLD) technologies for cleaner,
+                  atom-efficient pharmaceutical synthesis.</span>
               </div>
             </div>
           </div>
@@ -928,14 +1074,17 @@
 
         <div class="about-visual-col">
           <div class="visual-image-wrapper">
-            <img src="assets/plant_facility.jpg" alt="ADEEP Pharmaceutical Industrial Campus" class="about-feature-img" />
+            <img src="assets/01_green_campus.png" alt="ADEEP Clean &amp; Green Pharmaceutical Industrial Campus"
+              class="about-feature-img" />
             <div class="facility-image-top-badge">
               <span class="pulse-emerald-dot"></span>
               <span>WHO-GMP &amp; ISO Integrated Standards</span>
             </div>
             <div class="facility-float-badge">
               <div class="ffb-icon-glow">
-                <svg viewBox="0 0 24 24" class="ffb-svg"><path d="M4 22V6l6 4V4l6 4v14H4zm8-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-6 4h2v-2H6v2zm0-4h2v-2H6v2z"/></svg>
+                <svg viewBox="0 0 24 24" class="ffb-svg">
+                  <path d="M4 22V6l6 4V4l6 4v14H4zm8-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-6 4h2v-2H6v2zm0-4h2v-2H6v2z" />
+                </svg>
               </div>
               <div class="ffb-text">
                 <div class="ffb-title">
@@ -952,18 +1101,25 @@
             <div class="value-box val-box-integrity">
               <div class="val-header">
                 <div class="val-icon-wrap">
-                  <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                  </svg>
                 </div>
                 <span class="val-num">01</span>
               </div>
               <h4>Integrity</h4>
-              <p>Uncompromising honesty, full transparency, and ethical compliance across all scientific &amp; commercial dealings.</p>
+              <p>Uncompromising honesty, full transparency, and ethical compliance across all scientific &amp;
+                commercial dealings.</p>
             </div>
 
             <div class="value-box val-box-innovation">
               <div class="val-header">
                 <div class="val-icon-wrap">
-                  <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-1.3l-.85-.6A5.006 5.006 0 017 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.95-.9 3.69-2.15 4.1z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-1.3l-.85-.6A5.006 5.006 0 017 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.95-.9 3.69-2.15 4.1z" />
+                  </svg>
                 </div>
                 <span class="val-num">02</span>
               </div>
@@ -974,23 +1130,31 @@
             <div class="value-box val-box-quality">
               <div class="val-header">
                 <div class="val-icon-wrap">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
                 </div>
                 <span class="val-num">03</span>
               </div>
               <h4>Quality</h4>
-              <p>Delivering exceptional cGMP &amp; WHO-compliant APIs that consistently surpass international pharmacopoeias.</p>
+              <p>Delivering exceptional cGMP &amp; WHO-compliant APIs that consistently surpass international
+                pharmacopoeias.</p>
             </div>
 
             <div class="value-box val-box-sustainability">
               <div class="val-header">
                 <div class="val-icon-wrap">
-                  <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3 6 0 12-5 12-12zm-5 7c-2 0-3.5-1.5-3.5-3.5S10 8 12 8s3.5 1.5 3.5 3.5S14 15 12 15z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3 6 0 12-5 12-12zm-5 7c-2 0-3.5-1.5-3.5-3.5S10 8 12 8s3.5 1.5 3.5 3.5S14 15 12 15z" />
+                  </svg>
                 </div>
                 <span class="val-num">04</span>
               </div>
               <h4>ESG &amp; CSR</h4>
-              <p>Prioritizing 100% Zero Liquid Discharge, green biocatalysis, circular solvent recovery, and community CSR empowerment.</p>
+              <p>Prioritizing 100% Zero Liquid Discharge, green biocatalysis, circular solvent recovery, and community
+                CSR empowerment.</p>
             </div>
           </div>
         </div>
@@ -1005,7 +1169,8 @@
         <span class="section-tag">GLOBAL INFRASTRUCTURE</span>
         <h2 class="section-title">Strategic Manufacturing Facilities &amp; R&amp;D Hub</h2>
         <p class="section-desc">
-          Strategically located across premier pharmaceutical industrial corridors in Karnataka, Andhra Pradesh, and Telangana.
+          Strategically located across premier pharmaceutical industrial corridors in Karnataka, Andhra Pradesh, and
+          Telangana.
         </p>
       </div>
 
@@ -1040,11 +1205,16 @@
             </div>
             <h3 class="fac-title" id="facTitle">Unit 1 - Kolhar Industrial Area, Bidar</h3>
             <p class="fac-location" id="facLocation">
-              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <svg viewBox="0 0 24 24" class="icon-sm">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
               Plot no 131/A-1, 130 C&amp;D, Kolhar Industrial Area, Bidar – 585401, Karnataka, India
             </p>
             <p class="fac-desc" id="facDesc">
-              Our flagship commercial API and advanced intermediate production plant. Features world-class glass-lined and stainless-steel reactor trains, cleanroom finishing suites, automated powder processing, and dedicated QC testing laboratories.
+              Our flagship commercial API and advanced intermediate production plant. Features world-class glass-lined
+              and stainless-steel reactor trains, cleanroom finishing suites, automated powder processing, and dedicated
+              QC testing laboratories.
             </p>
 
             <div class="fac-specs-list" id="facSpecs">
@@ -1064,13 +1234,15 @@
 
             <div class="fac-actions">
               <a href="#contact" class="btn btn-primary btn-sm">Schedule Facility Audit</a>
-              <button class="btn btn-outline btn-sm copy-address-btn" data-copy="Plot no 131/A-1, 130 C&D, Kolhar Industrial Area, Bidar – 585401, Karnataka, India">Copy Address</button>
+              <button class="btn btn-outline btn-sm copy-address-btn"
+                data-copy="Plot no 131/A-1, 130 C&D, Kolhar Industrial Area, Bidar – 585401, Karnataka, India">Copy
+                Address</button>
             </div>
           </div>
 
           <div class="fac-visual">
             <div class="fac-photo-frame">
-              <img src="assets/plant_facility.jpg" alt="ADEEP Manufacturing Plant" class="fac-photo" id="facImg" />
+              <img src="assets/03_plant_area.png" alt="ADEEP Manufacturing Plant" class="fac-photo" id="facImg" />
               <div class="fac-photo-overlay">
                 <span class="tag tag-white" id="facTag">WHO-GMP Certified Facility</span>
               </div>
@@ -1128,7 +1300,9 @@
           <span class="section-tag section-tag-blue">UNCOMPROMISING QUALITY STANDARDS</span>
           <h2 class="section-title">Global Certifications &amp; cGMP Compliance</h2>
           <p class="section-desc">
-            Adeep adheres to the highest international regulatory standards. Our facilities are WHO-GMP certified and fully compliant with global regulatory requirements, ensuring systems are in place to verify the identity, strength, and quality of our products.
+            Adeep adheres to the highest international regulatory standards. Our facilities are WHO-GMP certified and
+            fully compliant with global regulatory requirements, ensuring systems are in place to verify the identity,
+            strength, and quality of our products.
           </p>
 
           <div class="qc-capabilities">
@@ -1136,21 +1310,24 @@
               <div class="qc-icon">📊</div>
               <div>
                 <h4>In-House QC Laboratories</h4>
-                <p>Equipped for extensive testing—such as HPLC, GC, UV-Vis spectroscopy, and microbial analysis—throughout every single stage of production.</p>
+                <p>Equipped for extensive testing—such as HPLC, GC, UV-Vis spectroscopy, and microbial
+                  analysis—throughout every single stage of production.</p>
               </div>
             </div>
             <div class="qc-item">
               <div class="qc-icon">🛡️</div>
               <div>
                 <h4>Risk Mitigation Strategy</h4>
-                <p>Diversified product streams, robust compliance with international pharmacopoeias, and established long-term supplier alliances to safeguard continuous output.</p>
+                <p>Diversified product streams, robust compliance with international pharmacopoeias, and established
+                  long-term supplier alliances to safeguard continuous output.</p>
               </div>
             </div>
             <div class="qc-item">
               <div class="qc-icon">👥</div>
               <div>
                 <h4>Skilled &amp; Dedicated Workforce (250+)</h4>
-                <p>Over 250+ skilled professionals across R&amp;D, Operations, Quality, and Regulatory. Lowest attrition rate in the industry with ongoing technical development.</p>
+                <p>Over 250+ skilled professionals across R&amp;D, Operations, Quality, and Regulatory. Lowest attrition
+                  rate in the industry with ongoing technical development.</p>
               </div>
             </div>
           </div>
@@ -1161,7 +1338,10 @@
           <div class="cert-seals-grid">
             <div class="seal-card">
               <div class="seal-icon-circle seal-who">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
               </div>
               <h4>WHO-GMP</h4>
               <p>Certified Good Manufacturing Practices aligned with World Health Organization guidelines.</p>
@@ -1169,15 +1349,22 @@
 
             <div class="seal-card seal-highlight-card">
               <div class="seal-icon-circle seal-regulatory">
-                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
               </div>
               <h4>cGMP &amp; Schedule M</h4>
-              <p>Current Good Manufacturing Practice and Schedule M compliant facilities ensuring rigorous pharmaceutical quality standards.</p>
+              <p>Current Good Manufacturing Practice and Schedule M compliant facilities ensuring rigorous
+                pharmaceutical quality standards.</p>
             </div>
 
             <div class="seal-card">
               <div class="seal-icon-circle seal-iso">
-                <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                </svg>
               </div>
               <h4>ISO 9001:2015</h4>
               <p>Quality Management System standard ensuring continuous product consistency.</p>
@@ -1185,7 +1372,10 @@
 
             <div class="seal-card">
               <div class="seal-icon-circle seal-iso-env">
-                <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
+                </svg>
               </div>
               <h4>ISO 14001:2015</h4>
               <p>Environmental Management System for sustainable waste, energy, and green chemistry.</p>
@@ -1193,7 +1383,10 @@
 
             <div class="seal-card">
               <div class="seal-icon-circle seal-iso-safe">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                </svg>
               </div>
               <h4>ISO 45001:2018</h4>
               <p>Occupational Health &amp; Safety Management ensuring highest standard worker safety.</p>
@@ -1201,7 +1394,10 @@
 
             <div class="seal-card">
               <div class="seal-icon-circle seal-lic">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                </svg>
               </div>
               <h4>API Drug License</h4>
               <p>Authorized statutory manufacturing licenses for active ingredients &amp; intermediates.</p>
@@ -1219,7 +1415,8 @@
         <span class="section-tag">GLOBAL TRUST &amp; REPUTATION</span>
         <h2 class="section-title">Trusted Partner to Leading Global Pharma Giants</h2>
         <p class="section-desc">
-          Adeep has established a solid customer base, partnering with leading multi-billion-dollar pharmaceutical innovators across regulated and emerging markets.
+          Adeep has established a solid customer base, partnering with leading multi-billion-dollar pharmaceutical
+          innovators across regulated and emerging markets.
         </p>
       </div>
 
@@ -1336,7 +1533,8 @@
         <span class="section-tag">VISIONARY GOVERNANCE</span>
         <h2 class="section-title">Leadership Team: Meet Our Directors</h2>
         <p class="section-desc">
-          Seasoned pharmaceutical professionals with over a century of cumulative leadership experience across production, R&amp;D, regulatory compliance, operational excellence, and financial governance.
+          Seasoned pharmaceutical professionals with over a century of cumulative leadership experience across
+          production, R&amp;D, regulatory compliance, operational excellence, and financial governance.
         </p>
       </div>
 
@@ -1344,16 +1542,20 @@
         <!-- Director 1: Mr. Narasimha Reddy Sangati -->
         <div class="dir-card">
           <div class="dir-header">
-            <div class="dir-avatar">NRS<div class="dir-exp-badge">25+ Yrs</div></div>
+            <div class="dir-avatar">NRS<div class="dir-exp-badge">25+ Yrs</div>
+            </div>
             <div>
               <div class="dir-name">Mr. Narasimha Reddy Sangati</div>
               <div class="dir-role">Founder &amp; Managing Director</div>
-              <div class="dir-tags"><span class="dir-tag">Production</span><span class="dir-tag">R&amp;D</span><span class="dir-tag">Quality</span><span class="dir-tag">Operations</span></div>
+              <div class="dir-tags"><span class="dir-tag">Production</span><span class="dir-tag">R&amp;D</span><span
+                  class="dir-tag">Quality</span><span class="dir-tag">Operations</span></div>
             </div>
           </div>
           <div class="dir-body">
             <p class="dir-bio">
-              Possessing over 25+ years of comprehensive expertise in API production, cutting-edge R&amp;D, quality systems, and large-scale plant operations. Leads ADEEP’s global strategic trajectory and technical innovation.
+              Possessing over 25+ years of comprehensive expertise in API production, cutting-edge R&amp;D, quality
+              systems, and large-scale plant operations. Leads ADEEP’s global strategic trajectory and technical
+              innovation.
             </p>
           </div>
         </div>
@@ -1361,16 +1563,20 @@
         <!-- Director 2: Mr. Srinivasa Reddy Nallagatla -->
         <div class="dir-card">
           <div class="dir-header">
-            <div class="dir-avatar">SRN<div class="dir-exp-badge">30+ Yrs</div></div>
+            <div class="dir-avatar">SRN<div class="dir-exp-badge">30+ Yrs</div>
+            </div>
             <div>
               <div class="dir-name">Mr. Srinivasa Reddy Nallagatla</div>
-              <div class="dir-role">Founder &amp; Executive Director</div>
-              <div class="dir-tags"><span class="dir-tag">Pharmaceuticals</span><span class="dir-tag">Construction</span><span class="dir-tag">Logistics &amp; Supply</span></div>
+              <div class="dir-role">Founder &amp; Director</div>
+              <div class="dir-tags"><span class="dir-tag">Pharmaceuticals</span><span
+                  class="dir-tag">Construction</span><span class="dir-tag">Logistics &amp; Supply</span></div>
             </div>
           </div>
           <div class="dir-body">
             <p class="dir-bio">
-              With 30+ years of visionary business leadership spanning pharmaceuticals, high-spec industrial construction, and integrated supply chain logistics. Architect of ADEEP’s multi-site manufacturing footprint.
+              With 30+ years of visionary business leadership spanning pharmaceuticals, high-spec industrial
+              construction, and integrated supply chain logistics. Architect of ADEEP’s multi-site manufacturing
+              footprint.
             </p>
           </div>
         </div>
@@ -1378,16 +1584,19 @@
         <!-- Director 3: Mr. Narasimha Reddy Kalluru -->
         <div class="dir-card">
           <div class="dir-header">
-            <div class="dir-avatar">NRK<div class="dir-exp-badge">26+ Yrs</div></div>
+            <div class="dir-avatar">NRK<div class="dir-exp-badge">26+ Yrs</div>
+            </div>
             <div>
               <div class="dir-name">Mr. Narasimha Reddy Kalluru</div>
               <div class="dir-role">Executive Director of Operations</div>
-              <div class="dir-tags"><span class="dir-tag">Plant Operations</span><span class="dir-tag">Regulatory Affairs</span><span class="dir-tag">Process Scaling</span></div>
+              <div class="dir-tags"><span class="dir-tag">Plant Operations</span><span class="dir-tag">Regulatory
+                  Affairs</span><span class="dir-tag">Process Scaling</span></div>
             </div>
           </div>
           <div class="dir-body">
             <p class="dir-bio">
-              Brings 26+ years of specialized expertise in complex drug manufacturing operations and regulatory affairs. Champions rigorous adherence to WHO-GMP, cGMP, and international pharmacopoeial standards.
+              Brings 26+ years of specialized expertise in complex drug manufacturing operations and regulatory affairs.
+              Champions rigorous adherence to WHO-GMP, cGMP, and international pharmacopoeial standards.
             </p>
           </div>
         </div>
@@ -1395,16 +1604,20 @@
         <!-- Director 4: Mr. Suresh Reddy Yellipalem -->
         <div class="dir-card">
           <div class="dir-header">
-            <div class="dir-avatar">SRY<div class="dir-exp-badge">35+ Yrs</div></div>
+            <div class="dir-avatar">SRY<div class="dir-exp-badge">35+ Yrs</div>
+            </div>
             <div>
               <div class="dir-name">Mr. Suresh Reddy Yellipalem</div>
               <div class="dir-role">Executive Director of Finance</div>
-              <div class="dir-tags"><span class="dir-tag">Corporate Finance</span><span class="dir-tag">Capital Allocation</span><span class="dir-tag">Business Strategy</span></div>
+              <div class="dir-tags"><span class="dir-tag">Corporate Finance</span><span class="dir-tag">Capital
+                  Allocation</span><span class="dir-tag">Business Strategy</span></div>
             </div>
           </div>
           <div class="dir-body">
             <p class="dir-bio">
-              Over 35+ years of distinguished leadership in corporate finance, strategic capital allocation, and business management. Drives fiscal discipline, strategic acquisitions, and long-term enterprise value creation.
+              Over 35+ years of distinguished leadership in corporate finance, strategic capital allocation, and
+              business management. Drives fiscal discipline, strategic acquisitions, and long-term enterprise value
+              creation.
             </p>
           </div>
         </div>
@@ -1412,16 +1625,20 @@
         <!-- Director 5: Mr. Srujan Reddy Nallagatla -->
         <div class="dir-card">
           <div class="dir-header">
-            <div class="dir-avatar">SRN<div class="dir-exp-badge">10+ Yrs</div></div>
+            <div class="dir-avatar">SRN<div class="dir-exp-badge">10+ Yrs</div>
+            </div>
             <div>
               <div class="dir-name">Mr. Srujan Reddy Nallagatla</div>
               <div class="dir-role">CEO &amp; Executive Director</div>
-              <div class="dir-tags"><span class="dir-tag">Strategy</span><span class="dir-tag">Business Dev</span><span class="dir-tag">R&amp;D &amp; Commercial</span><span class="dir-tag">Regulatory</span></div>
+              <div class="dir-tags"><span class="dir-tag">Strategy</span><span class="dir-tag">Business Dev</span><span
+                  class="dir-tag">R&amp;D &amp; Commercial</span><span class="dir-tag">Regulatory</span></div>
             </div>
           </div>
           <div class="dir-body">
             <p class="dir-bio">
-              With nearly a decade in the pharmaceutical industry, Mr. Srujan Reddy Nallagatla drives strategic planning, marketing, business development, and commercial operations. Steers cross-functional execution across R&amp;D, new launches, and global regulatory submissions.
+              With nearly a decade in the pharmaceutical industry, Mr. Srujan Reddy Nallagatla drives strategic
+              planning, marketing, business development, and commercial operations. Steers cross-functional execution
+              across R&amp;D, new launches, and global regulatory submissions.
             </p>
           </div>
         </div>
@@ -1437,7 +1654,8 @@
           <span class="section-tag section-tag-orange">DIRECT COMMERCIAL PROCUREMENT</span>
           <h2 class="inquiry-title">Request Quotation &amp; Technical Dossier</h2>
           <p class="inquiry-desc">
-            Directly connect with our commercial and technical team for API pricing, intermediate procurement, DMF status, open-part dossiers, or evaluation samples.
+            Directly connect with our commercial and technical team for API pricing, intermediate procurement, DMF
+            status, open-part dossiers, or evaluation samples.
           </p>
 
           <div class="inquiry-highlights">
@@ -1447,32 +1665,44 @@
             </div>
             <div class="ih-point">
               <span class="ih-check">✓</span>
-              <span><strong>Regulatory Support:</strong> Access to DMFs, COA, Route of Synthesis, and ICH stability data.</span>
+              <span><strong>Regulatory Support:</strong> Access to DMFs, COA, Route of Synthesis, and ICH stability
+                data.</span>
             </div>
             <div class="ih-point">
               <span class="ih-check">✓</span>
-              <span><strong>Sample Program:</strong> High-purity evaluation samples dispatched for qualifying pharma partners.</span>
+              <span><strong>Sample Program:</strong> High-purity evaluation samples dispatched for qualifying pharma
+                partners.</span>
             </div>
           </div>
 
           <div class="direct-contact-box">
             <h4>Commercial Inquiries Desk</h4>
             <div class="contact-row">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
               <div>
                 <span class="lbl">Email:</span>
-                <a href="mailto:Marketing@adeepgroup.com">Marketing@adeepgroup.com</a> / <a href="mailto:info@adeepgroup.com">info@adeepgroup.com</a>
+                <a href="mailto:Marketing@adeepgroup.com">Marketing@adeepgroup.com</a> / <a
+                  href="mailto:info@adeepgroup.com">info@adeepgroup.com</a>
               </div>
             </div>
             <div class="contact-row">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z" />
+              </svg>
               <div>
                 <span class="lbl">Direct Line:</span>
                 <a href="tel:+914045151444">+91 40 4515 1444</a>
               </div>
             </div>
             <div class="contact-row">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
               <div>
                 <span class="lbl">Corporate Office:</span>
                 <span>#1501, Asian Sun City, B-Block, Kondapur, Hyderabad - 500084</span>
@@ -1484,12 +1714,13 @@
         <div class="inquiry-form-pane">
           <form id="rfqForm" class="rfq-form">
             <h3 class="form-title">Submit Request For Quotation (RFQ)</h3>
-            
+
             <!-- Selected Basket Molecules Preview -->
             <div class="basket-preview" id="basketPreview">
               <div class="bp-label">Selected Molecules in Request:</div>
               <div class="bp-tags" id="bpTags">
-                <span class="bp-placeholder">No molecules selected yet. Select from the product table or type below.</span>
+                <span class="bp-placeholder">No molecules selected yet. Select from the product table or type
+                  below.</span>
               </div>
             </div>
 
@@ -1533,17 +1764,21 @@
 
             <div class="form-group">
               <label for="rfqMessage">Technical Specifications / Project Details</label>
-              <textarea id="rfqMessage" rows="3" placeholder="Please mention target grade, delivery timeline, destination country, or custom specification requirements..."></textarea>
+              <textarea id="rfqMessage" rows="3"
+                placeholder="Please mention target grade, delivery timeline, destination country, or custom specification requirements..."></textarea>
             </div>
 
             <div class="form-actions">
               <button type="submit" class="btn btn-primary btn-block" id="submitRfqBtn">
                 <span>Submit Quotation Request</span>
-                <svg viewBox="0 0 24 24" class="icon-sm"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                <svg viewBox="0 0 24 24" class="icon-sm">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                </svg>
               </button>
             </div>
             <div class="form-privacy">
-              <small>🔒 Your confidential inquiries and technical requirements are protected under strict NDA standards.</small>
+              <small>🔒 Your confidential inquiries and technical requirements are protected under strict NDA
+                standards.</small>
             </div>
           </form>
 
@@ -1551,7 +1786,8 @@
           <div class="form-success-alert" id="formSuccessAlert" style="display: none;">
             <div class="fsa-icon">✓</div>
             <h3>RFQ Successfully Dispatched!</h3>
-            <p>Thank you for reaching out to <strong>ADEEP GROUP</strong>. Our commercial team has received your inquiry and a dedicated account manager will respond with pricing and technical dossiers within 24 hours.</p>
+            <p>Thank you for reaching out to <strong>ADEEP GROUP</strong>. Our commercial team has received your inquiry
+              and a dedicated account manager will respond with pricing and technical dossiers within 24 hours.</p>
             <button class="btn btn-sm btn-outline" id="resetRfqBtn">Send Another Inquiry</button>
           </div>
         </div>
@@ -1581,7 +1817,8 @@
             Telangana, India.
           </p>
           <div class="cic-links">
-            <a href="https://maps.google.com/?q=Asian+Sun+City+Kondapur+Hyderabad" target="_blank" rel="noopener" class="cic-link">Open in Google Maps ↗</a>
+            <a href="https://maps.google.com/?q=Asian+Sun+City+Kondapur+Hyderabad" target="_blank" rel="noopener"
+              class="cic-link">Open in Google Maps ↗</a>
           </div>
         </div>
 
@@ -1603,11 +1840,13 @@
           </div>
           <div class="comm-line">
             <span class="comm-label">Official Portal:</span>
-            <a href="https://www.adeepgroup.com" target="_blank" rel="noopener" class="comm-value">www.adeepgroup.com</a>
+            <a href="https://www.adeepgroup.com" target="_blank" rel="noopener"
+              class="comm-value">www.adeepgroup.com</a>
           </div>
           <div class="comm-line">
             <span class="comm-label">Life Sciences Portal:</span>
-            <a href="https://adeeplifesciences.com" target="_blank" rel="noopener" class="comm-value">adeeplifesciences.com</a>
+            <a href="https://adeeplifesciences.com" target="_blank" rel="noopener"
+              class="comm-value">adeeplifesciences.com</a>
           </div>
         </div>
 
@@ -1638,13 +1877,18 @@
           <span><strong>CPHI Worldwide 2026</strong> — Meet ADEEP Group Executive Team at Hall 4, Stand 4B20</span>
         </div>
         <div class="ftr-actions">
-          <form class="ftr-newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to ADEEP Molecule Pipeline Updates!');">
+          <form class="ftr-newsletter-form"
+            onsubmit="event.preventDefault(); showToast('Subscribed to ADEEP Molecule Pipeline Updates!');">
             <input type="email" placeholder="Enter your business email..." required aria-label="Business Email" />
             <button type="submit">Subscribe</button>
           </form>
-          <a href="#inquiry" class="btn btn-sm btn-primary" style="padding: 8px 16px; font-size: 0.82rem;">Send Enquiry</a>
+          <a href="#inquiry" class="btn btn-sm btn-primary" style="padding: 8px 16px; font-size: 0.82rem;">Send
+            Enquiry</a>
           <a href="contact.html" class="ftr-login-link">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+            </svg>
             <span>Partner Login</span>
           </a>
         </div>
@@ -1657,24 +1901,41 @@
       <div class="footer-col brand-col">
         <img src="assets/adeep_logo.png" alt="ADEEP GROUP" class="footer-brand-logo" />
         <p class="footer-desc">
-          A Center for Excellence &amp; Innovation in the Pharmaceutical Industry. Delivering high-purity commercial APIs, advanced intermediates, and green biocatalytic synthesis since 2008.
+          A Center for Excellence &amp; Innovation in the Pharmaceutical Industry. Delivering high-purity commercial
+          APIs, advanced intermediates, and green biocatalytic synthesis since 2008.
         </p>
         <div class="footer-entities">
           <span><strong style="color: #f58220;">•</strong> Adeep Life Sciences Pvt. Ltd.</span>
           <span><strong style="color: #38cb56;">•</strong> Adeep Laboratories Pvt. Ltd.</span>
         </div>
         <div class="footer-social-row">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+            aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z" />
+            </svg>
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube" title="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"/></svg>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+            aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z" />
+            </svg>
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+            aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+            </svg>
           </a>
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (Twitter)" title="X (Twitter)">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+            aria-label="X (Twitter)" title="X (Twitter)">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1729,9 +1990,14 @@
             <div class="fci-icon">🏭</div>
             <div class="fci-content">
               <strong>Plant / Factory Locations:</strong>
-              <span>• Unit 1: Kolhar Industrial Area, Bidar (Karnataka)<br />• Unit 2 &amp; 3: APIIC Mega Hub, Kopparthi, Kadapa (AP)</span>
-              <a href="https://maps.google.com/?q=Kolhar+Industrial+Area+Bidar" target="_blank" rel="noopener noreferrer" class="fci-map-link">
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              <span>• Unit 1: Kolhar Industrial Area, Bidar (Karnataka)<br />• Unit 2 &amp; 3: APIIC Mega Hub,
+                Kopparthi, Kadapa (AP)</span>
+              <a href="https://maps.google.com/?q=Kolhar+Industrial+Area+Bidar" target="_blank"
+                rel="noopener noreferrer" class="fci-map-link">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                </svg>
                 <span>View on Google Maps</span>
               </a>
             </div>
@@ -1747,7 +2013,8 @@
             <div class="fci-icon">✉️</div>
             <div class="fci-content">
               <strong>Email Inquiries:</strong>
-              <span>Marketing: <a href="mailto:Marketing@adeepgroup.com">Marketing@adeepgroup.com</a></span>`r`n              <span>General: <a href="mailto:info@adeepgroup.com">info@adeepgroup.com</a></span>
+              <span>Marketing: <a href="mailto:Marketing@adeepgroup.com">Marketing@adeepgroup.com</a></span>`r`n
+              <span>General: <a href="mailto:info@adeepgroup.com">info@adeepgroup.com</a></span>
             </div>
           </div>
           <div class="fci-item">
@@ -1776,7 +2043,9 @@
           <div class="make-in-india-badge" style="margin-bottom: 12px; font-size: 0.8rem; color: #fed7aa;">
             <span>🇮🇳 Supporting India's Self-Reliance (Make in India)</span>
           </div>
-          <a href="quality.html" class="btn btn-outline btn-sm btn-block" style="text-align: center; font-size: 0.82rem; padding: 8px 12px; border-color: rgba(56, 203, 86, 0.4); color: #86efac;">View Compliance Dossiers</a>
+          <a href="quality.html" class="btn btn-outline btn-sm btn-block"
+            style="text-align: center; font-size: 0.82rem; padding: 8px 12px; border-color: rgba(56, 203, 86, 0.4); color: #86efac;">View
+            Compliance Dossiers</a>
         </div>
       </div>
     </div>
@@ -1786,10 +2055,12 @@
       <div class="fbb-container">
         <div>
           <div class="fbb-copy">
-            © 2008 – 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights Reserved.
+            © 2008 – 2026 ADEEP GROUP (Adeep Life Sciences Pvt Ltd &amp; Adeep Laboratories Pvt Ltd). All Rights
+            Reserved.
           </div>
           <div class="fbb-corporate-ids">
-            CIN: <strong>U24232KA2008PTC047890</strong> • GSTIN: <strong>29AABCA1234F1Z5</strong> • Bidar, Karnataka, India
+            CIN: <strong>U24232KA2008PTC047890</strong> • GSTIN: <strong>29AABCA1234F1Z5</strong> • Bidar, Karnataka,
+            India
           </div>
         </div>
         <div class="footer-legal-links">
@@ -1880,10 +2151,10 @@
   <!-- Scroll-to-Top Button -->
   <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top" aria-label="Scroll to top">↑</button>
 
-  <script src="app.js?v=5.0"></script>
+  <script src="app.js?v=6.0"></script>
   <script>
     // ── Interactive Molecular Particle Constellation ──────────────────────
-    (function() {
+    (function () {
       const canvas = document.getElementById('particleCanvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
@@ -1924,7 +2195,7 @@
       });
 
       function Particle() {
-        this.reset = function() {
+        this.reset = function () {
           this.x = Math.random() * W;
           this.y = Math.random() * H;
           this.r = Math.random() * 2.2 + 1;
@@ -2030,4 +2301,5 @@
     scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
+
 </html>

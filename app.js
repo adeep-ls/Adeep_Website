@@ -434,7 +434,7 @@ const FACILITIES_DATA = {
     certs: "WHO-GMP, ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
     safety: "Zero Liquid Discharge (ZLD), automated gas scrubbers & solvent recovery",
     tag: "WHO-GMP Certified Facility",
-    img: "assets/plant_facility.jpg"
+    img: "assets/03_plant_area.png"
   },
   unit2: {
     title: "Unit 2 - YSRJ Mega Industrial Hub, Kadapa",
@@ -446,7 +446,7 @@ const FACILITIES_DATA = {
     certs: "Architected for cGMP, EU-GMP, WHO-GMP & ISO Integrated Systems",
     safety: "Green engineering, solar energy integration, advanced containment suites",
     tag: "Next-Gen Mega Hub",
-    img: "assets/plant_facility.jpg"
+    img: "assets/01_green_campus.png"
   },
   unit3: {
     title: "Unit 3 - Adeep Laboratories Private Limited",
@@ -458,7 +458,7 @@ const FACILITIES_DATA = {
     certs: "cGMP Compliant, ISO 9001:2015, ISO 14001:2015",
     safety: "Advanced automated safety valves, toxic gas monitoring, full thermal abatement",
     tag: "High-Spec Intermediates Hub",
-    img: "assets/plant_facility.jpg"
+    img: "assets/02_factory_building.png"
   },
   unit4: {
     title: "ADEEP Technology Center - Hyderabad",
@@ -470,7 +470,7 @@ const FACILITIES_DATA = {
     certs: "GLP Protocols, Schedule M, cGMP Quality Standards",
     safety: "World-class audit track record with zero critical observations",
     tag: "Central R&D & Innovation Hub",
-    img: "assets/hero_lab.jpg"
+    img: "assets/04_inside_view.png"
   },
   unitRnd: {
     title: "ADEEP Technology Center - Hyderabad",
@@ -482,7 +482,7 @@ const FACILITIES_DATA = {
     certs: "GLP Protocols, Schedule M, cGMP Quality Standards",
     safety: "World-class audit track record with zero critical observations",
     tag: "Central R&D & Innovation Hub",
-    img: "assets/hero_lab.jpg"
+    img: "assets/04_inside_view.png"
   }
 };
 
@@ -1444,6 +1444,14 @@ function initSplashScreen() {
 
   const splash = document.getElementById("siteSplashScreen");
   if (!splash) return;
+
+  if (window.location.search.includes("nosplash=1")) {
+    splash.style.display = "none";
+    if (typeof window.startHeroSlider === "function") {
+      window.startHeroSlider();
+    }
+    return;
+  }
 
   const bar = document.getElementById("splashProgressBar");
   const pct = document.getElementById("splashPercentage");
