@@ -723,6 +723,16 @@
         const badgeText = document.getElementById('splashStatusBadgeText');
         const skipBtn = document.getElementById('splashSkipBtn');
 
+        if (new URLSearchParams(window.location.search).has('nosplash')) {
+          splash.style.display = 'none';
+          document.body.classList.add('site-loaded');
+          window.dispatchEvent(new CustomEvent('splashComplete'));
+          if (typeof window.startHeroSlider === 'function') {
+            window.startHeroSlider();
+          }
+          return;
+        }
+
         function finishSplash() {
           if (finished) return;
           finished = true;
